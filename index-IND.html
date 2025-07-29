@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LIVI NEOASIA GROUP LTD - IND version</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+</head>
+
+<body>
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="./index-IND.html#home">
+                    <img src="./assets/images/logo.png" alt="LIVI NEOASIA GROUP LTD logo">
+                </a>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#vision">Visi</a></li>
+                <li><a href="./product-IND.html">Produk</a></li>
+                <li><a href="./contact-IND.html">Hubungi</a></li>
+                <li><a href="#credentials">Kualifikasi</a></li>
+                <li><a href="./assets/images/avia-whitepaper-en.pdf">Whitepaper</a></li>
+                <li class="language-dropdown">
+                    <button class="dropdown-btn" id="languageBtn">
+                        <i class="fas fa-globe"></i> Indonesia
+                    </button>
+                    <div class="dropdown-content" id="languageDropdown">
+                        <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                        <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
+                        <a href="index-CN.html" onclick="changeLanguage('中文')">中文（简体）</a>
+                        <a href="index-TW.html" onclick="changeLanguage('繁体')">中文（繁体）</a>
+                        <a href="index-IND.html" onclick="changeLanguage('Bahasa Indonesia')">Bahasa Indonesia</a>
+                    </div>
+                </li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <video class="hero-bg-video" autoplay muted loop playsinline>
+            <source src="./assets/images/banner-new.mp4" type="video/mp4" />
+        </video>
+
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    <span class="highlight">LIVI NEOASIA GROUP LTD</span><br />
+                    Jadikan Setiap Polis Sebagai Aset yang Bernilai
+                </h1>
+                <p>
+                    Kami bukan "menjual asuransi"; kami sedang membangun sistem keuangan asuransi yang baru
+                    di mana semua orang dapat berpartisipasi dan berbagi keuntungan.
+                </p>
+                <button class="apply-btn">Daftar Sekarang</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <div class="about-wrapper" id="about">
+        <div class="about-main-section">
+            <div class="about-text-content fade-element">
+                <h1 class="about-title">Tentang Kami</h1>
+                <h2 class="about-tagline fade-element">Dari Asuransi Menuju Kebebasan Aset</h2>
+
+                <p class="about-overview fade-element">
+                    Berbasis di Hong Kong dan beroperasi di berbagai pasar Asia, kami adalah platform inovatif yang
+                    menghubungkan asuransi dan teknologi keuangan. Melalui kemitraan dengan perusahaan asuransi, lembaga
+                    kepercayaan, dan badan pengatur, kami mendigitalkan aset asuransi tradisional untuk membuka nilai
+                    jangka panjang tanpa gesekan.
+                </p>
+
+                <p class="about-company-details">
+                    Platform ini merupakan bagian dari <span class="about-emphasis">Aviva plc</span>, sebuah grup
+                    asuransi Inggris ternama dengan sejarah lebih dari <span class="about-emphasis">300 tahun</span> dan
+                    lebih dari <span class="about-emphasis">30 juta pelanggan</span> di seluruh dunia, dikenal karena
+                    kepercayaan dan stabilitas keuangannya.
+                </p>
+            </div>
+
+            <div class="about-image-content fade-element">
+                <video class="about-hero-img" autoplay muted loop playsinline>
+                    <source src="./assets/images/about-partA.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="about-services-section fade-element">
+            <div class="about-service-card fade-element">
+                <div class="about-service-content">
+                    <h3 class="about-service-title">Digitalisasi Aset Asuransi</h3>
+                    <p class="about-service-text">
+                        Kami mengubah polis asuransi tradisional, polis penghasilan seumur hidup, dan aset bernilai
+                        lainnya menjadi sertifikat digital untuk manajemen dan operasi melalui teknologi.
+                    </p>
+                </div>
+                <div class="about-service-icon">
+                    <img src="./assets/images/Group-1.png" alt="Ikon Digitalisasi">
+                </div>
+            </div>
+
+            <div class="about-service-card align-right fade-element">
+                <div class="about-service-content">
+                    <h3 class="about-service-title">Nilai Kolektif di Blockchain</h3>
+                    <p class="about-service-text">
+                        Setiap aset asuransi diverifikasi di blockchain, memastikan investasi yang didukung oleh aset
+                        nyata — aman, dapat dipercaya, dan dapat dinilai secara transparan.
+                    </p>
+                </div>
+                <div class="about-service-icon">
+                    <img src="./assets/images/Group-2.png" alt="Ikon Blockchain">
+                </div>
+            </div>
+
+            <div class="about-service-card fade-element">
+                <div class="about-service-content">
+                    <h3 class="about-service-title">Memberdayakan Individu dan Perusahaan</h3>
+                    <p class="about-service-text">
+                        Baik untuk perencanaan kekayaan pribadi atau kebutuhan pendapatan risiko rendah bagi perusahaan,
+                        kami memberikan kesempatan untuk berpartisipasi dalam pertumbuhan jangka panjang dana asuransi.
+                    </p>
+                </div>
+                <div class="about-service-icon">
+                    <img src="./assets/images/Group-3.png" alt="Ikon Pemberdayaan">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- What we do section -->
+    <!-- What we do section -->
+    <section class="what-we-do-container reveal-element">
+        <div class="what-we-do">
+            <h2>Apa yang Kami Lakukan</h2>
+
+            <video class="about-hero-img" autoplay muted loop playsinline>
+                <source src="./assets/images/about-partB.mp4" type="video/mp4">
+            </video>
+
+            <div class="cards">
+                <div class="card animate-zoom-rotate">
+                    <h3>Transformasi Digital Aset Asuransi:</h3>
+                    <p>
+                        Mengubah polis asuransi tabungan dan penghasil pendapatan tahunan menjadi aset digital,
+                        dirancang untuk manajemen yang transparan dan operasi yang fleksibel.
+                    </p>
+                </div>
+                <div class="card animate-zoom-rotate">
+                    <h3>Memberdayakan Individu dan Perusahaan:</h3>
+                    <p>
+                        Baik untuk perencanaan keuangan pribadi atau investasi perusahaan, Anda dapat berpartisipasi
+                        dalam pertumbuhan jangka panjang dana asuransi.
+                    </p>
+                </div>
+                <div class="card animate-zoom-rotate">
+                    <h3>Dalam Rantai Nilai Aset:</h3>
+                    <p>
+                        Setiap polis asuransi disertifikasi dalam rantai, didukung oleh aset nyata — aman, terpercaya,
+                        dan memiliki nilai yang jelas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- What We Do Section  END-->
+
+    <!-- Policy Session  -->
+    <section class="session-bg">
+        <div class="policy-section">
+            <!-- Left: Text Content -->
+            <div class="policy-text fade-element">
+                <h2>Ubah Rencana Asuransi Anda<br><span>Menjadi Aliran Kas</span></h2>
+                <p>
+                    Kami menyediakan layanan terpadu dalam lima bidang utama aset asuransi:
+                    verifikasi, peningkatan nilai, distribusi, warisan, dan likuiditas.
+                    Dari penilaian dan pencatatan digital hingga berbagi keuntungan dan manajemen likuiditas,
+                    kami membantu mengubah "asuransi pasif" menjadi kekayaan yang dapat diakses, dipersonalisasi, dan
+                    dapat ditransformasikan.
+                </p>
+            </div>
+
+            <!-- Right: Services Grid -->
+            <div class="policy-services">
+                <div class="policy-card animate-zoom-rotate">
+                    <img src="./assets/images/asset-i.png" alt="Ikon Verifikasi Aset" class="icon-img" />
+                    <h4>Verifikasi Aset</h4>
+                    <p>Menemukan nilai sebenarnya dari polis asuransi Anda dan menilai status aset.</p>
+                </div>
+
+                <div class="policy-card animate-zoom-rotate">
+                    <img src="./assets/images/resgi-i.png" alt="Ikon Pendaftaran" class="icon-img" />
+                    <h4>Pendaftaran Kepemilikan</h4>
+                    <p>Mengubah polis asuransi menjadi aset digital untuk meningkatkan nilai dan likuiditas.</p>
+                </div>
+
+                <div class="policy-card animate-zoom-rotate">
+                    <img src="./assets/images/inc-i.png" alt="Ikon Pendapatan" class="icon-img" />
+                    <h4>Rencana Pendapatan</h4>
+                    <p>Skema pendapatan fleksibel dengan distribusi keuntungan bulanan atau triwulanan.</p>
+                </div>
+
+                <div class="policy-card animate-zoom-rotate">
+                    <img src="./assets/images/liquid-i.png" alt="Ikon Likuiditas" class="icon-img" />
+                    <h4>Manajemen Likuiditas</h4>
+                    <p>Mendukung fleksibilitas dalam membagi, menukar, atau menggunakan aset sebagai jaminan.</p>
+                </div>
+
+                <div class="policy-card animate-zoom-rotate">
+                    <img src="./assets/images/custo-i.png" alt="Ikon Warisan" class="icon-img" />
+                    <h4>Perencanaan Warisan</h4>
+                    <p>Memastikan aset asuransi Anda ditransfer secara mulus kepada ahli waris atau penerima manfaat.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bagian Avia -->
+    <div class="avia-main reveal-element">
+        <div class="avia-wrapper">
+            <div class="avia-header reveal-element">
+                <div class="avia-brand">LIVI NEOASIA —</div>
+                <div class="avia-slogan">Penggerak di balik aset Anda</div>
+                <div class="avia-intro">
+                    Polis asuransi Anda bukan hanya sebuah kontrak — ini adalah peluang aset.
+                    Kami membantu pengguna mengamankan kepemilikan aset, membuka penghasilan,
+                    dan mengelola likuiditas, mengubah produk asuransi tradisional menjadi kekayaan yang
+                    nyaman, dapat diakses, dan strategis.
+                </div>
+            </div>
+
+            <div class="avia-stats">
+                <div class="avia-stat-card reveal-element" style="transition-delay: 0.1s">
+                    <div class="avia-progress-box">
+                        <div class="avia-progress-bg">
+                            <div class="avia-progress-fill red"></div>
+                            <div class="avia-percent">22%</div>
+                            <div class="avia-label">Konsultasi Penghasilan Bulanan</div>
+                        </div>
+                    </div>
+                    <div class="avia-stat-text">
+                        Melalui analisis strategi investasi dan alokasi,
+                        aset polis menghasilkan pendapatan bulanan 22% lebih tinggi dibandingkan metode tradisional —
+                        stabil, transparan, dan siap mendukung arus kas keluarga Anda.
+                    </div>
+                </div>
+
+                <div class="avia-stat-card reveal-element" style="transition-delay: 0.2s">
+                    <div class="avia-progress-box">
+                        <div class="avia-progress-bg">
+                            <div class="avia-progress-fill blue"></div>
+                            <div class="avia-percent">72%</div>
+                            <div class="avia-label">72% Pemegang Polis Jangka Panjang</div>
+                        </div>
+                    </div>
+                    <div class="avia-stat-text">
+                        Polis yang disimpan lebih dari 5 tahun menunjukkan peningkatan signifikan dalam nilai tabungan —
+                        riset kami menunjukkan rata-rata kenaikan penilaian mencapai 72%.
+                    </div>
+                </div>
+
+                <div class="avia-stat-card reveal-element" style="transition-delay: 0.3s">
+                    <div class="avia-progress-box">
+                        <div class="avia-progress-bg">
+                            <div class="avia-progress-fill green"></div>
+                            <div class="avia-percent">80%</div>
+                            <div class="avia-label">80% Terverifikasi, Usia Di Atas 60</div>
+                        </div>
+                    </div>
+                    <div class="avia-stat-text">
+                        Dalam tinjauan kebijakan kedua, pendekatan kami meningkatkan stabilitas warisan,
+                        menambah nilai aset, dan memperkuat keseimbangan risiko
+                        melalui struktur pewarisan yang adil dan properti yang bernilai.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Sesi Footer -->
+    <div class="core-vision-section" id="vision">
+        <div class="core-vision-container">
+            <div class="content-wrapper">
+                <div class="section-header fade-element">
+                    <h1 class="section-title">Nilai Inti dan Visi Masa Depan Kami</h1>
+                    <p class="section-subtitle">
+                        Sebagai upaya terpadu, kami membentuk masa depan baru untuk aset asuransi —
+                        mengubah keamanan menjadi kekuatan penggerak pertumbuhan keuangan yang berkelanjutan,
+                        menuju pertumbuhan bernilai jangka panjang dan warisan kekayaan yang terlindungi.
+                    </p>
+                </div>
+
+                <div class="vision-grid">
+                    <div class="vision-item fade-element">
+                        <div class="vision-image philosophy-theme">
+                            <img src="./assets/images/philo-logo.png" alt="Ikon Filosofi" class="vision-icon-img" />
+                            <h3 class="vision-title">Filosofi Kami</h3>
+                            <p class="vision-description">
+                                Didirikan atas dasar integritas dan dipandu oleh inovasi,
+                                perusahaan kami berkomitmen untuk memberikan pengalaman manajemen aset asuransi
+                                yang transparan, aman, dan efisien kepada setiap pelanggan.
+                                Kami percaya bahwa setiap orang layak mendapatkan perlindungan terbaik dan stabilitas
+                                finansial jangka panjang.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="vision-item fade-element">
+                        <div class="vision-image vision-theme">
+                            <img src="./assets/images/vision-logo.png" alt="Ikon Visi" class="vision-icon-img" />
+                            <h3 class="vision-title">Visi Kami</h3>
+                            <p class="vision-description">
+                                Menjadi platform manajemen aset asuransi digital terkemuka di Asia —
+                                misi kami adalah mengubah asuransi tradisional menjadi aset cair berbasis kecerdasan
+                                dan menciptakan nilai finansial maksimal dari setiap polis.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="vision-item fade-element">
+                        <div class="vision-image commitment-theme">
+                            <img src="./assets/images/commit-logo.png" alt="Ikon Komitmen" class="vision-icon-img" />
+                            <h3 class="vision-title">Komitmen Kami</h3>
+                            <p class="vision-description">
+                                Kami sepenuhnya berkomitmen untuk melindungi kepentingan nasabah,
+                                mematuhi standar regulasi, dan mengintegrasikan teknologi modern
+                                dengan layanan profesional untuk membangun kemitraan kekayaan yang dapat dipercaya dan
+                                berkelanjutan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="providers-area">
+                <h3 class="providers-heading">Beberapa Penyedia Asuransi Kesehatan Swasta:</h3>
+                <div class="logo-carousel fade-element">
+                    <div class="logo-track">
+                        <!-- Set pertama logo -->
+                        <div class="logo-item">
+                            <img src="./assets/images/logo1.png" alt="Logo Aetna" width="80" height="40" />
+                        </div>
+                        <div class="logo-item">
+                            <img src="./assets/images/logo2.png" alt="Logo ALC" width="80" height="40" />
+                        </div>
+                        <div class="logo-item">
+                            <img src="./assets/images/logo3.png" alt="Logo Allianz Care" width="100" height="40" />
+                        </div>
+                        <div class="logo-item">
+                            <img src="./assets/images/logo4.png" alt="Logo April" width="80" height="40" />
+                        </div>
+                        <div class="logo-item">
+                            <img src="./assets/images/logo5.png" alt="Logo AXA" width="60" height="40" />
+                        </div>
+                        <div class="logo-item">
+                            <img src="./assets/images/logo6.png" alt="Logo Cigna" width="80" height="40" />
+                        </div>
+                        <div class="logo-item">
+                            <img src="./assets/images/logo7.png" alt="Logo FI" width="60" height="40" />
+                        </div>
+
+                        <!-- Duplikat untuk loop tanpa henti -->
+                        <div class="logo-item">
+                            <img src="./assets/images/logo1.png" alt="Logo Aetna" width="80" height="40" />
+                        </div>
+                        <div class="logo-item">
+                            <img src="./assets/images/logo2.png" alt="Logo ALC" width="80" height="40" />
+                        </div>
+                        <div class="logo-item">
+                            <img src="./assets/images/logo3.png" alt="Logo Allianz Care" width="100" height="40" />
+                        </div>
+                        <div class="logo-item">
+                            <img src="./assets/images/logo4.png" alt="Logo April" width="80" height="40" />
+                        </div>
+                        <div class="logo-item">
+                            <img src="./assets/images/logo5.png" alt="Logo AXA" width="60" height="40" />
+                        </div>
+                        <div class="logo-item">
+                            <img src="./assets/images/logo6.png" alt="Logo Cigna" width="80" height="40" />
+                        </div>
+                        <div class="logo-item">
+                            <img src="./assets/images/logo7.png" alt="Logo FI" width="60" height="40" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="section-footer">
+        <div class="footer-left">
+            <div class="footer-links">
+                <a href="#">Ketentuan</a><span>|</span>
+                <a href="#">Privasi</a><span>|</span>
+                <a href="#">Etika</a><span>|</span>
+                <a href="#">Panduan</a><span>|</span>
+                <a href="#">Cookie</a>
+            </div>
+        </div>
+
+        <div class="footer-center">
+            <div class="footer-copyright">
+                <span>© 2025 — LIVI NEOASIA GROUP LTD</span>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <a href="#"><img src="./assets/images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="./assets/images/ins.png" alt="Instagram"></a>
+            <a href="#"><img src="./assets/images/linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="./assets/images/ytb.png" alt="YouTube"></a>
+            <a href="#"><img src="./assets/images/wechat.png" alt="WeChat"></a>
+        </div>
+    </div>
+
+    <!-- script  -->
+    <script src="./assets/js/index.js"></script>
+
+</body>
+
+</html>

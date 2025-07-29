@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+</head>
+
+<body>
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="./index-IND.html#home">
+                    <img src="./assets/images/logo.png" alt="Logo LIVI NEOASIA GROUP LTD">
+                </a>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="./index-IND.html#home">Beranda</a></li>
+                <li><a href="./index-IND.html#about">Tentang</a></li>
+                <li><a href="./index-IND.html#vision">Visi</a></li>
+                <li><a href="./product-IND.html">Produk</a></li>
+                <li><a href="./contact-IND.html">Hubungi</a></li>
+                <li><a href="./index-IND.html#credentials">Kualifikasi</a></li>
+                <li><a href="./assets/images/avia-whitepaper-en.pdf">Whitepaper</a></li>
+                <li class="language-dropdown">
+                    <button class="dropdown-btn" id="languageBtn">
+                        <i class="fas fa-globe"></i> Indonesia
+                    </button>
+                    <div class="dropdown-content" id="languageDropdown">
+                        <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                        <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
+                        <a href="index-CN.html" onclick="changeLanguage('中文')">中文（简体）</a>
+                        <a href="index-TW.html" onclick="changeLanguage('繁体')">中文（繁体）</a>
+                        <a href="index-IND.html" onclick="changeLanguage('Bahasa Indonesia')">Bahasa Indonesia</a>
+                    </div>
+                </li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- Bagian Hero Kontak -->
+    <div class="contact-hero">
+        <h1>Hubungi Kami</h1>
+    </div>
+
+    <div class="form-container-wrapper">
+        <div class="form-sidebar">
+            <ul>
+                <li onclick="showInvestmentForm()">Produk Asuransi</li>
+                <li onclick="showServiceCenter()">Buat Janji Temu</li>
+                <li onclick="showFeedbackForm()">Layanan & Masukan</li>
+            </ul>
+        </div>
+
+        <!-- Formulir Produk Asuransi -->
+        <div class="main-form-content">
+            <div class="form-content-area" id="investmentForm">
+                <div class="form-header">
+                    <h2>Permohonan Produk Asuransi</h2>
+                    <p>Masuk ke akun LIVI NEOASIA Anda atau tinggalkan informasi pribadi Anda agar kami dapat memberikan
+                        info
+                        layanan yang relevan</p>
+                    <p class="required-notice">* Bidang wajib<br>* Harus diisi</p>
+                </div>
+
+                <form id="mainForm">
+                    <div class="input-group">
+                        <label class="input-label">* Bidang wajib</label>
+                        <p style="font-size: 14px; color: #6b7280; margin-bottom: 18px;">
+                            Untuk menghindari LIVI NEOASIA mengakses data keuangan pribadi Anda**<br>
+                            (tidak termasuk nomor kontak / alamat surat / nomor HP / masa berlaku dokumen / info
+                            konsultan LIVI NEOASIA atau lainnya yang disebutkan)
+                        </p>
+                        <div class="radio-section">
+                            <div class="radio-option">
+                                <input type="radio" id="yes" name="disclosure" value="yes" checked>
+                                <label for="yes">Ya</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="no" name="disclosure" value="no">
+                                <label for="no">Tidak</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nama -->
+                    <div class="input-row">
+                        <div class="input-column">
+                            <div class="input-group">
+                                <label class="input-label">Nama Depan <span class="required-field">*</span></label>
+                                <input type="text" class="form-field" placeholder="Nama Depan" required>
+                            </div>
+                        </div>
+                        <div class="input-column">
+                            <div class="input-group">
+                                <label class="input-label">Nama Belakang <span class="required-field">*</span></label>
+                                <input type="text" class="form-field" placeholder="Nama Belakang" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kontak -->
+                    <div class="input-row">
+                        <div class="input-column">
+                            <div class="input-group">
+                                <label class="input-label">Nomor Telepon Internasional <span
+                                        class="required-field">*</span></label>
+                                <div class="phone-input-group">
+                                    <select class="form-dropdown country-code">
+                                        <option>Kode Negara</option>
+                                        <option>+60</option>
+                                        <option>+65</option>
+                                        <option>+852</option>
+                                        <option>+86</option>
+                                    </select>
+                                    <input type="tel" class="form-field" placeholder="Nomor Telepon" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-column">
+                            <div class="input-group">
+                                <label class="input-label">Alamat Email <span class="required-field">*</span></label>
+                                <input type="email" class="form-field" placeholder="david.chan@livi.com" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Waktu dihubungi -->
+                    <div class="input-group">
+                        <label class="input-label">Kapan kami bisa menghubungi Anda?</label>
+                        <div class="input-row">
+                            <div class="input-column">
+                                <input type="text" class="form-field" placeholder="2025-07-24" id="dateInput">
+                            </div>
+                            <div class="input-column">
+                                <select class="form-dropdown">
+                                    <option>Kapan saja</option>
+                                    <option>09:00–12:00</option>
+                                    <option>13:00–18:00</option>
+                                    <option>19:00–21:00</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bahasa -->
+                    <div class="input-row">
+                        <div class="input-column">
+                            <div class="input-group">
+                                <label class="input-label">Bahasa Kontak Pilihan <span
+                                        class="required-field">*</span></label>
+                                <select class="form-dropdown" required>
+                                    <option>Pilih</option>
+                                    <option>Inggris</option>
+                                    <option>Melayu</option>
+                                    <option>Mandarin</option>
+                                    <option>Kanton</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-column">
+                            <div class="input-group">
+                                <label class="input-label">Bahasa Komunikasi <span
+                                        class="required-field">*</span></label>
+                                <select class="form-dropdown" required>
+                                    <option>Pilih</option>
+                                    <option>Inggris</option>
+                                    <option>Melayu</option>
+                                    <option>Mandarin</option>
+                                    <option>Kanton</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produk -->
+                    <div class="input-group">
+                        <label class="input-label">Jenis Asuransi yang Anda minati? <span
+                                class="required-field">*</span></label>
+                        <div class="products-grid">
+                            <div class="product-option" onclick="selectProduct(this)">
+                                <div class="product-icon-wrapper">
+                                    <img src="./assets/images/icon-1.png" alt="">
+                                </div>
+                                <div>Asuransi Kesehatan</div>
+                            </div>
+                            <div class="product-option" onclick="selectProduct(this)">
+                                <div class="product-icon-wrapper">
+                                    <img src="./assets/images/icon-2.png" alt="">
+                                </div>
+                                <div>Asuransi Jiwa</div>
+                            </div>
+                            <div class="product-option" onclick="selectProduct(this)">
+                                <div class="product-icon-wrapper">
+                                    <img src="./assets/images/icon-3.png" alt="">
+                                </div>
+                                <div>Asuransi Tabungan</div>
+                            </div>
+                            <div class="product-option" onclick="selectProduct(this)">
+                                <div class="product-icon-wrapper">
+                                    <img src="./assets/images/icon-4.png" alt="">
+                                </div>
+                                <div>Perencanaan Pensiun</div>
+                            </div>
+                            <div class="product-option" onclick="selectProduct(this)">
+                                <div class="product-icon-wrapper">
+                                    <img src="./assets/images/icon-5.png"
+                                        alt="Perlindungan Kecelakaan / Tanggung Jawab Publik">
+                                </div>
+                                <div>Kecelakaan / Tanggung Jawab Publik</div>
+                            </div>
+                            <div class="product-option" onclick="selectProduct(this)">
+                                <div class="product-icon-wrapper">
+                                    <img src="./assets/images/icon-6.png" alt="Perlindungan Penyakit Kritis">
+                                </div>
+                                <div>Penyakit Kritis</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Info tambahan -->
+                    <div class="input-group">
+                        <label class="input-label">Informasi Tambahan (Opsional)</label>
+                        <textarea class="form-text-area" placeholder="Tulis informasi tambahan di sini" maxlength="500"
+                            onkeyup="updateCharCount(this)"></textarea>
+                        <div class="character-counter">0/500</div>
+                    </div>
+
+                    <!-- Kebijakan -->
+                    <div class="terms-disclaimer">
+                        <strong>Kebijakan Privasi & Ketentuan Hukum:</strong> Informasi pribadi Anda akan dikumpulkan,
+                        disimpan, digunakan, atau diungkapkan sesuai dengan Kebijakan Privasi kami. Silakan merujuk ke
+                        kebijakan untuk detailnya.
+                    </div>
+
+                    <div class="checkbox-section">
+                        <input type="checkbox" id="privacy" required>
+                        <label for="privacy" class="checkbox-label">
+                            Saya telah membaca dan menyetujui <a href="#">Pernyataan Kebijakan Privasi</a>, dan
+                            memberikan izin untuk penggunaan data saya sebagaimana dijelaskan.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-button">Kirim</button>
+                </form>
+            </div>
+
+            <!------------------ Formulir Janji Temu Pusat Layanan ----------------------->
+            <div class="form-content-area" id="serviceCenterForm" style="display: none;">
+                <div class="form-header">
+                    <h2>Janji Temu Pusat Layanan</h2>
+                    <p class="required-notice">* Wajib diisi</p>
+                </div>
+
+                <form id="appointmentForm">
+                    <div class="input-row">
+                        <div class="input-column">
+                            <div class="input-group">
+                                <label class="input-label">Nama Depan <span class="required-field">*</span></label>
+                                <input type="text" class="form-field" placeholder="Nama Depan" required>
+                            </div>
+                        </div>
+                        <div class="input-column">
+                            <div class="input-group">
+                                <label class="input-label">Nama Belakang <span class="required-field">*</span></label>
+                                <input type="text" class="form-field" placeholder="Nama Belakang" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Untuk menghindari LIVI NEOASIA meminta informasi keuangan pribadi**
+                            <span class="required-field">*</span></label>
+                        <p style="font-size: 14px; color: #6b7280; margin-bottom: 18px;">
+                            (Tidak termasuk nomor telepon / alamat / KTP / masa berlaku dokumen / keanggotaan LIVI
+                            NEOASIA
+                            Vitality atau informasi lain yang tercantum)
+                        </p>
+                        <div class="radio-section">
+                            <div class="radio-option">
+                                <input type="radio" id="yes2" name="disclosure2" value="yes" checked>
+                                <label for="yes2">Ya</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="no2" name="disclosure2" value="no">
+                                <label for="no2">Tidak</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Jenis Janji Temu <span class="required-field">*</span></label>
+                        <div class="radio-section" style="flex-direction: column; gap: 12px; align-items: flex-start;">
+                            <div class="radio-option">
+                                <input type="radio" id="service1" name="serviceType" value="service1" checked>
+                                <label for="service1">Pusat Layanan Pelanggan - Permintaan janji temu melalui telepon
+                                    (137) dan 3 layanan terkait</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="service2" name="serviceType" value="service2">
+                                <label for="service2">Pendaftaran/Perpanjangan/Pembatalan Polis - Janji temu pusat
+                                    layanan melalui telepon (137) dan 3 layanan terkait</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Tanggal & Waktu Janji Temu</label>
+                        <div class="input-row">
+                            <div class="input-column">
+                                <select class="form-dropdown">
+                                    <option>2025-06-05</option>
+                                    <option>2025-06-06</option>
+                                    <option>2025-06-07</option>
+                                    <option>2025-06-08</option>
+                                </select>
+                            </div>
+                            <div class="input-column">
+                                <select class="form-dropdown">
+                                    <option>15:00 - 16:00</option>
+                                    <option>16:00 - 17:00</option>
+                                    <option>17:00 - 18:00</option>
+                                    <option>14:00 - 15:00</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-column">
+                            <div class="input-group">
+                                <label class="input-label">Nomor Telepon Pelanggan <span
+                                        class="required-field">*</span></label>
+                                <div class="phone-input-group">
+                                    <select class="form-dropdown country-code">
+                                        <option>Kode Negara</option>
+                                        <option>+60</option>
+                                        <option>+65</option>
+                                        <option>+852</option>
+                                        <option>+86</option>
+                                    </select>
+                                    <input type="tel" class="form-field" placeholder="Nomor Telepon" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-column">
+                            <div class="input-group">
+                                <label class="input-label">Email Pelanggan <span class="required-field">*</span></label>
+                                <input type="email" class="form-field" placeholder="david.chan@livi.com" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Catatan Tambahan</label>
+                        <textarea class="form-text-area" placeholder="Tulis catatan tambahan di sini" maxlength="1000"
+                            onkeyup="updateCharCount2(this)"></textarea>
+                        <div class="character-counter">0/1000</div>
+                    </div>
+
+                    <div class="terms-disclaimer">
+                        <strong>Kebijakan Privasi & Pernyataan:</strong> Informasi pribadi Anda akan diproses sesuai
+                        dengan <em>Kebijakan Privasi</em> kami. Silakan baca kebijakan untuk informasi lebih lanjut.
+                    </div>
+
+                    <div class="checkbox-section">
+                        <input type="checkbox" id="privacy2" required>
+                        <label for="privacy2" class="checkbox-label">
+                            Saya menyetujui bahwa LIVI NEOASIA dapat mengumpulkan dan memproses informasi pribadi saya
+                            sesuai <a href="#">Pernyataan Kebijakan Privasi</a>.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-button">Kirim</button>
+                </form>
+            </div>
+
+
+            <!------------ Layanan Pelanggan & Masukan ----------->
+            <div class="form-content-area" id="feedbackForm" style="display: none;">
+                <div class="form-header">
+                    <h2>Layanan Pelanggan & Masukan</h2>
+                    <p>Pelanggan yang terhormat, silakan berikan masukan Anda untuk membantu kami meningkatkan kualitas
+                        layanan.</p>
+                    <p class="required-notice">* Wajib diisi</p>
+                </div>
+
+                <form id="feedbackMainForm">
+                    <div class="input-group">
+                        <label class="input-label">* Wajib diisi</label>
+                        <p style="font-size: 14px; color: #6b7280; margin-bottom: 18px;">
+                            Untuk menghindari LIVI NEOASIA meminta informasi keuangan pribadi Anda**<br>
+                            (tidak termasuk nomor telepon / alamat korespondensi / ID / masa berlaku dokumen /
+                            keanggotaan LIVI NEOASIA Vitality atau informasi lain yang disebutkan)
+                        </p>
+                        <div class="radio-section">
+                            <div class="radio-option">
+                                <input type="radio" id="yes3" name="disclosure3" value="yes" checked>
+                                <label for="yes3">Ya</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="no3" name="disclosure3" value="no">
+                                <label for="no3">Tidak</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-column">
+                            <div class="input-group">
+                                <label class="input-label">Nama Depan <span class="required-field">*</span></label>
+                                <input type="text" class="form-field" placeholder="Nama Depan" required>
+                            </div>
+                        </div>
+                        <div class="input-column">
+                            <div class="input-group">
+                                <label class="input-label">Nama Belakang <span class="required-field">*</span></label>
+                                <input type="text" class="form-field" placeholder="Nama Belakang" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-column">
+                            <div class="input-group">
+                                <label class="input-label">Nomor Telepon <span class="required-field">*</span></label>
+                                <div class="phone-input-group">
+                                    <select class="form-dropdown country-code">
+                                        <option>Kode Negara</option>
+                                        <option>+60</option>
+                                        <option>+65</option>
+                                        <option>+852</option>
+                                        <option>+86</option>
+                                    </select>
+                                    <input type="tel" class="form-field" placeholder="Nomor Telepon" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-column">
+                            <div class="input-group">
+                                <label class="input-label">Alamat Email <span class="required-field">*</span></label>
+                                <input type="email" class="form-field" placeholder="david.chan@livi.com" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Kapan Anda ingin kami menghubungi Anda?</label>
+                        <div class="input-row">
+                            <div class="input-column">
+                                <input type="text" class="form-field" placeholder="2025-07-24" id="feedbackDateInput">
+                            </div>
+                            <div class="input-column">
+                                <select class="form-dropdown">
+                                    <option>Silakan pilih waktu</option>
+                                    <option>Pagi 9:00-12:00</option>
+                                    <option>Siang 13:00-18:00</option>
+                                    <option>Malam 19:00-21:00</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Bahasa Komunikasi yang Diutamakan <span
+                                class="required-field">*</span></label>
+                        <select class="form-dropdown" required>
+                            <option>Silakan pilih</option>
+                            <option>Bahasa Inggris</option>
+                            <option>Bahasa Melayu</option>
+                            <option>Bahasa Mandarin</option>
+                            <option>Kanton</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Kategori Masukan <span class="required-field">*</span></label>
+                        <div class="radio-section" style="flex-direction: column; gap: 12px; align-items: flex-start;">
+                            <div class="radio-option">
+                                <input type="radio" id="feedback1" name="feedbackType" value="feedback1" checked>
+                                <label for="feedback1">Pertanyaan Umum</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="feedback2" name="feedbackType" value="feedback2">
+                                <label for="feedback2">Apresiasi</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="feedback3" name="feedbackType" value="feedback3">
+                                <label for="feedback3">Keluhan</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="feedback4" name="feedbackType" value="feedback4">
+                                <label for="feedback4">Saran Perbaikan</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Detail Tambahan</label>
+                        <textarea class="form-text-area" placeholder="Silakan isi detail Anda" maxlength="1500"
+                            onkeyup="updateCharCount3(this)"></textarea>
+                        <div class="character-counter">0/1500</div>
+                    </div>
+
+                    <div class="terms-disclaimer">
+                        <strong>Pernyataan Privasi:</strong> Semua informasi pribadi Anda akan diproses sesuai dengan
+                        Kebijakan Privasi kami. Silakan kunjungi www.livi.com untuk informasi lebih lanjut.
+                    </div>
+
+                    <div class="checkbox-section">
+                        <input type="checkbox" id="privacy3" required>
+                        <label for="privacy3" class="checkbox-label">
+                            Saya telah membaca dan menyetujui <a href="#">Pernyataan Pengumpulan Data Pribadi</a> dan
+                            memberi izin untuk memproses informasi yang disediakan.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-button">Kirim</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="section-footer">
+        <div class="footer-left">
+            <div class="footer-links">
+                <a href="#">Ketentuan</a><span>|</span>
+                <a href="#">Privasi</a><span>|</span>
+                <a href="#">Etika</a><span>|</span>
+                <a href="#">Panduan</a><span>|</span>
+                <a href="#">Cookie</a>
+            </div>
+        </div>
+
+        <div class="footer-center">
+            <div class="footer-copyright">
+                <span>© 2025 — LIVI NEOASIA GROUP LTD</span>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <a href="#"><img src="./assets/images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="./assets/images/ins.png" alt="Instagram"></a>
+            <a href="#"><img src="./assets/images/linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="./assets/images/ytb.png" alt="YouTube"></a>
+            <a href="#"><img src="./assets/images/wechat.png" alt="WeChat"></a>
+        </div>
+    </div>
+
+    <!-- script  -->
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/contact.js"></script>
+</body>
+
+</html>
