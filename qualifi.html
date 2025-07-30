@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Qualifications</title>
+    <link rel="stylesheet" href="./assets/css/demo.css" />
+    <style>
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="./assets/images/fx-logo.png" alt="FX8">
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#vision">愿景</a></li>
+                    <li><a href="#products">产品介绍</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                    <li><a href="#qualifications">公司资质</a></li>
+                    <li><a href="#whitepaper">白皮书</a></li>
+                    <li class="language-dropdown">
+                        <button class="dropdown-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i> 中文简体
+                        </button>
+                        <div class="dropdown-content" id="languageDropdown">
+                            <a href="#" onclick="changeLanguage('English')">English</a>
+                            <a href="#" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
+                            <a href="#" onclick="changeLanguage('中文')">中文（简体）</a>
+                            <a href="#" onclick="changeLanguage('中文')">中文（繁体）</a>
+                            <a href="#" onclick="changeLanguage('Tamil')">Bahasa Indonesia</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#download" class="download-btn fade-element">FX8app下载</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <h2>公司资质展示</h2>
+
+    <div class="">
+        <div class="image-grid">
+            <img src="./assets/images/info1.jpg" alt="Qualification 1" />
+            <img src="./assets/images/info2.jpg" alt="Qualification 2" />
+            <img src="./assets/images/info3.jpg" alt="Qualification 3" />
+        </div>
+    </div>
+
+</body>
+
+</html>
