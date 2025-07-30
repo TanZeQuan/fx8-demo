@@ -5,19 +5,19 @@
  }
 
  :root {
-     --primary-color: #6B46C1;
-     /* Vibrant purple */
-     --primary-dark: #553C9A;
-     /* Darker purple */
-     --accent-color: #9F7AEA;
-     /* Light purple accent */
+     --primary-color: #D97706;
+     /* Burnt orange */
+     --primary-dark: #B45309;
+     /* Darker amber */
+     --accent-color: #F59E0B;
+     /* Golden amber accent */
      --text-primary: #2D3748;
-     /* Dark gray for text */
+     /* Dark gray for text (unchanged) */
      --text-secondary: #718096;
-     /* Medium gray for secondary text */
-     --bg-gradient: linear-gradient(135deg, #6B46C1 0%, #805AD5 100%);
-     /* Purple gradient */
-     --card-shadow: 0 20px 25px -5px rgba(107, 70, 193, 0.2), 0 10px 10px -5px rgba(128, 90, 213, 0.1);
+     /* Medium gray for secondary text (unchanged) */
+     --bg-gradient: linear-gradient(135deg, #D97706 0%, #F59E0B 100%);
+     /* Orange gradient */
+     --card-shadow: 0 20px 25px -5px rgba(217, 119, 6, 0.2), 0 10px 10px -5px rgba(245, 158, 11, 0.1);
      --border-radius: 16px;
      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
      --container-padding: clamp(1rem, 4vw, 2rem);
@@ -48,6 +48,8 @@
      z-index: 1000;
      transition: var(--transition);
      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+     padding: clamp(0.1rem, 1.2vw, 0.6rem) clamp(0.5rem, 3vw, 1.5rem);
+     /* Smaller Top-Bottom / Left-Right */
  }
 
  #header.scrolled {
@@ -92,7 +94,7 @@
      text-decoration: none;
      color: white;
      font-weight: 500;
-     font-size: clamp(0.9rem, 1.5vw, 1rem);
+     font-size: clamp(1.1rem, 1.5vw, 1rem);
      transition: var(--transition);
      position: relative;
      white-space: nowrap;
@@ -303,9 +305,13 @@
  }
 
  .highlight {
-     color: #8b5cf6;
-     text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+     color: #F59E0B;
+     /* Yellow-orange */
+     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+     /* Subtle depth */
  }
+
+
 
  .hero-content p {
      font-size: clamp(1rem, 2.5vw, 1.2rem) !important;
@@ -317,7 +323,8 @@
  }
 
  .apply-btn {
-     background: linear-gradient(45deg, #8b5cf6, #a855f7);
+     background: linear-gradient(45deg, #FBBF24, #F59E0B);
+     /* Yellow-orange gradient */
      color: white;
      border: none;
      padding: clamp(0.8rem, 2.5vw, 1rem) clamp(2rem, 6vw, 3rem);
@@ -326,10 +333,12 @@
      border-radius: 50px;
      cursor: pointer;
      transition: all 0.3s ease;
-     box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+     box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3);
+     /* Soft yellow glow */
      margin-bottom: clamp(2rem, 6vw, 3rem);
      animation: floatDown 2s ease-in-out infinite;
  }
+
 
  @keyframes floatDown {
      0% {
@@ -345,9 +354,11 @@
      }
  }
 
+
  .apply-btn:hover {
      transform: translateY(-2px);
-     box-shadow: 0 6px 25px rgba(139, 92, 246, 0.4);
+     box-shadow: 0 6px 25px rgba(245, 158, 11, 0.4);
+     /* Stronger yellow-orange on hover */
  }
 
  .app-icons-section {
@@ -443,7 +454,7 @@
 
  .features-slider {
      display: flex;
-     animation: slide 30s linear infinite;
+     animation: slide 20s linear infinite;
      gap: clamp(1rem, 3vw, 2rem);
  }
 
@@ -563,12 +574,15 @@
      border-radius: 12px;
      cursor: pointer;
      transition: var(--transition);
-     box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+     box-shadow: 0 5px 20px rgba(245, 159, 11, 0.219);
+     /* Based on #F59E0B */
+
  }
 
  .start-button:hover {
      transform: translateY(-3px) scale(1.05);
-     box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+     box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4);
+     /* Based on #F59E0B */
  }
 
  .sidebar video {
@@ -581,7 +595,7 @@
  /* What Section */
  .what-section {
      padding: var(--section-padding) 0;
-     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     background: linear-gradient(135deg, #F59E0B 0%, #B45309 100%);
      color: white;
  }
 
@@ -828,8 +842,9 @@
  .app-logo {
      width: clamp(60px, 12vw, 80px);
      height: auto;
-     filter: brightness(0.8);
+     filter: brightness(0) grayscale(100%);
  }
+
 
  .app-title {
      font-size: clamp(1.2rem, 3vw, 1.5rem);
