@@ -38,8 +38,12 @@ img {
 
 /* ===== HEADER STYLES ===== */
 header {
-    background: rgba(0, 0, 0, 0.92);
-    backdrop-filter: blur(10px);
+    .logo img {
+  height: clamp(24px, 4vw, 32px);
+  width: auto;
+  transition: var(--transition);
+}
+
     position: fixed;
     width: 100%;
     top: 0;
