@@ -1,29 +1,27 @@
 /****************** RESET & BASE STYLES *******************/
-:root {
-    --primary-color: #FFD600;         /* 品牌主色（黄色强调） */
-    --secondary-color: #1A1A1A;       /* 卡片背景色 */
-    --accent-color: #00E676;          /* 盈利色/绿色强调 */
-    --danger-color: #FF3D00;          /* 下跌警告色 */
-    --text-color: #FFFFFF;            /* 主文字颜色 */
-    --subtext-color: #B3B3B3;         /* 副文字颜色 */
-    --light-bg: #1A1A1A;              /* 替代light背景为暗色 */
-    --dark-bg: #0D0D0D;               /* 页面整体背景 */
-    --border-color: #333333;          /* 边框颜色 */
-    --transition: all 0.3s ease;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #1a73e8;
+    --primary-dark: #1557b0;
+    --accent-color: #ff6b35;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --border-radius: 16px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
+    color: var(--text-primary);
     overflow-x: hidden;
-    background-color: var(--dark-bg);
 }
 
 .container {
@@ -64,17 +62,14 @@ nav {
     padding: 0 20px;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.logo img {
+    height: 40px;
+    width: auto;
+    transition: var(--transition);
 }
 
-.logo img {
-    width: 100px;
-    height: auto;
-    object-fit: contain;
-    cursor: pointer;
+.logo img:hover {
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -835,106 +830,107 @@ nav {
 
 /* what we do new */
 .how-section {
-  background: #2f2a18; /* Dark olive tone like your image */
-  color: #fff;
-  padding: 80px 20px;
+    background: #2f2a18;
+    /* Dark olive tone like your image */
+    color: #fff;
+    padding: 80px 20px;
 }
 
 .how-container {
-  max-width: 1300px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
 }
 
 .how-left {
-  flex: 1 1 50%;
-  display: flex;
-  justify-content: center;
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
 }
 
 .how-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 16px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
 }
 
 .how-right {
-  flex: 1 1 40%;
-  background: #4c451c;
-  padding: 40px;
-  border-radius: 30px;
-  color: #fff;
+    flex: 1 1 40%;
+    background: #4c451c;
+    padding: 40px;
+    border-radius: 30px;
+    color: #fff;
 }
 
 .how-title {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .how-description {
-  font-size: 16px;
-  line-height: 2;
+    font-size: 16px;
+    line-height: 2;
 }
 
 /*profit session */
 .profit-model-section {
-  background-color: #000;
-  padding: 80px 20px;
-  text-align: center;
-  color: #fff;
+    background-color: #000;
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
 }
 
 .profit-title {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 50px;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 50px;
 }
 
 .profit-cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
 .profit-card {
-  background: linear-gradient(to bottom, #756800, #665d00);
-  color: white;
-  width: 300px;
-  border-radius: 30px;
-  padding: 40px 25px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  transition: transform 0.3s ease;
+    background: linear-gradient(to bottom, #756800, #665d00);
+    color: white;
+    width: 300px;
+    border-radius: 30px;
+    padding: 40px 25px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: transform 0.3s ease;
 }
 
 .profit-card:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .profit-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 10px auto;
-  display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px auto;
+    display: block;
 }
 
 .profit-card-title {
-  font-size: 20px;
-  font-weight: bold;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .profit-description {
-  font-size: 14px;
-  line-height: 1.8;
-  color: #f2f2f2;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #f2f2f2;
 }
 
 
@@ -1235,7 +1231,7 @@ nav {
 .providers-area {
     margin-top: 30px;
     padding: 30px 0;
-     max-width: 1400px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -1294,129 +1290,129 @@ nav {
 /* download app */
 
 .app-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  padding: 40px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 40px;
+    flex-wrap: wrap;
 }
 
 .app-left-section {
-  text-align: center;
+    text-align: center;
 }
 
 .app-phone-img {
-  max-width: 500px;
-  margin-bottom: 20px;
+    max-width: 500px;
+    margin-bottom: 20px;
 }
 
 .app-info {
-  margin-top: 20px;
-  text-align: center;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .app-title-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 16px;
 }
 
 .app-logo {
-  height: 50px;
+    height: 50px;
 }
 
 .app-title {
-  font-size: 30px;
-  font-weight: bold;
-  margin-left:10px;
-  color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #fff;
 }
 
 .app-store-buttons img {
-  height: 40px;
-  margin: 0 5px;
+    height: 40px;
+    margin: 0 5px;
 }
 
 .app-right-section {
-  background-color: #3a3a00;
-  padding: 50px;
-  border-radius: 16px;
-  min-width: 420px;
-  margin-top:50px;
+    background-color: #3a3a00;
+    padding: 50px;
+    border-radius: 16px;
+    min-width: 420px;
+    margin-top: 50px;
 }
 
 .app-subtitle {
-  margin-bottom: 20px;
-  font-size: 18px;
-  color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #fff;
 }
 
 .app-wallet-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .app-wallet-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .app-wallet-item img {
-  height: 40px;
+    height: 40px;
 }
 
 /* footer copyright **/
 .footer-container {
-  color: #fff;
-  padding: 20px 50px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+    color: #fff;
+    padding: 20px 50px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
 }
 
 .footer-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .footer-logo img {
-  height: 40px;
+    height: 40px;
 }
 
 .footer-socials {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 .footer-social-link {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
 }
 
 .footer-social-link img {
-  height: 18px;
+    height: 18px;
 }
 
 .footer-divider {
-  border: 0;
-  border-top: 1px solid #444;
-  margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #444;
+    margin: 20px 0;
 }
 
 .footer-text {
-  line-height: 1.8;
-  color: #ccc;
-  text-align: left;
+    line-height: 1.8;
+    color: #ccc;
+    text-align: left;
 }
 
 
