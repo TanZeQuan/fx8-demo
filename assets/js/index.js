@@ -1,112 +1,132 @@
-// Mobile menu toggle
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navLinks = document.getElementById('navLinks');
-mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-    mobileMenuBtn.innerHTML = navLinks.classList.contains('show') ?
-        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+// Language change function
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        },
+        {
+            threshold: 0.2,
+        }
+    );
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 });
-
-// Language dropdown
-const languageBtn = document.getElementById('languageBtn');
-const languageDropdown = document.getElementById('languageDropdown');
-languageBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    languageDropdown.classList.toggle('show');
-    languageBtn.classList.toggle('active');
-});
-
-// Close dropdowns when clicking outside
-document.addEventListener('click', (e) => {
-    if (!e.target.closest('.language-dropdown')) {
-        languageDropdown.classList.remove('show');
-        languageBtn.classList.remove('active');
-    }
-});
-
-// Change language function
-function changeLanguage(language) {
-    languageBtn.innerHTML = `<i class="fas fa-globe"></i> ${language}`;
-    languageDropdown.classList.remove('show');
-    languageBtn.classList.remove('active');
-    console.log('Language changed to:', language);
-}
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('show');
-        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-    });
-});
-
 // Header scroll effect
-window.addEventListener('scroll', () => {
+function handleHeaderScroll() {
     const header = document.getElementById('header');
-    if (window.scrollY > 50) {
+    if (window.scrollY > 100) {
         header.classList.add('scrolled');
     } else {
         header.classList.remove('scrolled');
     }
-});
+}
+// Mobile menu toggle
+function toggleMobileMenu() {
+    const navLinks = document.getElementById('navLinks');
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const icon = mobileBtn.querySelector('i');
 
-// Scroll animations
-function animateOnScroll() {
-    const serviceCards = document.querySelectorAll('.about-service-card');
-    serviceCards.forEach((card, index) => {
-        const cardPosition = card.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.3;
-        if (cardPosition < screenPosition) {
-            card.style.opacity = '1';
-            card.style.transform = 'translateX(0)';
-            card.style.transitionDelay = `${index * 0.1}s`;
-        }
-    });
+    navLinks.classList.toggle('mobile-active');
+
+    if (navLinks.classList.contains('mobile-active')) {
+        icon.className = 'fas fa-times';
+    } else {
+        icon.className = 'fas fa-bars';
+    }
 }
 
-// Initialize animations
-window.addEventListener('load', () => {
-    animateOnScroll();
-});
-window.addEventListener('scroll', animateOnScroll);
+// Create floating particles
+function createParticle() {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop - 80,
-                behavior: 'smooth'
-            });
+    const size = Math.random() * 4 + 1;
+    particle.style.width = size + 'px';
+    particle.style.height = size + 'px';
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+    particle.style.animationDelay = Math.random() * 2 + 's';
+
+    document.getElementById('particles').appendChild(particle);
+
+    setTimeout(() => {
+        particle.remove();
+    }, 6000);
+}
+
+// Initialize everything when DOM is loaded
+document.addEventListener('DOMContentLoaded', function () {
+    // Header scroll effect
+    window.addEventListener('scroll', handleHeaderScroll);
+
+    // Mobile menu toggle
+    document.getElementById('mobileMenuBtn').addEventListener('click', toggleMobileMenu);
+
+    // Language dropdown functionality
+    const languageBtn = document.getElementById('languageBtn');
+    const languageDropdown = document.getElementById('languageDropdown');
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function (e) {
+        if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
+            languageDropdown.style.display = 'none';
         }
     });
-});
 
-// Restart animation when clicking on cards
-document.querySelectorAll('.asset-card').forEach(card => {
-    card.addEventListener('click', () => {
-        const liquid = card.querySelector('.liquid');
-        liquid.style.animation = 'none';
-        liquid.offsetHeight; // Trigger reflow
-        liquid.style.animation = null;
+    // Create particles continuously
+    setInterval(createParticle, 300);
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+// mobile toggle dropdown //
+document.addEventListener('DOMContentLoaded', function () {
+    const languageBtn = document.getElementById('languageBtn');
+    const languageDropdown = document.getElementById('languageDropdown');
+
+    // Toggle dropdown on button click
+    languageBtn.addEventListener('click', function (e) {
+        e.stopPropagation(); // Prevent click bubbling to document
+        const isVisible = languageDropdown.style.display === 'block';
+        languageDropdown.style.display = isVisible ? 'none' : 'block';
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function (e) {
+        if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
+            languageDropdown.style.display = 'none';
+        }
     });
 });
 
 // Add entrance animation
 document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.asset-card');
-    cards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        card.style.transition = 'all 0.6s ease';
+const cards = document.querySelectorAll('.asset-card');
+cards.forEach((card, index) => {
+card.style.opacity = '0';
+card.style.transform = 'translateY(30px)';
+card.style.transition = 'all 0.6s ease';
 
-        setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }, index * 200);
-    });
+setTimeout(() => {
+    card.style.opacity = '1';
+    card.style.transform = 'translateY(0)';
+}, index * 200);
+});
 });
 
 // Liquid animation function
@@ -181,47 +201,4 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.animate-zoom-rotate').forEach((el) => {
     observer.observe(el);
-});
-
-
-// 滚动动画控制器
-document.addEventListener('DOMContentLoaded', function () {
-    // 进度条动画
-    const progressBars = document.querySelectorAll('.avia-progress-fill');
-    progressBars.forEach(bar => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    bar.style.animation = `fillLiquid 2.5s ease-in-out forwards`;
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-        observer.observe(bar);
-    });
-
-
-    // 按钮波纹效果
-    const buttons = document.querySelectorAll('.apply-btn');
-    buttons.forEach(button => {
-        button.addEventListener('click', function (e) {
-            e.preventDefault();
-            const x = e.clientX - e.target.getBoundingClientRect().left;
-            const y = e.clientY - e.target.getBoundingClientRect().top;
-
-            const ripple = document.createElement('span');
-            ripple.classList.add('ripple');
-            ripple.style.left = `${x}px`;
-            ripple.style.top = `${y}px`;
-
-            this.appendChild(ripple);
-
-            setTimeout(() => {
-                ripple.remove();
-            }, 1000);
-        });
-    });
-
-    // 初始化所有动画
-    animateOnScroll();
 });
