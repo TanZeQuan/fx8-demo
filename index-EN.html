@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIVI NEOASIA GROUP LTD- EN version</title>
+    <title>FX8 EN- 胜者为王 | 专业交易平台</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/demo.css" />
 </head>
 
 <body>
@@ -15,32 +15,36 @@
     <header id="header">
         <nav class="container">
             <div class="logo">
-                <a href="./index-EN.html#home">
-                    <img src="./assets/images/logo.png" alt="AVIA ASIA Logo">
+                <a href="#home">
+                    <img src="./assets/images/fx-logo.png" alt="FX8">
                 </a>
             </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#vision">Vision</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="./qualifi.html">Certifications</a></li>
+                    <li><a href="#whitepaper">Whitepaper</a></li>
+                    <li class="language-dropdown">
+                        <button class="dropdown-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i> English
+                        </button>
+                        <div class="dropdown-content" id="languageDropdown">
+                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
+                            <a href="index-CN.html" onclick="changeLanguage('Simplified Chinese')">中文（简体）</a>
+                            <a href="index-TW.html" onclick="changeLanguage('Traditional Chinese')">中文（繁體）</a>
+                            <a href="index-JP.html" onclick="changeLanguage('Japanese')">Japan</a>
+                            <a href="index-KR.html" onclick="changeLanguage('Korean')">Korea</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#download" class="download-btn fade-element">Download FX8 APP</a>
+            </div>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#vision">Vision</a></li>
-                <li><a href="./product-EN.html">Products</a></li>
-                <li><a href="./contact-EN.html">Contact</a></li>
-                <li><a href="./credential-EN.html">Credentials</a></li>
-                <li><a href="./assets/images/avia-whitepaper-en.pdf">Whitepaper</a></li>
-                <li class="language-dropdown">
-                    <button class="dropdown-btn" id="languageBtn">
-                        <i class="fas fa-globe"></i> English
-                    </button>
-                    <div class="dropdown-content" id="languageDropdown">
-                        <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
-                        <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
-                        <a href="index-CN.html" onclick="changeLanguage('中文')">中文（简体）</a>
-                        <a href="index-TW.html" onclick="changeLanguage('中文')">中文（繁体）</a>
-                        <a href="index-IND.html" onclick="changeLanguage('Tamil')">Bahasa Indonesia</a>
-                    </div>
-                </li>
-            </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
@@ -48,389 +52,456 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero fade-element" id="home">
+        <div class="particles" id="particles"></div>
+
         <video class="hero-bg-video" autoplay muted loop playsinline>
-            <source src="./assets/images/banner-new.mp4" type="video/mp4" />
+            <source src="./assets/images/banner-bg-new.mp4" type="video/mp4" />
         </video>
 
-        <div class="container">
-            <div class="hero-content">
+        <div class="hero-container fade-element">
+            <div class="hero-content fade-element">
                 <h1>
-                    <span class="highlight">LIVI NEOASIA GROUP LTD</span><br />
-                    Make Every Policy A Valuable Asset
+                    <span class="highlight fade-element">FX8 — Trade to Win</span><br />
+                    Get <span class="highlight">$5 Bonus</span> Instantly for New Accounts
                 </h1>
-                <p>
-                    We are not "selling insurance"; we are building a new insurance finance
-                    system where everyone can participate and share in the returns.
-                </p>
-                <button class="apply-btn">Apply Now</button>
+                <p>A professional trading platform delivering a premium investment experience</p>
+                <button class="apply-btn fade-element" onclick="startTrading()">Start Trading Now</button>
+
+                <!-- App Icons Section -->
+                <div class="app-icons-section fade-element">
+                    <div class="app-icons-dock fade-element">
+                        <span class="app-icons-label">Wallets</span>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo1.png" alt="Wallet 1" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo2.png" alt="Wallet 2" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo3.png" alt="Wallet 3" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo4.png" alt="Wallet 4" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo5.png" alt="Wallet 5" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-
-    <!-- About Section -->
-    <div class="about-wrapper" id="about">
-        <div class="about-main-section">
-            <div class="about-text-content fade-element">
-                <h1 class="about-title">About Us</h1>
-                <h2 class="about-tagline fade-element">From Insurance to Asset Freedom</h2>
-
-                <p class="about-overview fade-element">
-                    We are an innovative platform integrating insurance and fintech, headquartered in Hong Kong with
-                    business across multiple Asian markets. Through partnerships with insurance companies, trust
-                    institutions, and regulatory sandboxes, we drive the digitalization of traditional policy assets and
-                    unlock long-term value.
-                </p>
-
-                <p class="about-company-details fade-element">
-                    The platform is part of the renowned British insurance group <span class="about-emphasis">Aviva
-                        plc</span>, with a history of <span class="about-emphasis">over 300 years</span> and more than
-                    <span class="about-emphasis">30 million customers</span> globally — a symbol of financial stability
-                    and trust.
+    <!-- Features Banner -->
+    <section class="features-banner fade-element">
+        <div class="features-slider fade-element">
+            <!-- Original Feature Cards -->
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i1.png" alt="IM">
+                </div>
+                <h3 class="feature-title">Built-in IM</h3>
+                <p class="feature-description">
+                    Integrated instant messaging for seamless communication with friends. Share market insights and
+                    investment ideas anytime, anywhere.
                 </p>
             </div>
 
-            <div class="about-image-content reveal-element">
-                <video class="about-hero-img reveal-element" autoplay muted loop playsinline>
-                    <source src="./assets/images/about-partA.mp4" type="video/mp4">
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i2.png" alt="Exchange Contracts">
+                </div>
+                <h3 class="feature-title">Exchange Contracts</h3>
+                <p class="feature-description">
+                    Connect to major global exchanges and access a variety of contracts, including index futures, for
+                    both hedging and speculative strategies.
+                </p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i3.png" alt="Wealth Management">
+                </div>
+                <h3 class="feature-title">Wealth Management</h3>
+                <p class="feature-description">
+                    Access diverse investment products tailored to your risk preferences. Get smart recommendations to
+                    grow your assets steadily through one unified platform.
+                </p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i4.png" alt="Copy Trading">
+                </div>
+                <h3 class="feature-title">Copy Trading</h3>
+                <p class="feature-description">
+                    Mirror the trades of top investors in real time. One-click strategy replication saves time and
+                    boosts returns with less effort.
+                </p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i5.png" alt="Demo Trading">
+                </div>
+                <h3 class="feature-title">Demo Trading</h3>
+                <p class="feature-description">
+                    Practice with virtual funds in a zero-risk environment. Ideal for beginners to learn and test
+                    trading strategies confidently.
+                </p>
+            </div>
+
+            <!-- Duplicated Cards for Seamless Looping -->
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i1.png" alt="IM">
+                </div>
+                <h3 class="feature-title">Built-in IM</h3>
+                <p class="feature-description">
+                    Integrated instant messaging for seamless communication with friends. Share market insights and
+                    investment ideas anytime, anywhere.
+                </p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i2.png" alt="Exchange Contracts">
+                </div>
+                <h3 class="feature-title">Exchange Contracts</h3>
+                <p class="feature-description">
+                    Connect to major global exchanges and access a variety of contracts, including index futures, for
+                    both hedging and speculative strategies.
+                </p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i3.png" alt="Wealth Management">
+                </div>
+                <h3 class="feature-title">Wealth Management</h3>
+                <p class="feature-description">
+                    Access diverse investment products tailored to your risk preferences. Get smart recommendations to
+                    grow your assets steadily through one unified platform.
+                </p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i4.png" alt="Copy Trading">
+                </div>
+                <h3 class="feature-title">Copy Trading</h3>
+                <p class="feature-description">
+                    Mirror the trades of top investors in real time. One-click strategy replication saves time and
+                    boosts returns with less effort.
+                </p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i5.png" alt="Demo Trading">
+                </div>
+                <h3 class="feature-title">Demo Trading</h3>
+                <p class="feature-description">
+                    Practice with virtual funds in a zero-risk environment. Ideal for beginners to learn and test
+                    trading strategies confidently.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulated Trading Analysis -->
+    <div class="side-container reveal-in">
+        <div class="sidebar reveal-in">
+            <div
+                style="background: var(--bg-gradient); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; overflow: hidden;">
+                <video src="./assets/images/trade-bg.mp4" autoplay muted loop playsinline
+                    style="max-width: 150%; max-height: 100%; border-radius: inherit; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);">
+                    Your browser does not support the video tag.
                 </video>
             </div>
         </div>
 
-        <div class="about-services-section fade-element">
-            <div class="about-service-card fade-element">
-                <div class="about-service-content">
-                    <h3 class="about-service-title">Digitalization of Insurance Assets</h3>
-                    <p class="about-service-text">
-                        Transform traditional savings policies, annuities, and other valuable assets into digital
-                        certificates using technology for more transparent management and flexible operations.
-                    </p>
-                </div>
-                <div class="about-service-icon">
-                    <img src="./assets/images/Group-1.png" alt="Digitalization Icon">
-                </div>
-            </div>
-
-            <div class="about-service-card align-right fade-element">
-                <div class="about-service-content">
-                    <h3 class="about-service-title">On-Chain Policy Value</h3>
-                    <p class="about-service-text">
-                        Each policy asset is certified on-chain, ensuring that every investment is backed by real
-                        assets—safe, reliable, and clearly valued.
-                    </p>
-                </div>
-                <div class="about-service-icon">
-                    <img src="./assets/images/Group-2.png" alt="Blockchain Icon">
-                </div>
-            </div>
-
-            <div class="about-service-card fade-element">
-                <div class="about-service-content">
-                    <h3 class="about-service-title">Empowering Individuals & Institutions</h3>
-                    <p class="about-service-text">
-                        Whether it's personal wealth planning or low-risk income needs of institutions, we enable
-                        participation in the long-term value growth of insurance finance.
-                    </p>
-                </div>
-                <div class="about-service-icon">
-                    <img src="./assets/images/Group-3.png" alt="Empowerment Icon">
-                </div>
-            </div>
+        <div class="main-content reveal-in">
+            <h1 class="main-title fade-element">Simulated Trading Analysis</h1>
+            <p class="main-description fade-element">
+                Based on virtual trading environments, the platform evaluates user activity, including engagement and
+                promotional impact, within simulation mode. Users who invite others or develop effective strategies may
+                earn rewards—bridging the gap between virtual experience and real-world benefits.
+            </p>
+            <button class="start-button" onclick="startTrading()">Start Trading Now</button>
         </div>
     </div>
 
-    <!-- What we do section -->
-    <section class="what-we-do-container reveal-element">
-        <div class="what-we-do">
-            <h2>What We Do</h2>
 
-            <video class="about-hero-img fade-element" autoplay muted loop playsinline>
-                <source src="./assets/images/about-partB.mp4" type="video/mp4">
-            </video>
-
-            <div class="cards">
-                <div class="card animate-zoom-rotate">
-                    <h3>Insurance Asset Digitalization:</h3>
-                    <p>Convert savings-type policies and annuities with cash value into digital assets for more
-                        transparent
-                        management and flexible operations.</p>
-                </div>
-                <div class="card animate-zoom-rotate">
-                    <h3>Empowering Individuals & Institutions:</h3>
-                    <p>Whether personal financial planning or institutional investment, you can participate in low-risk,
-                        long-term estate growth in insurance finance.</p>
-                </div>
-                <div class="card animate-zoom-rotate">
-                    <h3>On-Chain Policy Value:</h3>
-                    <p>Each policy is certified on-chain, with real, traceable assets—safe, reliable, and clearly
-                        valued.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- What We Do Section  END-->
-
-    <!-- Policy Session  END-->
-    <section class="session-bg">
-        <div class="policy-section ">
-            <!-- Left: Text Content -->
-            <div class="policy-text fade-element">
-                <h2>Turn Your Policy into<br><span>Cash Flow</span></h2>
-                <p>
-                    We provide a one-stop service around five key areas of policy assets:
-                    verification, value enhancement, circulation, inheritance, and liquidity.
-                    From valuation and digital registration to dividend withdrawal and liquidity
-                    management, we help you turn “dormant insurance” into a wealth tool
-                    that is accessible, configurable, and transferable.
+    <!-- About Us -->
+    <section class="what-section" id="about">
+        <div class="what-container fade-element">
+            <div class="what-left reveal-in">
+                <h2 class="what-title fade-element">What Do We Do?</h2>
+                <p class="what-description fade-element">
+                    We are building an all-in-one trading platform designed to empower investors through a comprehensive
+                    suite of financial tools. Our platform features simulated trading, instant messaging (IM),
+                    exchange-based contracts, wealth management, and copy trading—offering solutions for communication,
+                    strategy testing, execution, and asset growth across all investor levels.
                 </p>
+                <a href="#" class="what-button fade-element" onclick="startTrading()">Start Trading Now</a>
+                <div class="what-features fade-element">
+                    <div class="what-feature"><span class="circle-tick">✓</span> Smart Wallet</div>
+                    <div class="what-feature"><span class="circle-tick">✓</span> Profit Planner</div>
+                    <div class="what-feature"><span class="circle-tick">✓</span> Capital Flow</div>
+                    <div class="what-feature"><span class="circle-tick">✓</span> Fee Explorer</div>
+                </div>
             </div>
-
-            <!-- Right: Services Grid -->
-            <div class="policy-services">
-                <div class="policy-card animate-zoom-rotate">
-                    <img src="./assets/images/asset-i.png" alt="Confirm Icon" class="icon-img" />
-                    <h4>Asset Confirmation</h4>
-                    <p>Understand the real value of your policy and clarify your asset status.</p>
-                </div>
-
-                <div class="policy-card animate-zoom-rotate">
-                    <img src="./assets/images/resgi-i.png" alt="Register Icon" class="icon-img" />
-                    <h4>Rights Registration</h4>
-                    <p>Convert policies into manageable digital assets to enhance value and liquidity.</p>
-                </div>
-
-                <div class="policy-card animate-zoom-rotate">
-                    <img src="./assets/images/inc-i.png" alt="Income Icon" class="icon-img" />
-                    <h4>Income Plan</h4>
-                    <p>Flexible income plans with monthly or quarterly dividend withdrawals.</p>
-                </div>
-
-                <div class="policy-card animate-zoom-rotate">
-                    <img src="./assets/images/liquid-i.png" alt="Liquidity Icon" class="icon-img" />
-                    <h4>Liquidity Management</h4>
-                    <p>Support asset withdrawal, transfer, and collateralization with flexible control.</p>
-                </div>
-
-                <div class="policy-card animate-zoom-rotate">
-                    <img src="./assets/images/custo-i.png" alt="Inheritance Icon" class="icon-img" />
-                    <h4>Inheritance Planning</h4>
-                    <p>Ensure smooth transfer of your policy assets to beneficiaries or next of kin.</p>
+            <div class="what-right reveal-in">
+                <div class="media-display fade-element">
+                    <video class="financial-video fade-element" autoplay muted loop playsinline>
+                        <source src="./assets/images/we-bg.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <!-- Avia Session -->
-    <div class="avia-main reveal-element">
-        <div class="avia-wrapper">
-            <div class="avia-header reveal-element">
-                <div class="avia-brand">LIVI NEOASIA —</div>
-                <div class="avia-slogan">The Engine Behind Your Assets</div>
-                <div class="avia-intro">
-                    Your policy is more than just a contract — it is a potential asset. We help users
-                    confirm asset ownership, unlock returns, and manage liquidity, turning a static
-                    insurance product into a comfortable, accessible, and strategic wealth engine.
+    <!-- How It Works -->
+    <section class="how-section fade-element">
+        <div class="how-container fade-element">
+            <div class="how-left fade-element">
+                <img src="./assets/images/what-banner.png" alt="Chart UI" class="how-img" />
+            </div>
+            <div class="how-right reveal-in">
+                <h2 class="how-title fade-element">How It Works</h2>
+                <p class="how-description fade-element">
+                    Our platform is designed to be a comprehensive, multi-functional trading and financial services
+                    solution for investors.<br /><br />
+                    It integrates key features such as simulated trading, instant messaging (IM), exchange-based
+                    contract trading, wealth management, and copy trading.<br /><br />
+                    Whether you're a beginner or an experienced trader, our tools support communication, strategy
+                    development, execution, and long-term financial planning.
+                </p>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div
+                        style="background: rgba(26, 115, 232, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: rgb(121, 121, 204); font-weight: 500;">
+                        ▲ Professional Trading
+                    </div>
+                    <div
+                        style="background: rgba(255, 107, 53, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: var(--accent-color); font-weight: 500;">
+                        ▲ Secure & Reliable
+                    </div>
+                    <div
+                        style="background: rgba(52, 168, 83, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: #34a853; font-weight: 500;">
+                        ▲ User-Friendly
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="avia-stats">
-                <div class="avia-stat-card reveal-element" style="transition-delay: 0.1s">
-                    <div class="avia-progress-box">
-                        <div class="avia-progress-bg">
-                            <div class="avia-progress-fill red">
-                                <div class="shine"></div>
-                            </div>
 
-                            <div class="avia-percent">22%</div>
-                            <div class="avia-label">Advice Monthly Cash</div>
-                        </div>
-                    </div>
-                    <div class="avia-stat-text reveal-element" style="transition-delay: 0.1s"">
-                        Through analysis of investment and allocation strategies, policy
-                        assets deliver 22% more monthly withdrawable income
-                        compared to traditional methods — stable, sustainable, and
-                        ready for household cash flow support.
-                    </div>
+    <!-- Profit Model -->
+    <div class="core-vision-section fade-element" id="vision">
+        <div class="core-vision-container fade-element">
+            <div class="content-wrapper reveal-in">
+                <div class="section-header fade-element">
+                    <h1 class="section-title fade-element">Profit Model</h1>
+                    <p
+                        style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                        Diversified revenue streams that create win-win value for both users and the platform
+                    </p>
                 </div>
 
-                <div class=" avia-stat-card reveal-element" style="transition-delay: 0.1s"">
-                    <div class=" avia-progress-box">
-                        <div class="avia-progress-bg">
-                            <div class="avia-progress-fill blue"></div>
-                            <div class="shine"></div>
-                            <div class="avia-percent">72%</div>
-                            <div class="avia-label">72% of Long-term Policyholders</div>
-                        </div>
+                <div class="vision-grid fade-element">
+                    <div class="vision-item fade-element">
+                        <img src="./assets/images/profit-logo1.png" alt="Simulated Trading" class="vision-icon-img" />
+                        <h3 class="vision-title">Simulated Trading Commissions</h3>
+                        <p class="vision-description">
+                            Reward promoters and active users with virtual incentives or physical gifts for bringing in
+                            new users through simulated trading. Earn referral commissions from brokers on successful
+                            user account openings.
+                        </p>
                     </div>
-                    <div class="avia-stat-text">
-                        Data reveal significantly enhanced live savings cash value of
-                        policies held for more than 5 years — our core verification
-                        studies and yields discover an average 72% valuation
-                        up-shift.
-                    </div>
-                </div>
 
-                <div class="avia-stat-card">
-                    <div class="avia-progress-box">
-                        <div class="avia-progress-bg">
-                            <div class="avia-progress-fill green"></div>
-                            <div class="shine"></div>
-                            <div class="avia-percent">80%</div>
-                            <div class="avia-label">80% of 60+ years verified</div>
-                        </div>
+                    <div class="vision-item fade-element">
+                        <img src="./assets/images/profit-logo2.png" alt="Contract Trading" class="vision-icon-img" />
+                        <h3 class="vision-title fade-element">Contract Trading Commissions</h3>
+                        <p class="vision-description fade-element">
+                            Revenue is shared between the platform, exchanges, and brokers based on user trading fees. A
+                            performance-based commission may also be collected from profitable users.
+                        </p>
                     </div>
-                    <div class="avia-stat-text">
-                        When conducting second policy audits, we increase the legacy
-                        potential of estate liquidity, including portfolio excess,
-                        proper inheritance, and improved risk offsetting from
-                        valuable assets.
+
+                    <div class="vision-item fade-element">
+                        <img src="./assets/images/profit-logo3.png" alt="Copy Trading" class="vision-icon-img" />
+                        <h3 class="vision-title">Copy Trading Commissions</h3>
+                        <p class="vision-description">
+                            When followers earn profits from copy trading, the platform shares a portion with expert
+                            traders. Referrers also earn tiered rewards from the profits of referred users.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <!-- Footer Session -->
-    <div class="core-vision-section" id="vision">
-        <div class="core-vision-container">
-            <div class="content-wrapper">
-                <div class="section-header fade-element">
-                    <h1 class="section-title">Our Core Values & Future Vision</h1>
-                    <p class="section-subtitle">
-                        Together, we're shaping a new future for insurance assets—transforming</br>protection into
-                        sustainable, stable financial momentum for long-term </br>value growth and secure wealth
-                        succession.
-                    </p>
+    <!-- App Download Section -->
+    <div class="app-container fade-element">
+        <div class="app-left-section fade-element">
+            <img src="./assets/images/phone-mockup.png" alt="FX8 App Mockup" class="app-phone-img">
+            <div class="app-info">
+                <div class="app-title-row fade-element">
+                    <img src="./assets/images/fx-logo.png" alt="FX8 Logo" class="app-logo">
+                    <div class="app-title">Download the FX8 App</div>
                 </div>
-
-                <div class="vision-grid">
-                    <div class="vision-item fade-element">
-                        <div class="vision-image philosophy-theme">
-                            <img src="./assets/images/philo-logo.png" alt="Philosophy Icon" class="vision-icon-img" />
-                            <h3 class="vision-title">Our Philosophy</h3>
-                            <p class="vision-description">
-                                Built on integrity and driven by innovation, we are committed to providing every client
-                                with a transparent, secure, and efficient insurance asset management experience. We
-                                believe everyone deserves the best protection and long-term financial security.
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <div class="vision-item fade-element">
-                        <div class="vision-image vision-theme">
-                            <img src="./assets/images/vision-logo.png" alt="Philosophy Icon" class="vision-icon-img" />
-                            <h3 class="vision-title">Our Vision</h3>
-                            <p class="vision-description">
-                                To become Asia's leading platform for digital insurance asset management—pioneering the
-                                transformation of traditional insurance into smart liquid assets that unlock greater
-                                financial value from every policy.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="vision-item fade-element">
-                        <div class="vision-image commitment-theme">
-                            <img src="./assets/images/commit-logo.png" alt="Philosophy Icon" class="vision-icon-img" />
-                            <h3 class="vision-title">Our Commitment</h3>
-                            <p class="vision-description">
-                                We are dedicated to safeguarding client interests, adhering to regulatory standards, and
-                                integrating cutting-edge technology with professional service to build trusted,
-                                long-term wealth partnerships.
-                            </p>
-                        </div>
-                    </div>
+                <div class="app-store-buttons fade-element">
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
                 </div>
             </div>
+        </div>
 
-            <div class="providers-area">
-                <h3 class="providers-heading">Private health insurance providers include</h3>
-                <div class="logo-carousel fade-element">
-                    <div class="logo-track">
-                        <!-- First set of logos -->
-                        <div class="logo-item">
-                            <img src="./assets/images/logo1.png" alt="Aetna Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo2.png" alt="ALC Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo3.png" alt="Allianz Care Logo" width="100" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo4.png" alt="April Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo5.png" alt="AXA Logo" width="60" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo6.png" alt="Cigna Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo7.png" alt="FI Logo" width="60" height="40" />
-                        </div>
+        <div class="app-right-section fade-element">
+            <h3 class="app-subtitle">Recommended Crypto Wallets</h3>
+            <div class="app-wallet-list fade-element">
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo1.png" alt="ImToken Logo">
+                    <span>ImToken</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo2.png" alt="MetaMask Logo">
+                    <span>MetaMask</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo3.png" alt="TokenPocket Logo">
+                    <span>TokenPocket</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo4.png" alt="TP Wallet Logo">
+                    <span>TP Wallet</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo5.png" alt="Trust Wallet Logo">
+                    <span>Trust Wallet</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+            </div>
+        </div>
+    </div>
 
-                        <!-- Duplicate set for seamless loop -->
-                        <div class="logo-item">
-                            <img src="./assets/images/logo1.png" alt="Aetna Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo2.png" alt="ALC Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo3.png" alt="Allianz Care Logo" width="100" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo4.png" alt="April Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo5.png" alt="AXA Logo" width="60" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo6.png" alt="Cigna Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo7.png" alt="FI Logo" width="60" height="40" />
-                        </div>
-                    </div>
+
+    <!-- Partner Institutions -->
+    <div class="providers-area fade-element">
+        <h3 class="providers-heading fade-element">Our Partners</h3>
+        <div class="logo-carousel">
+            <div class="logo-track fade-element">
+                <!-- First set of logos -->
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo1.png" alt="Partner 1" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo2.png" alt="Partner 2" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo3.png" alt="Partner 3" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo4.png" alt="Partner 4" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo5.png" alt="Partner 5" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo6.png" alt="Partner 6" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo7.png" alt="Partner 7" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo8.png" alt="Partner 8" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo9.png" alt="Partner 9" />
+                </div>
+
+                <!-- Duplicate set for seamless loop -->
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo1.png" alt="Partner 1" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo2.png" alt="Partner 2" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo3.png" alt="Partner 3" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo4.png" alt="Partner 4" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo5.png" alt="Partner 5" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo6.png" alt="Partner 6" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo7.png" alt="Partner 7" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo8.png" alt="Partner 8" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo9.png" alt="Partner 9" />
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <div class="section-footer">
-        <div class="footer-left">
-            <div class="footer-links">
-                <a href="#">Terms</a><span>|</span>
-                <a href="#">Privacy</a><span>|</span>
-                <a href="#">Conduct</a><span>|</span>
-                <a href="#">Guide</a><span>|</span>
-                <a href="#">Cookies</a>
+    <footer class="footer-container">
+        <div class="footer-top fade-element">
+            <div class="footer-logo fade-element">
+                <img src="./assets/images/fx-logo.png" alt="FX8 Logo">
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="footer-social-link">
+                    <img src="./assets/images/telegram.png" alt="Telegram">
+                    Telegram
+                </a>
+                <a href="#" class="footer-social-link">
+                    <img src="./assets/images/whatsapp.png" alt="WhatsApp">
+                    WhatsApp
+                </a>
             </div>
         </div>
 
-        <div class="footer-center">
-            <div class="footer-copyright">
-                <span>© 2025 — LIVI NEOASIA GROUP LTD</span>
-            </div>
-        </div>
+        <hr class="footer-divider">
 
-        <div class="footer-right">
-            <a href="#"><img src="./assets/images/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="./assets/images/ins.png" alt="Instagram"></a>
-            <a href="#"><img src="./assets/images/linkedin.png" alt="LinkedIn"></a>
-            <a href="#"><img src="./assets/images/ytb.png" alt="YouTube"></a>
-            <a href="#"><img src="./assets/images/wechat.png" alt="WeChat"></a>
+        <div class="footer-text">
+            This website is jointly operated by FX8 and GAIN Global Markets, Inc. ("GGM"), both wholly owned
+            subsidiaries of StoneX Group Inc.
+            StoneX Financial Ltd is authorized and regulated by the Financial Conduct Authority (FCA) in the United
+            Kingdom (FCA Number: 446717).
+            GGM is regulated by the Cayman Islands Monetary Authority (License Number: 25033).
+            <br><br>
+            Before trading with any regulated entity under StoneX Group Inc., you should carefully read and consider all
+            terms and conditions, related appendices, disclosures, and policies.
+            <br><br>
+            © 2025 FX8.com. All rights reserved.
         </div>
-    </div>
+    </footer>
 
-    <!-- script  -->
-    <script src="./assets/js/index.js"></script>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/demo.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FX8 JP- 胜者为王 | 专业交易平台</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/demo.css" />
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="./assets/images/fx-logo.png" alt="FX8">
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">ホーム</a></li>
+                    <li><a href="#about">私たちについて</a></li>
+                    <li><a href="#vision">ビジョン</a></li>
+                    <li><a href="#products">製品紹介</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                    <li><a href="./qualifi.html">会社資格</a></li>
+                    <li><a href="#whitepaper">ホワイトペーパー</a></li>
+                    <li class="language-dropdown">
+                        <button class="dropdown-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i> 日本語
+                        </button>
+                        <div class="dropdown-content" id="languageDropdown">
+                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
+                            <a href="index-CN.html" onclick="changeLanguage('中文')">中文簡体字</a>
+                            <a href="index-TW.html" onclick="changeLanguage('中文')">中文繁體字</a>
+                            <a href="index-JP.html" onclick="changeLanguage('日本語')">日本語</a>
+                            <a href="index-KR.html" onclick="changeLanguage('韓国語')">韓国語</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#download" class="download-btn fade-element">FX8アプリをダウンロード</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero fade-element" id="home">
+        <div class="particles" id="particles"></div>
+
+        <video class="hero-bg-video" autoplay muted loop playsinline>
+            <source src="./assets/images/banner-bg-new.mp4" type="video/mp4" />
+        </video>
+
+        <div class="hero-container fade-element">
+            <div class="hero-content fade-element">
+                <h1>
+                    <span class="highlight fade-element">FX8. 勝者が王者</span><br />
+                    新規口座開設で<span class="highlight">5ドル</span>を即時プレゼント
+                </h1>
+                <p>プロフェッショナルな取引プラットフォームで、最高の投資体験を提供します</p>
+                <button class="apply-btn fade-element" onclick="startTrading()">今すぐ取引を始める</button>
+
+                <!-- App Icons Section -->
+                <div class="app-icons-section fade-element">
+                    <div class="app-icons-dock fade-element">
+                        <span class="app-icons-label">おすすめウォレット</span>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo1.png" alt="Wallet 1" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo2.png" alt="Wallet 2" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo3.png" alt="Wallet 3" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo4.png" alt="Wallet 4" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo5.png" alt="Wallet 5" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Banner -->
+    <section class="features-banner fade-element">
+        <div class="features-slider fade-element">
+            <!-- オリジナルの機能カード -->
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i1.png" alt="IM">
+                </div>
+                <h3 class="feature-title">IM</h3>
+                <p class="feature-description">内蔵チャット機能で、友人との情報共有がスムーズ。いつでもどこでも市場分析や投資アイデアを交換。</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i2.png" alt="取引所契約">
+                </div>
+                <h3 class="feature-title">取引所契約</h3>
+                <p class="feature-description">主要取引所と連携し、株価指数先物など多様な契約を提供。リスクヘッジや投機ニーズに対応。</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i3.png" alt="資産運用">
+                </div>
+                <h3 class="feature-title">資産運用</h3>
+                <p class="feature-description">多様な金融商品を統合し、リスク嗜好に応じてスマートに提案。一括で資産を計画し、安定的に成長。</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i4.png" alt="コピー取引">
+                </div>
+                <h3 class="feature-title">コピー取引</h3>
+                <p class="feature-description">プロの投資家の操作に追随。リアルタイムで取引を同期し、戦略をワンクリックでコピー。時間を節約し、効率的に収益向上。</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i5.png" alt="デモ取引">
+                </div>
+                <h3 class="feature-title">デモ取引</h3>
+                <p class="feature-description">仮想資金で取引練習。リスクゼロで取引戦略を学習。初心者にも優しいシミュレーション環境。</p>
+            </div>
+
+            <!-- 無限ループのためにカードを複製 -->
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i1.png" alt="IM">
+                </div>
+                <h3 class="feature-title">IM</h3>
+                <p class="feature-description">内蔵チャット機能で、友人との情報共有がスムーズ。いつでもどこでも市場分析や投資アイデアを交換。</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i2.png" alt="取引所契約">
+                </div>
+                <h3 class="feature-title">取引所契約</h3>
+                <p class="feature-description">主要取引所と連携し、株価指数先物など多様な契約を提供。リスクヘッジや投機ニーズに対応。</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i3.png" alt="資産運用">
+                </div>
+                <h3 class="feature-title">資産運用</h3>
+                <p class="feature-description">多様な金融商品を統合し、リスク嗜好に応じてスマートに提案。一括で資産を計画し、安定的に成長。</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i4.png" alt="コピー取引">
+                </div>
+                <h3 class="feature-title">コピー取引</h3>
+                <p class="feature-description">プロの投資家の操作に追随。リアルタイムで取引を同期し、戦略をワンクリックでコピー。時間を節約し、効率的に収益向上。</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i5.png" alt="デモ取引">
+                </div>
+                <h3 class="feature-title">デモ取引</h3>
+                <p class="feature-description">仮想資金で取引練習。リスクゼロで取引戦略を学習。初心者にも優しいシミュレーション環境。</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- デモ取引分析 -->
+    <div class="side-container reveal-in">
+        <div class="sidebar reveal-in">
+            <div
+                style="background: var(--bg-gradient); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; overflow: hidden;">
+                <video src="./assets/images/trade-bg.mp4" autoplay muted loop playsinline
+                    style="max-width: 150%; max-height: 100%; border-radius: inherit; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);">
+                    お使いのブラウザは video タグをサポートしていません。
+                </video>
+            </div>
+        </div>
+
+        <div class="main-content reveal-in">
+            <h1 class="main-title fade-element">デモ取引分析</h1>
+            <p class="main-description fade-element">
+                仮想取引環境に基づき、プラットフォームはユーザーの模擬操作によるトラフィックやプロモーション成果に応じて、
+                新規ユーザーの招待や優れた取引戦略に報酬を付与し、仮想体験を実際の収益へと転換します。
+            </p>
+            <button class="start-button" onclick="startTrading()">今すぐ取引を始める</button>
+        </div>
+    </div>
+
+
+    <!-- 私たちのサービスについて -->
+    <section class="what-section" id="about">
+        <div class="what-container fade-element">
+            <div class="what-left reveal-in">
+                <h2 class="what-title fade-element">私たちは何をしているのか？</h2>
+                <p class="what-description fade-element">
+                    当社が開発した株式取引アプリは、投資家のために統合された多機能な金融取引・サービスプラットフォームを構築することを目指しています。
+                    アプリは、デモ取引、インスタントメッセージング（IM）、取引所契約取引、資産運用、コピー取引などの主要機能を網羅し、
+                    情報共有、戦略実践、取引実行、資産管理といった多方面で、様々なレベルの投資家のニーズに応えます。
+                </p>
+                <a href="#" class="what-button fade-element" onclick="startTrading()">今すぐ取引を始める</a>
+                <div class="what-features fade-element">
+                    <div class="what-feature"><span class="circle-tick">✓</span> スマートウォレット</div>
+                    <div class="what-feature"><span class="circle-tick">✓</span> 利益プランナー</div>
+                    <div class="what-feature"><span class="circle-tick">✓</span> 資金フロー</div>
+                    <div class="what-feature"><span class="circle-tick">✓</span> 手数料探索ツール</div>
+                </div>
+            </div>
+            <div class="what-right reveal-in">
+                <div class="media-display fade-element">
+                    <video class="financial-video fade-element" autoplay muted loop playsinline>
+                        <source src="./assets/images/we-bg.mp4" type="video/mp4">
+                        お使いのブラウザは動画の再生をサポートしていません。
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- どのように実現するか -->
+    <section class="how-section fade-element">
+        <div class="how-container fade-element">
+            <div class="how-left fade-element">
+                <img src="./assets/images/what-banner.png" alt="Chart UI" class="how-img" />
+            </div>
+            <div class="how-right reveal-in">
+                <h2 class="how-title fade-element">どのように実現するか？</h2>
+                <p class="how-description fade-element">
+                    私たちが開発した株式取引アプリは、投資家のために統合的で多機能な金融取引・サービスプラットフォームの構築を目指しています。<br /><br />
+                    デモ取引、インスタントメッセージング（IM）、取引所契約取引、資産運用、コピー取引などの主要機能を備え、<br /><br />
+                    情報共有、戦略実践、取引執行、資産管理など、さまざまなレベルの投資家のニーズに応えます。
+                </p>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div
+                        style="background: rgba(26, 115, 232, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: rgb(121, 121, 204); font-weight: 500;">
+                        ▲プロフェッショナルトレーディング
+                    </div>
+                    <div
+                        style="background: rgba(255, 107, 53, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: var(--accent-color); font-weight: 500;">
+                        ▲安全で信頼できる
+                    </div>
+                    <div
+                        style="background: rgba(52, 168, 83, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: #34a853; font-weight: 500;">
+                        ▲ユーザーフレンドリー
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 収益モデル -->
+    <div class="core-vision-section fade-element" id="vision">
+        <div class="core-vision-container fade-element">
+            <div class="content-wrapper reveal-in">
+                <div class="section-header fade-element">
+                    <h1 class="section-title fade-element">収益モデル</h1>
+                    <p
+                        style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                        多様な収益チャネルで、ユーザーとプラットフォーム双方に価値を創出
+                    </p>
+                </div>
+
+                <div class="vision-grid fade-element">
+                    <div class="vision-item fade-element">
+                        <img src="./assets/images/profit-logo1.png" alt="デモ取引" class="vision-icon-img" />
+                        <h3 class="vision-title">デモ取引による報酬分配</h3>
+                        <p class="vision-description">
+                            デモ取引を通じて新規ユーザーを獲得または活性化し、プロモーターやアクティブユーザーにバーチャル報酬や実物インセンティブを提供。証券会社との口座開設連携により、成約ユーザーから紹介手数料を獲得。
+                        </p>
+                    </div>
+
+                    <div class="vision-item fade-element">
+                        <img src="./assets/images/profit-logo2.png" alt="契約取引" class="vision-icon-img" />
+                        <h3 class="vision-title fade-element">契約取引による収益分配</h3>
+                        <p class="vision-description fade-element">
+                            ユーザーの取引による手数料から、プラットフォームは取引所やブローカーと収益を分配。利益を得たユーザーからは、契約に基づき一部利益をコミッションとして徴収。
+                        </p>
+                    </div>
+
+                    <div class="vision-item fade-element">
+                        <img src="./assets/images/profit-logo3.png" alt="コピー取引" class="vision-icon-img" />
+                        <h3 class="vision-title">コピー取引による収益分配</h3>
+                        <p class="vision-description">
+                            フォロワーがコピー取引で利益を上げた場合、プラットフォームとトレードエキスパートが利益を分配。紹介者は、被紹介者のコピー取引収益に応じた階層型報酬を受け取る。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- アプリダウンロードエリア -->
+    <div class="app-container fade-element">
+        <div class="app-left-section fade-element">
+            <img src="./assets/images/phone-mockup.png" alt="FX8 アプリモックアップ" class="app-phone-img">
+            <div class="app-info">
+                <div class="app-title-row fade-element">
+                    <img src="./assets/images/fx-logo.png" alt="FX8 ロゴ" class="app-logo">
+                    <div class="app-title">アプリダウンロード</div>
+                </div>
+                <div class="app-store-buttons fade-element">
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+            </div>
+        </div>
+
+        <div class="app-right-section fade-element">
+            <h3 class="app-subtitle">おすすめの暗号資産ウォレット</h3>
+            <div class="app-wallet-list fade-element">
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo1.png" alt="ウォレットアイコン">
+                    <span>ImToken</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo2.png" alt="ウォレットアイコン">
+                    <span>MetaMask</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo3.png" alt="ウォレットアイコン">
+                    <span>TokenPocket</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo4.png" alt="ウォレットアイコン">
+                    <span>TP Wallet</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo5.png" alt="ウォレットアイコン">
+                    <span>Trust Wallet</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 提携機関 -->
+    <div class="providers-area fade-element">
+        <h3 class="providers-heading fade-element">提携機関</h3>
+        <div class="logo-carousel">
+            <div class="logo-track fade-element">
+                <!-- First set of logos -->
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo1.png" alt="パートナー1" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo2.png" alt="パートナー2" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo3.png" alt="パートナー3" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo4.png" alt="パートナー4" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo5.png" alt="パートナー5" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo6.png" alt="パートナー6" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo7.png" alt="パートナー7" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo8.png" alt="パートナー8" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo9.png" alt="パートナー9" />
+                </div>
+
+                <!-- Duplicate set for seamless loop -->
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo1.png" alt="パートナー1" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo2.png" alt="パートナー2" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo3.png" alt="パートナー3" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo4.png" alt="パートナー4" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo5.png" alt="パートナー5" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo6.png" alt="パートナー6" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo7.png" alt="パートナー7" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo8.png" alt="パートナー8" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo9.png" alt="パートナー9" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- フッター -->
+    <footer class="footer-container">
+        <div class="footer-top fade-element">
+            <div class="footer-logo fade-element">
+                <img src="./assets/images/fx-logo.png" alt="FX8 ロゴ">
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="footer-social-link">
+                    <img src="./assets/images/telegram.png" alt="Telegram">
+                    Telegram
+                </a>
+                <a href="#" class="footer-social-link">
+                    <img src="./assets/images/whatsapp.png" alt="WhatsApp">
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-text">
+            本サイトは、StoneXグループ（StoneX Group Inc.）の完全子会社であるFX8およびGAIN Global Markets, Inc.（以下「GGM」）によって共同運営されています。<br>
+            StoneX Financial Ltd.は、英国金融行動監視機構（FCA）に登録され、監督を受けています（FCA登録番号：446717）。<br>
+            GGMはケイマン諸島金融庁（CIMA）によって規制されています（ライセンス番号：25033）。<br>
+            StoneXグループのいずれかの規制対象会社と取引を行う前に、すべての利用規約、関連する付属書、通知、およびポリシーを慎重にお読みいただき、内容をご理解ください。<br><br>
+            著作権 © 2025 FX8.com
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/demo.js"></script>
+</body>
+
+</html>

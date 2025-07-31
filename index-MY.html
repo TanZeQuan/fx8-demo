@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="zh-Hans">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIVI NEOASIA GROUP LTD - MY version</title>
+    <title>FX8 MY- 胜者为王 | 专业交易平台</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/demo.css" />
 </head>
 
 <body>
@@ -15,32 +15,36 @@
     <header id="header">
         <nav class="container">
             <div class="logo">
-                <a href="./index-MY.html#home">
-                    <img src="./assets/images/logo.png" alt="Logo AVIA ASIA">
+                <a href="#home">
+                    <img src="./assets/images/fx-logo.png" alt="FX8">
                 </a>
             </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Utama</a></li>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#vision">Visi</a></li>
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="#contact">Hubungi</a></li>
+                    <li><a href="./qualifi.html">Kelayakan</a></li>
+                    <li><a href="#whitepaper">Kertas</a></li>
+                    <li class="language-dropdown">
+                        <button class="dropdown-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i> Bahasa
+                        </button>
+                        <div class="dropdown-content" id="languageDropdown">
+                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
+                            <a href="index-CN.html" onclick="changeLanguage('中文')">中文（简体）</a>
+                            <a href="index-TW.html" onclick="changeLanguage('中文')">中文（繁体）</a>
+                            <a href="index-JP.html" onclick="changeLanguage('日语')">Bahasa Jepun</a>
+                            <a href="index-KR.html" onclick="changeLanguage('韩语')">Bahasa Korea</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#download" class="download-btn fade-element">Download FX8 APP</a>
+            </div>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Utama</a></li>
-                <li><a href="#about">Tentang</a></li>
-                <li><a href="#vision">Visi</a></li>
-                <li><a href="./product-MY.html">Produk</a></li>
-                <li><a href="./contact-MY.html">Hubungi</a></li>
-                <li><a href="">Kelayakan</a></li> <!-- 或 Kredensial -->
-                <li><a href="./assets/images/avia-whitepaper-en.pdf">Whitepaper</a></li>
-                <li class="language-dropdown">
-                    <button class="dropdown-btn" id="languageBtn">
-                        <i class="fas fa-globe"></i> Malaysia
-                    </button>
-                    <div class="dropdown-content" id="languageDropdown">
-                        <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
-                        <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
-                        <a href="index-CN.html" onclick="changeLanguage('中文')">中文（简体）</a>
-                        <a href="index-TW.html" onclick="changeLanguage('中文')">中文（繁体）</a>
-                        <a href="index-IND.html" onclick="changeLanguage('Tamil')">Bahasa Indonesia</a>
-                    </div>
-                </li>
-            </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
@@ -48,387 +52,437 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero fade-element" id="home">
+        <div class="particles" id="particles"></div>
+
         <video class="hero-bg-video" autoplay muted loop playsinline>
-            <source src="./assets/images/banner-new.mp4" type="video/mp4" />
+            <source src="./assets/images/banner-bg-new.mp4" type="video/mp4" />
         </video>
 
-        <div class="container">
-            <div class="hero-content">
+        <div class="hero-container fade-element">
+            <div class="hero-content fade-element">
                 <h1>
-                    <span class="highlight">LIVI NEOASIA GROUP LTD</span><br />
-                    Jadikan Setiap Polisi Sebagai Aset Bernilai
+                    <span class="highlight fade-element">FX8. Pemenang Terbaik</span><br />
+                   Daftar & Dapat <span class="highlight">USD 5</span>
                 </h1>
-                <p>
-                    Kami bukan menjual "insurans"; kami sedang membina sistem kewangan insurans yang baharu
-                    di mana semua orang boleh menyertai dan berkongsi pulangan.
-                </p>
-                <button class="apply-btn">Mohon Sekarang</button>
+                <p>Platform dagangan profesional untuk pengalaman pelaburan unggul</p>
+                <button class="apply-btn fade-element" onclick="startTrading()">Mula Dagangan</button>
+
+                <!-- App Icons Section -->
+                <div class="app-icons-section fade-element">
+                    <div class="app-icons-dock fade-element">
+                        <span class="app-icons-label">Dompet Disyorkan</span>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo1.png" alt="Wallet 1" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo2.png" alt="Wallet 2" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo3.png" alt="Wallet 3" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo4.png" alt="Wallet 4" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo5.png" alt="Wallet 5" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
 
-    <!-- About Section -->
-    <div class="about-wrapper" id="about">
-        <div class="about-main-section">
-            <div class="about-text-content fade-element">
-                <h1 class="about-title">Tentang Kami</h1>
-                <h2 class="about-tagline fade-element">Daripada Insurans ke Kebebasan Aset</h2>
-
-                <p class="about-overview fade-element">
-                    Kami ialah platform inovatif yang menggabungkan insurans dan teknologi kewangan, berpangkalan di
-                    Hong Kong dan beroperasi di pelbagai pasaran Asia. Melalui kerjasama dengan syarikat insurans,
-                    institusi amanah dan kawasan perintis kawal selia, kami memacu pendigitalan aset polisi tradisional
-                    dan membuka nilai jangka panjang.
-                </p>
-
-                <p class="about-company-details fade-element">
-                    Platform ini adalah sebahagian daripada kumpulan insurans British yang terkenal <span
-                        class="about-emphasis">Aviva plc</span>, dengan sejarah melebihi <span
-                        class="about-emphasis">300 tahun</span> dan lebih daripada <span class="about-emphasis">30 juta
-                        pelanggan</span> di seluruh dunia — simbol kestabilan kewangan dan kepercayaan.
-                </p>
+    <!-- Features Banner -->
+    <section class="features-banner fade-element">
+        <div class="features-slider fade-element">
+            <!-- Kad Ciri Asal -->
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i1.png" alt="IM">
+                </div>
+                <h3 class="feature-title">IM</h3>
+                <p class="feature-description">Sistem pemesejan segera terbina dalam – berkomunikasi dengan rakan
+                    pelaburan, berkongsi pandangan pasaran bila-bila masa, di mana sahaja.</p>
             </div>
 
-            <div class="about-image-content reveal-element">
-                <video class="about-hero-img" autoplay muted loop playsinline>
-                    <source src="./assets/images/about-partA.mp4" type="video/mp4">
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i2.png" alt="Kontrak Bursa">
+                </div>
+                <h3 class="feature-title">Kontrak Bursa</h3>
+                <p class="feature-description">Disepadukan dengan pelbagai bursa utama, menawarkan pelbagai jenis
+                    kontrak seperti niaga hadapan indeks saham – sesuai untuk lindung nilai dan spekulasi.</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i3.png" alt="Pengurusan Kewangan">
+                </div>
+                <h3 class="feature-title">Pengurusan Kewangan</h3>
+                <p class="feature-description">Gabungan produk kewangan yang pelbagai, disesuaikan mengikut toleransi
+                    risiko anda – perancangan kekayaan sehenti untuk pertumbuhan aset yang stabil.</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i4.png" alt="Salin Dagangan">
+                </div>
+                <h3 class="feature-title">Salin Dagangan</h3>
+                <p class="feature-description">Ikuti langkah pakar pelaburan, salin strategi secara automatik dalam masa
+                    nyata – mudah dan menjimatkan masa, hasil maksimum dengan usaha minimum.</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i5.png" alt="Akaun Simulasi">
+                </div>
+                <h3 class="feature-title">Akaun Simulasi</h3>
+                <p class="feature-description">Berlatih menggunakan dana maya dalam persekitaran bebas risiko – tempat
+                    pembelajaran ideal untuk pedagang baharu.</p>
+            </div>
+
+            <!-- Kad Salinan untuk Gelung Lancar -->
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i1.png" alt="IM">
+                </div>
+                <h3 class="feature-title">IM</h3>
+                <p class="feature-description">Sistem pemesejan segera terbina dalam – berkomunikasi dengan rakan
+                    pelaburan, berkongsi pandangan pasaran bila-bila masa, di mana sahaja.</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i2.png" alt="Kontrak Bursa">
+                </div>
+                <h3 class="feature-title">Kontrak Bursa</h3>
+                <p class="feature-description">Disepadukan dengan pelbagai bursa utama, menawarkan pelbagai jenis
+                    kontrak seperti niaga hadapan indeks saham – sesuai untuk lindung nilai dan spekulasi.</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i3.png" alt="Pengurusan Kewangan">
+                </div>
+                <h3 class="feature-title">Pengurusan Kewangan</h3>
+                <p class="feature-description">Gabungan produk kewangan yang pelbagai, disesuaikan mengikut toleransi
+                    risiko anda – perancangan kekayaan sehenti untuk pertumbuhan aset yang stabil.</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i4.png" alt="Salin Dagangan">
+                </div>
+                <h3 class="feature-title">Salin Dagangan</h3>
+                <p class="feature-description">Ikuti langkah pakar pelaburan, salin strategi secara automatik dalam masa
+                    nyata – mudah dan menjimatkan masa, hasil maksimum dengan usaha minimum.</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i5.png" alt="Akaun Simulasi">
+                </div>
+                <h3 class="feature-title">Akaun Simulasi</h3>
+                <p class="feature-description">Berlatih menggunakan dana maya dalam persekitaran bebas risiko – tempat
+                    pembelajaran ideal untuk pedagang baharu.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Analisis Dagangan Simulasi -->
+    <div class="side-container reveal-in">
+        <div class="sidebar reveal-in">
+            <div
+                style="background: var(--bg-gradient); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; overflow: hidden;">
+                <video src="./assets/images/trade-bg.mp4" autoplay muted loop playsinline
+                    style="max-width: 150%; max-height: 100%; border-radius: inherit; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);">
+                    Your browser does not support the video tag.
                 </video>
             </div>
         </div>
 
-        <div class="about-services-section fade-element">
-            <div class="about-service-card fade-element">
-                <div class="about-service-content">
-                    <h3 class="about-service-title">Pendigitalan Aset Insurans</h3>
-                    <p class="about-service-text">
-                        Menukar polisi simpanan tradisional, anuiti dan aset bernilai lain menjadi sijil digital
-                        menggunakan teknologi untuk pengurusan yang lebih telus dan operasi yang fleksibel.
-                    </p>
-                </div>
-                <div class="about-service-icon">
-                    <img src="./assets/images/Group-1.png" alt="Ikon Digitalisasi">
-                </div>
-            </div>
-
-            <div class="about-service-card align-right fade-element">
-                <div class="about-service-content">
-                    <h3 class="about-service-title">Nilai Polisi Di Rantaian</h3>
-                    <p class="about-service-text">
-                        Setiap aset polisi disahkan di atas rantaian, memastikan setiap pelaburan disokong oleh aset
-                        sebenar — selamat, boleh dipercayai dan dinilai dengan jelas.
-                    </p>
-                </div>
-                <div class="about-service-icon">
-                    <img src="./assets/images/Group-2.png" alt="Ikon Blockchain">
-                </div>
-            </div>
-
-            <div class="about-service-card fade-element">
-                <div class="about-service-content">
-                    <h3 class="about-service-title">Memperkasa Individu & Institusi</h3>
-                    <p class="about-service-text">
-                        Sama ada perancangan kekayaan peribadi atau keperluan pendapatan berisiko rendah untuk
-                        institusi, kami membolehkan penyertaan dalam pertumbuhan nilai jangka panjang kewangan insurans.
-                    </p>
-                </div>
-                <div class="about-service-icon">
-                    <img src="./assets/images/Group-3.png" alt="Ikon Pemberdayaan">
-                </div>
-            </div>
+        <div class="main-content reveal-in">
+            <h1 class="main-title fade-element">Analisis Dagangan Simulasi</h1>
+            <p class="main-description fade-element">
+                Ganjaran diberikan berdasarkan prestasi simulasi dan keberkesanan promosi — tukarkan pengalaman maya
+                kepada pulangan sebenar.
+            </p>
+            <button class="start-button" onclick="startTrading()">Mula Berdagang Sekarang</button>
         </div>
     </div>
 
-    <!-- What we do section -->
-    <section class="what-we-do-container reveal-element">
-        <div class="what-we-do">
-            <h2>Apa Yang Kami Lakukan</h2>
-
-            <video class="about-hero-img" autoplay muted loop playsinline>
-                <source src="./assets/images/about-partB.mp4" type="video/mp4">
-            </video>
-
-            <div class="cards">
-                <div class="card animate-zoom-rotate">
-                    <h3>Pendigitalan Aset Insurans:</h3>
-                    <p>Tukar polisi simpanan dan anuiti dengan nilai tunai kepada aset digital untuk pengurusan yang
-                        lebih telus dan operasi fleksibel.</p>
-                </div>
-                <div class="card animate-zoom-rotate">
-                    <h3>Memperkasa Individu & Institusi:</h3>
-                    <p>Sama ada perancangan kewangan peribadi atau pelaburan institusi, anda boleh menyertai pertumbuhan
-                        harta jangka panjang dalam kewangan insurans.</p>
-                </div>
-                <div class="card animate-zoom-rotate">
-                    <h3>Nilai Polisi Atas Rantaian:</h3>
-                    <p>Setiap polisi disahkan atas rantaian dengan aset sebenar yang boleh dijejaki — selamat, boleh
-                        dipercayai dan jelas nilainya.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What We Do Section  END-->
-
-    <!-- Policy Session  END-->
-    <section class="session-bg">
-        <div class="policy-section ">
-            <!-- Left: Text Content -->
-            <div class="policy-text fade-element">
-                <h2>Tukar Polisi Anda kepada<br><span>Aliran Tunai</span></h2>
-                <p>
-                    Kami menyediakan perkhidmatan sehenti dalam lima bidang utama aset polisi:
-                    pengesahan, peningkatan nilai, edaran, pewarisan dan kecairan.
-                    Daripada penilaian dan pendaftaran digital kepada pengeluaran dividen dan pengurusan kecairan,
-                    kami membantu anda menukar “insurans tidak aktif” menjadi alat kekayaan
-                    yang boleh diakses, dikonfigurasikan dan dipindah milik.
+    <!-- Apa yang Kami Lakukan -->
+    <section class="what-section" id="about">
+        <div class="what-container fade-element">
+            <div class="what-left reveal-in">
+                <h2 class="what-title fade-element">Apa yang Kami Lakukan?</h2>
+                <p class="what-description fade-element">
+                    Kami membangunkan perisian dagangan saham yang bersepadu dan pelbagai fungsi, direka untuk
+                    menyediakan pelabur dengan platform komprehensif untuk dagangan dan perkhidmatan kewangan.
+                    Perisian ini merangkumi fungsi utama seperti dagangan simulasi, pemesejan segera (IM), kontrak
+                    bursa, pengurusan kewangan dan salin dagangan — memenuhi keperluan pelabur pelbagai tahap dalam
+                    komunikasi maklumat, strategi pelaburan, pelaksanaan dagangan dan pengurusan kekayaan.
                 </p>
+                <a href="#" class="what-button fade-element" onclick="startTrading()">Mula Berdagang Sekarang</a>
+                <div class="what-features fade-element">
+                    <div class="what-feature"><span class="circle-tick">✓</span> Dompet Pintar</div>
+                    <div class="what-feature"><span class="circle-tick">✓</span> Perancang Keuntungan</div>
+                    <div class="what-feature"><span class="circle-tick">✓</span> Aliran Dana</div>
+                    <div class="what-feature"><span class="circle-tick">✓</span> Penjelajah Yuran</div>
+                </div>
             </div>
-
-            <!-- Right: Services Grid -->
-            <div class="policy-services">
-                <div class="policy-card animate-zoom-rotate">
-                    <img src="./assets/images/asset-i.png" alt="Ikon Pengesahan" class="icon-img" />
-                    <h4>Pengesahan Aset</h4>
-                    <p>Kenal pasti nilai sebenar polisi anda dan ketahui status aset anda.</p>
-                </div>
-
-                <div class="policy-card animate-zoom-rotate">
-                    <img src="./assets/images/resgi-i.png" alt="Ikon Pendaftaran" class="icon-img" />
-                    <h4>Pendaftaran Hak</h4>
-                    <p>Tukar polisi kepada aset digital yang boleh diurus bagi meningkatkan nilai dan kecairan.</p>
-                </div>
-
-                <div class="policy-card animate-zoom-rotate">
-                    <img src="./assets/images/inc-i.png" alt="Ikon Pendapatan" class="icon-img" />
-                    <h4>Pelan Pendapatan</h4>
-                    <p>Pelan pendapatan fleksibel dengan pengeluaran dividen bulanan atau suku tahunan.</p>
-                </div>
-
-                <div class="policy-card animate-zoom-rotate">
-                    <img src="./assets/images/liquid-i.png" alt="Ikon Kecairan" class="icon-img" />
-                    <h4>Pengurusan Kecairan</h4>
-                    <p>Sokong pengeluaran, pemindahan, dan cagaran aset dengan kawalan yang fleksibel.</p>
-                </div>
-
-                <div class="policy-card animate-zoom-rotate">
-                    <img src="./assets/images/custo-i.png" alt="Ikon Pewarisan" class="icon-img" />
-                    <h4>Perancangan Pewarisan</h4>
-                    <p>Pastikan pemindahan aset polisi anda berjalan lancar kepada waris atau penerima manfaat.</p>
+            <div class="what-right reveal-in">
+                <div class="media-display fade-element">
+                    <video class="financial-video fade-element" autoplay muted loop playsinline>
+                        <source src="./assets/images/we-bg.mp4" type="video/mp4">
+                        Penyemak imbas anda tidak menyokong main semula video.
+                    </video>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Avia Session -->
-    <div class="avia-main reveal-element">
-        <div class="avia-wrapper">
-            <div class="avia-header reveal-element">
-                <div class="avia-brand">LIVI NEOASIA —</div>
-                <div class="avia-slogan">Enjin di Sebalik Aset Anda</div>
-                <div class="avia-intro">
-                    Polisi anda lebih daripada sekadar kontrak — ia adalah potensi aset.
-                    Kami membantu pengguna mengesahkan pemilikan aset, membuka pulangan,
-                    dan mengurus kecairan, menukar produk insurans statik kepada enjin kekayaan
-                    yang selesa, boleh diakses dan strategik.
-                </div>
+
+    <!-- Bagaimana Ia Berfungsi -->
+    <section class="how-section fade-element">
+        <div class="how-container fade-element">
+            <div class="how-left fade-element">
+                <img src="./assets/images/what-banner.png" alt="Carta Dagangan" class="how-img" />
             </div>
-
-            <div class="avia-stats">
-                <div class="avia-stat-card reveal-element" style="transition-delay: 0.1s">
-                    <div class="avia-progress-box">
-                        <div class="avia-progress-bg">
-                            <div class="avia-progress-fill red"></div>
-                            <div class="shine"></div>
-                            <div class="avia-percent">22%</div>
-                            <div class="avia-label">Nasihat Pendapatan Bulanan</div>
-                        </div>
+            <div class="how-right reveal-in">
+                <h2 class="how-title fade-element">Bagaimana Ia Berfungsi?</h2>
+                <p class="how-description fade-element">
+                    Kami membangunkan perisian dagangan saham bersepadu dan pelbagai fungsi untuk menyediakan pelabur
+                    dengan platform kewangan yang komprehensif.<br /><br />
+                    Perisian ini merangkumi dagangan simulasi, pemesejan segera (IM), kontrak bursa, pengurusan
+                    kewangan, dan fungsi salin dagangan.<br /><br />
+                    Ia memenuhi keperluan pelabur dari pelbagai peringkat, termasuk komunikasi maklumat, pelaksanaan
+                    strategi, urus niaga, dan pengurusan kekayaan.
+                </p>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div
+                        style="background: rgba(26, 115, 232, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: rgb(121, 121, 204); font-weight: 500;">
+                        ▲ Dagangan Profesional
                     </div>
-                    <div class="avia-stat-text reveal-element" style="transition-delay: 0.1s"">
-                    Melalui analisis strategi pelaburan dan peruntukan, aset polisi
-                    memberikan 22% lebih pendapatan bulanan boleh dikeluarkan
-                    berbanding kaedah tradisional — stabil, mampan dan
-                    sedia untuk menyokong aliran tunai isi rumah.
-                </div>
-            </div>
-
-            <div class=" avia-stat-card reveal-element" style="transition-delay: 0.1s"">
-                <div class=" avia-progress-box">
-                        <div class="avia-progress-bg">
-                            <div class="avia-progress-fill blue"></div>
-                            <div class="shine"></div>
-                            <div class="avia-percent">72%</div>
-                            <div class="avia-label">72% Pemegang Polisi Jangka Panjang</div>
-                        </div>
+                    <div
+                        style="background: rgba(255, 107, 53, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: var(--accent-color); font-weight: 500;">
+                        ▲ Selamat dan Boleh Dipercayai
                     </div>
-                    <div class="avia-stat-text">
-                        Data menunjukkan peningkatan besar dalam nilai tunai simpanan
-                        polisi yang dipegang lebih daripada 5 tahun — kajian pengesahan dan hasil
-                        kami menemui purata peningkatan penilaian sebanyak 72%.
-                    </div>
-                </div>
-
-                <div class="avia-stat-card">
-                    <div class="avia-progress-box">
-                        <div class="avia-progress-bg">
-                            <div class="avia-progress-fill green"></div>
-                            <div class="shine"></div>
-                            <div class="avia-percent">80%</div>
-                            <div class="avia-label">80% Berumur 60+ Disahkan</div>
-                        </div>
-                    </div>
-                    <div class="avia-stat-text">
-                        Dalam audit polisi kedua, kami meningkatkan potensi pewarisan
-                        kecairan harta pusaka, termasuk lebihan portfolio,
-                        pewarisan yang sesuai, dan pengimbangan risiko yang lebih baik
-                        daripada aset bernilai.
+                    <div
+                        style="background: rgba(52, 168, 83, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: #34a853; font-weight: 500;">
+                        ▲ Mesra Pengguna
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Footer Session -->
-    <div class="core-vision-section" id="vision">
-        <div class="core-vision-container">
-            <div class="content-wrapper">
+    <!-- Model Keuntungan -->
+    <div class="core-vision-section fade-element" id="vision">
+        <div class="core-vision-container fade-element">
+            <div class="content-wrapper reveal-in">
                 <div class="section-header fade-element">
-                    <h1 class="section-title">Nilai Teras & Visi Masa Depan Kami</h1>
-                    <p class="section-subtitle">
-                        Bersama-sama, kita membentuk masa depan baharu bagi aset insurans—menukar</br>perlindungan
-                        kepada
-                        momentum kewangan mampan dan stabil untuk pertumbuhan nilai jangka panjang dan</br>perwarisan
-                        kekayaan yang selamat.
+                    <h1 class="section-title fade-element">Model Keuntungan</h1>
+                    <p
+                        style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                        Pelbagai saluran pendapatan untuk mewujudkan nilai menang-menang bagi pengguna dan platform
                     </p>
                 </div>
 
-                <div class="vision-grid">
+                <div class="vision-grid fade-element">
                     <div class="vision-item fade-element">
-                        <div class="vision-image philosophy-theme">
-                            <img src="./assets/images/philo-logo.png" alt="Ikon Falsafah" class="vision-icon-img" />
-                            <h3 class="vision-title">Falsafah Kami</h3>
-                            <p class="vision-description">
-                                Dibina atas integriti dan didorong oleh inovasi, kami komited untuk menyediakan
-                                pengalaman
-                                pengurusan aset insurans yang telus, selamat dan cekap kepada setiap pelanggan. Kami
-                                percaya semua orang layak menerima perlindungan terbaik dan keselamatan kewangan jangka
-                                panjang.
-                            </p>
-                        </div>
+                        <img src="./assets/images/profit-logo1.png" alt="Dagangan Simulasi" class="vision-icon-img" />
+                        <h3 class="vision-title">Komisen Dagangan Simulasi</h3>
+                        <p class="vision-description">
+                            Ganjaran maya atau subsidi diberikan kepada pengguna aktif atau penaja yang membawa pengguna
+                            baharu melalui dagangan simulasi; pendapatan komisen diperoleh daripada pendaftaran akaun
+                            broker melalui saluran platform.
+                        </p>
                     </div>
 
                     <div class="vision-item fade-element">
-                        <div class="vision-image vision-theme">
-                            <img src="./assets/images/vision-logo.png" alt="Ikon Visi" class="vision-icon-img" />
-                            <h3 class="vision-title">Visi Kami</h3>
-                            <p class="vision-description">
-                                Untuk menjadi platform utama Asia dalam pengurusan aset insurans digital—
-                                menerajui transformasi insurans tradisional kepada aset cair pintar
-                                yang membuka nilai kewangan lebih besar daripada setiap polisi.
-                            </p>
-                        </div>
+                        <img src="./assets/images/profit-logo2.png" alt="Dagangan Kontrak" class="vision-icon-img" />
+                        <h3 class="vision-title fade-element">Komisen Dagangan Kontrak</h3>
+                        <p class="vision-description fade-element">
+                            Apabila pengguna menjalankan dagangan dan dikenakan yuran transaksi, platform akan berkongsi
+                            hasil tersebut bersama bursa dan broker; sebahagian keuntungan pengguna juga akan dikenakan
+                            komisen mengikut perjanjian.
+                        </p>
                     </div>
 
                     <div class="vision-item fade-element">
-                        <div class="vision-image commitment-theme">
-                            <img src="./assets/images/commit-logo.png" alt="Ikon Komitmen" class="vision-icon-img" />
-                            <h3 class="vision-title">Komitmen Kami</h3>
-                            <p class="vision-description">
-                                Kami berdedikasi untuk menjaga kepentingan pelanggan, mematuhi piawaian kawal selia,
-                                dan menggabungkan teknologi canggih dengan perkhidmatan profesional
-                                untuk membina perkongsian kekayaan jangka panjang yang dipercayai.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="providers-area">
-                <h3 class="providers-heading">Penyedia insurans kesihatan swasta termasuk</h3>
-                <div class="logo-carousel fade-element">
-                    <div class="logo-track">
-                        <!-- First set of logos -->
-                        <div class="logo-item">
-                            <img src="./assets/images/logo1.png" alt="Logo Aetna" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo2.png" alt="Logo ALC" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo3.png" alt="Logo Allianz Care" width="100" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo4.png" alt="Logo April" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo5.png" alt="Logo AXA" width="60" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo6.png" alt="Logo Cigna" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo7.png" alt="Logo FI" width="60" height="40" />
-                        </div>
-
-                        <!-- Duplicate set for seamless loop -->
-                        <div class="logo-item">
-                            <img src="./assets/images/logo1.png" alt="Aetna Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo2.png" alt="ALC Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo3.png" alt="Allianz Care Logo" width="100" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo4.png" alt="April Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo5.png" alt="AXA Logo" width="60" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo6.png" alt="Cigna Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo7.png" alt="FI Logo" width="60" height="40" />
-                        </div>
+                        <img src="./assets/images/profit-logo3.png" alt="Dagangan Ikut" class="vision-icon-img" />
+                        <h3 class="vision-title">Komisen Dagangan Ikut</h3>
+                        <p class="vision-description">
+                            Keuntungan daripada pengguna yang mengikuti pedagang profesional akan dikongsi antara
+                            platform dan pedagang; penaja akan menerima ganjaran berperingkat berdasarkan keuntungan
+                            pengikut yang dirujuk.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="section-footer">
-        <div class="footer-left">
-            <div class="footer-links">
-                <a href="#">Terma</a><span>|</span>
-                <a href="#">Privasi</a><span>|</span>
-                <a href="#">Etika</a><span>|</span>
-                <a href="#">Panduan</a><span>|</span>
-                <a href="#">Cookies</a>
+    <!-- Muat Turun Aplikasi -->
+    <div class="app-container fade-element">
+        <div class="app-left-section fade-element">
+            <img src="./assets/images/phone-mockup.png" alt="FX8 Paparan Aplikasi" class="app-phone-img">
+            <div class="app-info">
+                <div class="app-title-row fade-element">
+                    <img src="./assets/images/fx-logo.png" alt="Logo FX8" class="app-logo">
+                    <div class="app-title">Muat Turun APP</div>
+                </div>
+                <div class="app-store-buttons fade-element">
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
             </div>
         </div>
 
-        <div class="footer-center">
-            <div class="footer-copyright">
-                <span>© 2025 — LIVI NEOASIA GROUP LTD</span>
+        <div class="app-right-section fade-element">
+            <h3 class="app-subtitle">Cadangan Dompet Kripto untuk Dimuat Turun</h3>
+            <div class="app-wallet-list fade-element">
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo1.png" alt="Ikon Dompet">
+                    <span>ImToken</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo2.png" alt="Ikon Dompet">
+                    <span>MetaMask</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo3.png" alt="Ikon Dompet">
+                    <span>TokenPocket</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo4.png" alt="Ikon Dompet">
+                    <span>TP Wallet</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo5.png" alt="Ikon Dompet">
+                    <span>Trust Wallet</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
             </div>
-        </div>
-
-        <div class="footer-right">
-            <a href="#"><img src="./assets/images/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="./assets/images/ins.png" alt="Instagram"></a>
-            <a href="#"><img src="./assets/images/linkedin.png" alt="LinkedIn"></a>
-            <a href="#"><img src="./assets/images/ytb.png" alt="YouTube"></a>
-            <a href="#"><img src="./assets/images/wechat.png" alt="WeChat"></a>
         </div>
     </div>
 
 
-    <!-- script  -->
-    <script src="./assets/js/index.js"></script>
+    <!-- Rakan Kerjasama -->
+    <div class="providers-area fade-element">
+        <h3 class="providers-heading fade-element">Rakan Kerjasama</h3>
+        <div class="logo-carousel">
+            <div class="logo-track fade-element">
+                <!-- Set pertama logo -->
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo1.png" alt="Rakan 1" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo2.png" alt="Rakan 2" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo3.png" alt="Rakan 3" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo4.png" alt="Rakan 4" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo5.png" alt="Rakan 5" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo6.png" alt="Rakan 6" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo7.png" alt="Rakan 7" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo8.png" alt="Rakan 8" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo9.png" alt="Rakan 9" />
+                </div>
+
+                <!-- Set pendua untuk gelung lancar -->
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo1.png" alt="Rakan 1" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo2.png" alt="Rakan 2" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo3.png" alt="Rakan 3" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo4.png" alt="Rakan 4" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo5.png" alt="Rakan 5" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo6.png" alt="Rakan 6" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo7.png" alt="Rakan 7" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo8.png" alt="Rakan 8" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo9.png" alt="Rakan 9" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pengaki Kaki (Footer) -->
+    <footer class="footer-container">
+        <div class="footer-top fade-element">
+            <div class="footer-logo fade-element">
+                <img src="./assets/images/fx-logo.png" alt="Logo FX8">
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="footer-social-link">
+                    <img src="./assets/images/telegram.png" alt="Telegram">
+                    Telegram
+                </a>
+                <a href="#" class="footer-social-link">
+                    <img src="./assets/images/whatsapp.png" alt="WhatsApp">
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-text">
+            Laman web ini dikendalikan bersama oleh FX8 dan GAIN Global Markets, Inc. ("GGM"), anak syarikat milik penuh
+            di bawah StoneX Group Inc.<br>
+            StoneX Financial Ltd. didaftarkan dan dikawal selia oleh Financial Conduct Authority (FCA) di United Kingdom
+            (Nombor FCA: 446717).<br>
+            GGM dikawal selia oleh Pihak Berkuasa Kewangan Kepulauan Cayman (Nombor Lesen: 25033).<br>
+            Sebelum membuat keputusan untuk berdagang dengan mana-mana entiti yang dikawal selia di bawah StoneX Group
+            Inc., anda hendaklah membaca dan mempertimbangkan semua terma dan syarat, lampiran berkaitan, notis dan
+            dasar yang berkenaan.
+            <br><br>
+            Hak Cipta © 2025 FX8.com
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/demo.js"></script>
 </body>
 
 </html>

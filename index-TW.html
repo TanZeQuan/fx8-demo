@@ -1,47 +1,49 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hans">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIVI NEOASIA GROUP LTD - TW vesion</title>
+    <title>FX8 TW- 胜者为王 | 专业交易平台</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/demo.css" />
 </head>
 
-
 <body>
-    <!-- Header Section -->
+    <!-- 頁首區塊 -->
     <header id="header">
         <nav class="container">
             <div class="logo">
-                <a href="./index-TW.html#home">
-                    <img src="./assets/images/logo.png" alt="LIVI NEOASIA GROUP LTD 標誌">
+                <a href="#home">
+                    <img src="./assets/images/fx-logo.png" alt="FX8">
                 </a>
             </div>
-
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">首頁</a></li>
-                <li><a href="#about">關於我們</a></li>
-                <li><a href="#vision">願景</a></li>
-                <li><a href="./product-TW.html">產品介紹</a></li>
-                <li><a href="./contact-TW.html">聯絡我們</a></li>
-                <li><a href="">公司資質</a></li>
-                <li><a href="./assets/images/avia-whitepaper-zh-TW.pdf">白皮書</a></li>
-                <li class="language-dropdown">
-                    <button class="dropdown-btn" id="languageBtn">
-                        <i class="fas fa-globe"></i> 中文繁體
-                    </button>
-                    <div class="dropdown-content" id="languageDropdown">
-                        <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
-                        <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
-                        <a href="index-CN.html" onclick="changeLanguage('中文')">中文（简体）</a>
-                        <a href="index-TW.html" onclick="changeLanguage('中文')">中文（繁體）</a>
-                        <a href="index-IND.html" onclick="changeLanguage('Tamil')">Bahasa Indonesia</a>
-                    </div>
-                </li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">首頁</a></li>
+                    <li><a href="#about">關於我們</a></li>
+                    <li><a href="#vision">願景</a></li>
+                    <li><a href="#products">產品介紹</a></li>
+                    <li><a href="#contact">聯絡我們</a></li>
+                    <li><a href="./qualifi.html">公司資質</a></li>
+                    <li><a href="#whitepaper">白皮書</a></li>
+                    <li class="language-dropdown">
+                        <button class="dropdown-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i> 中文繁體
+                        </button>
+                        <div class="dropdown-content" id="languageDropdown">
+                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
+                            <a href="index-CN.html" onclick="changeLanguage('中文')">中文（簡體）</a>
+                            <a href="index-TW.html" onclick="changeLanguage('中文')">中文（繁體）</a>
+                            <a href="index-JP.html" onclick="changeLanguage('日語')">日語</a>
+                            <a href="index-KR.html" onclick="changeLanguage('韓語')">韓語</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#download" class="download-btn fade-element">下載 FX8 APP</a>
+            </div>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
@@ -49,344 +51,413 @@
         </nav>
     </header>
 
+    <!-- 主視覺區塊 -->
+    <section class="hero fade-element" id="home">
+        <div class="particles" id="particles"></div>
 
-    <!-- 首頁 Hero 區塊 -->
-    <section class="hero" id="home">
         <video class="hero-bg-video" autoplay muted loop playsinline>
-            <source src="./assets/images/banner-new.mp4" type="video/mp4" />
+            <source src="./assets/images/banner-bg-new.mp4" type="video/mp4" />
         </video>
 
-        <div class="container">
-            <div class="hero-content">
+        <div class="hero-container fade-element">
+            <div class="hero-content fade-element">
                 <h1>
-                    <span class="highlight">LIVI NEOASIA GROUP LTD</span><br />
-                    讓每一份保單成為有價值的資產
+                    <span class="highlight fade-element">FX8．唯強者勝出</span><br />
+                    新用戶註冊交易即贈<span class="highlight">5美元</span>
                 </h1>
-                <p>
-                    我們不是在「賣保險」，而是在構建一個全新的保險金融體系，人人皆可參與並共享回報。
-                </p>
-                <button class="apply-btn">立即申請</button>
+                <p>專業交易平台，為您提供頂級的投資體驗</p>
+                <button class="apply-btn fade-element" onclick="startTrading()">立即開始交易</button>
+
+                <!-- App Icons Section -->
+                <div class="app-icons-section fade-element">
+                    <div class="app-icons-dock fade-element">
+                        <span class="app-icons-label">推薦錢包</span>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo1.png" alt="Wallet 1" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo2.png" alt="Wallet 2" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo3.png" alt="Wallet 3" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo4.png" alt="Wallet 4" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo5.png" alt="Wallet 5" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
 
-    <!-- 關於我們 -->
-    <div class="about-wrapper" id="about">
-        <div class="about-main-section">
-            <div class="about-text-content fade-element">
-                <h1 class="about-title">關於我們</h1>
-                <h2 class="about-tagline fade-element">從保險走向資產自由</h2>
-
-                <p class="about-overview fade-element">
-                    我們是一個融合保險與金融科技的創新平台，總部設於香港，業務涵蓋多個亞洲市場。透過與保險公司、信託機構及監管沙盒合作，推動傳統保單資產的數位化，釋放其長期價值。
-                </p>
-
-                <p class="about-company-details fade-element">
-                    平台隸屬於享譽全球的英國保險集團 <span class="about-emphasis">英傑華（Aviva plc）</span>，擁有
-                    <span class="about-emphasis">超過300年</span>歷史，服務
-                    <span class="about-emphasis">超過3,000萬名客戶</span>，是金融穩定與信任的象徵。
-                </p>
+    <!-- 特色功能橫幅 -->
+    <section class="features-banner fade-element">
+        <div class="features-slider fade-element">
+            <!-- 原始功能卡片 -->
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i1.png" alt="IM">
+                </div>
+                <h3 class="feature-title">IM 即時通訊</h3>
+                <p class="feature-description">內建即時通訊系統，好友互動無界限，隨時分享行情洞見與投資想法。</p>
             </div>
 
-            <div class="about-image-content fade-element">
-                <video class="about-hero-img" autoplay muted loop playsinline>
-                    <source src="./assets/images/about-partA.mp4" type="video/mp4">
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i2.png" alt="交易所合約">
+                </div>
+                <h3 class="feature-title">多元合約交易</h3>
+                <p class="feature-description">串接主流交易所，支援多種合約產品，如股指期貨，滿足避險與投機需求。</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i3.png" alt="理財">
+                </div>
+                <h3 class="feature-title">智慧理財</h3>
+                <p class="feature-description">整合多元理財工具，依據風險偏好提供個性化推薦，輕鬆實現資產穩健成長。</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i4.png" alt="跟單">
+                </div>
+                <h3 class="feature-title">智能跟單</h3>
+                <p class="feature-description">跟隨頂尖交易者實時操作，一鍵複製策略，快速提升投資效率與收益。</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i5.png" alt="模擬">
+                </div>
+                <h3 class="feature-title">模擬交易</h3>
+                <p class="feature-description">使用虛擬資金實戰演練，零風險學習交易技巧，為新手打造友好環境。</p>
+            </div>
+
+            <!-- 複製卡片用於無縫輪播 -->
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i1.png" alt="IM">
+                </div>
+                <h3 class="feature-title">IM 即時通訊</h3>
+                <p class="feature-description">內建即時通訊系統，好友互動無界限，隨時分享行情洞見與投資想法。</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i2.png" alt="交易所合約">
+                </div>
+                <h3 class="feature-title">多元合約交易</h3>
+                <p class="feature-description">串接主流交易所，支援多種合約產品，如股指期貨，滿足避險與投機需求。</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i3.png" alt="理財">
+                </div>
+                <h3 class="feature-title">智慧理財</h3>
+                <p class="feature-description">整合多元理財工具，依據風險偏好提供個性化推薦，輕鬆實現資產穩健成長。</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i4.png" alt="跟單">
+                </div>
+                <h3 class="feature-title">智能跟單</h3>
+                <p class="feature-description">跟隨頂尖交易者實時操作，一鍵複製策略，快速提升投資效率與收益。</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i5.png" alt="模擬">
+                </div>
+                <h3 class="feature-title">模擬交易</h3>
+                <p class="feature-description">使用虛擬資金實戰演練，零風險學習交易技巧，為新手打造友好環境。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 模擬交易分析 -->
+    <div class="side-container reveal-in">
+        <div class="sidebar reveal-in">
+            <div
+                style="background: var(--bg-gradient); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; overflow: hidden;">
+                <video src="./assets/images/trade-bg.mp4" autoplay muted loop playsinline
+                    style="max-width: 150%; max-height: 100%; border-radius: inherit; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);">
+                    您的瀏覽器不支援此影片格式。
                 </video>
             </div>
         </div>
 
-        <div class="about-services-section fade-element">
-            <div class="about-service-card fade-element">
-                <div class="about-service-content">
-                    <h3 class="about-service-title">保險資產數位化</h3>
-                    <p class="about-service-text">
-                        透過科技將傳統儲蓄保單、年金等有價值資產轉化為數位憑證，實現更透明的管理與更靈活的操作。
-                    </p>
-                </div>
-                <div class="about-service-icon">
-                    <img src="./assets/images/Group-1.png" alt="數位化圖示">
-                </div>
-            </div>
-
-            <div class="about-service-card align-right fade-element">
-                <div class="about-service-content">
-                    <h3 class="about-service-title">上鏈的保單價值</h3>
-                    <p class="about-service-text">
-                        每一份保單資產皆經上鏈驗證，確保每一項投資均有真實資產支撐——安全、可信、價值清晰。
-                    </p>
-                </div>
-                <div class="about-service-icon">
-                    <img src="./assets/images/Group-2.png" alt="區塊鏈圖示">
-                </div>
-            </div>
-
-            <div class="about-service-card fade-element">
-                <div class="about-service-content">
-                    <h3 class="about-service-title">賦能個人與機構</h3>
-                    <p class="about-service-text">
-                        無論是個人財富規劃，或是機構的低風險收益需求，我們都致力協助其參與保險金融的長期價值成長。
-                    </p>
-                </div>
-                <div class="about-service-icon">
-                    <img src="./assets/images/Group-3.png" alt="賦能圖示">
-                </div>
-            </div>
+        <div class="main-content reveal-in">
+            <h1 class="main-title fade-element">模擬交易分析</h1>
+            <p class="main-description fade-element">
+                基於虛擬交易場景，平台將依據用戶在模擬操作中所產生的流量或推廣成效，對邀請新用戶參與模擬交易及優質策略行為給予獎勵，實現虛擬經驗向實際收益的轉化。
+            </p>
+            <button class="start-button" onclick="startTrading()">立即開始交易</button>
         </div>
     </div>
 
-    <!-- 我們的服務 -->
-    <section class="what-we-do-container reveal-element">
-        <div class="what-we-do">
-            <h2>我們的服務</h2>
-            <video class="about-hero-img" autoplay muted loop playsinline>
-                <source src="./assets/images/about-partB.mp4" type="video/mp4">
-            </video>
 
-            <div class="cards">
-                <div class="card animate-zoom-rotate">
-                    <h3>保險資產數位化：</h3>
-                    <p>將具有現金價值的儲蓄型保單與年金轉化為數位資產，實現更透明管理與更靈活操作。</p>
-                </div>
-                <div class="card animate-zoom-rotate">
-                    <h3>賦能個人與機構：</h3>
-                    <p>無論個人理財或機構投資，皆可參與低風險、長期成長的保險金融資產。</p>
-                </div>
-                <div class="card animate-zoom-rotate">
-                    <h3>上鏈的保單價值：</h3>
-                    <p>每一份保單皆經上鏈驗證，擁有真實可追溯資產支撐——安全、可信、價值明確。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 保單專區 -->
-    <section class="session-bg">
-        <div class="policy-section">
-            <div class="policy-text fade-element">
-                <h2>讓您的保單<br><span>變現增值</span></h2>
-                <p>
-                    我們圍繞保單資產的五大核心環節提供一站式服務：確權、增值、流通、傳承與流動性。
-                    從估值、數位登記到分紅提取與流動管理，協助您將「沉睡的保單」轉化為可運用、可配置、可傳承的財富工具。
+    <!-- 我們是做什麼的 -->
+    <section class="what-section" id="about">
+        <div class="what-container fade-element">
+            <div class="what-left reveal-in">
+                <h2 class="what-title fade-element">我們是做什麼的？</h2>
+                <p class="what-description fade-element">
+                    我們所打造的股票交易軟體，致力於為投資者構建一個綜合性、多功能的金融交易與服務平台。
+                    軟體涵蓋模擬交易、即時通訊（IM）、交易所合約、理財以及跟單等核心功能模組，
+                    滿足不同層級投資者在資訊交流、策略實踐、交易執行與資產管理等多方面的需求。
                 </p>
+                <a href="#" class="what-button fade-element" onclick="startTrading()">立即開始交易</a>
+                <div class="what-features fade-element">
+                    <div class="what-feature"><span class="circle-tick">✓</span> 智能錢包</div>
+                    <div class="what-feature"><span class="circle-tick">✓</span> 利潤規劃師</div>
+                    <div class="what-feature"><span class="circle-tick">✓</span> 資金流分析</div>
+                    <div class="what-feature"><span class="circle-tick">✓</span> 成本探索工具</div>
+                </div>
             </div>
-
-            <div class="policy-services">
-                <div class="policy-card animate-zoom-rotate">
-                    <img src="./assets/images/asset-i.png" alt="確權圖示" class="icon-img" />
-                    <h4>資產確權</h4>
-                    <p>了解您保單的真實價值，明確資產狀況。</p>
-                </div>
-
-                <div class="policy-card animate-zoom-rotate">
-                    <img src="./assets/images/resgi-i.png" alt="登記圖示" class="icon-img" />
-                    <h4>權益登記</h4>
-                    <p>將保單轉化為可管理的數位資產，提升價值與流通性。</p>
-                </div>
-
-                <div class="policy-card animate-zoom-rotate">
-                    <img src="./assets/images/inc-i.png" alt="收益圖示" class="icon-img" />
-                    <h4>收益計畫</h4>
-                    <p>提供靈活的收益方案，可按月或按季提取分紅。</p>
-                </div>
-
-                <div class="policy-card animate-zoom-rotate">
-                    <img src="./assets/images/liquid-i.png" alt="流動性圖示" class="icon-img" />
-                    <h4>流動性管理</h4>
-                    <p>支援資產提取、轉讓及質押，實現彈性運用。</p>
-                </div>
-
-                <div class="policy-card animate-zoom-rotate">
-                    <img src="./assets/images/custo-i.png" alt="傳承圖示" class="icon-img" />
-                    <h4>傳承規劃</h4>
-                    <p>確保您的保單資產順利傳遞給受益人或家屬。</p>
+            <div class="what-right reveal-in">
+                <div class="media-display fade-element">
+                    <video class="financial-video fade-element" autoplay muted loop playsinline>
+                        <source src="./assets/images/we-bg.mp4" type="video/mp4">
+                        您的瀏覽器不支援影片播放。
+                    </video>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- AVIA 區塊 -->
-    <div class="avia-main reveal-element">
-        <div class="avia-wrapper">
-            <div class="avia-header reveal-element">
-                <div class="avia-brand">LIVI NEOASIA —</div>
-                <div class="avia-slogan">您資產背後的驅動力</div>
-                <div class="avia-intro">
-                    您的保單不僅是一份合約，更是一項潛在資產。我們協助用戶確權、釋放收益、管理流動性，將靜態保單轉化為可配置、具策略意義的財富引擎。
-                </div>
+    <!-- 怎麼做 -->
+    <section class="how-section fade-element">
+        <div class="how-container fade-element">
+            <div class="how-left fade-element">
+                <img src="./assets/images/what-banner.png" alt="Chart UI" class="how-img" />
             </div>
-
-            <div class="avia-stats">
-                <div class="avia-stat-card reveal-element" style="transition-delay: 0.1s">
-                    <div class="avia-progress-box">
-                        <div class="avia-progress-bg">
-                            <div class="avia-progress-fill red"></div>
-                            <div class="avia-percent">22%</div>
-                            <div class="avia-label">建議月度現金回流</div>
-                        </div>
+            <div class="how-right reveal-in">
+                <h2 class="how-title fade-element">怎麼做？</h2>
+                <p class="how-description fade-element">
+                    我們打造的股票交易軟體，致力於為投資者構建一個綜合性、多功能的金融交易與服務平台。<br /><br />
+                    軟體涵蓋模擬交易、即時通訊（IM）、交易所合約、理財以及跟單等核心功能模組，<br /><br />
+                    滿足不同層級投資者在資訊交流、策略實踐、交易執行與資產管理等多方面的需求。
+                </p>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div
+                        style="background: rgba(26, 115, 232, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: rgb(121, 121, 204); font-weight: 500;">
+                        ▲ 專業交易
                     </div>
-                    <div class="avia-stat-text">
-                        透過資產配置與策略分析，保單資產可帶來比傳統方式多出 22% 的月度可提取收益——穩定、可持續，提升家庭現金流。
+                    <div
+                        style="background: rgba(255, 107, 53, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: var(--accent-color); font-weight: 500;">
+                        ▲ 安全可靠
                     </div>
-                </div>
-
-                <div class="avia-stat-card reveal-element">
-                    <div class="avia-progress-box">
-                        <div class="avia-progress-bg">
-                            <div class="avia-progress-fill blue"></div>
-                            <div class="avia-percent">72%</div>
-                            <div class="avia-label">72% 長期持有者</div>
-                        </div>
-                    </div>
-                    <div class="avia-stat-text">
-                        數據顯示，持有超過 5 年的保單，其儲蓄價值大幅成長——根據我們模型分析，平均估值提升達 72%。
-                    </div>
-                </div>
-
-                <div class="avia-stat-card">
-                    <div class="avia-progress-box">
-                        <div class="avia-progress-bg">
-                            <div class="avia-progress-fill green"></div>
-                            <div class="avia-percent">80%</div>
-                            <div class="avia-label">80% 確認於 60 歲以上</div>
-                        </div>
-                    </div>
-                    <div class="avia-stat-text">
-                        透過第二次保單審查，我們提升了資產的傳承潛力與風險對沖能力，包括盈餘運用與資產交接效率。
+                    <div
+                        style="background: rgba(52, 168, 83, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: #34a853; font-weight: 500;">
+                        ▲ 使用者友善
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- 核心理念與願景 -->
-    <div class="core-vision-section" id="vision">
-        <div class="core-vision-container">
-            <div class="content-wrapper">
+
+    <!-- 盈利模式 -->
+    <div class="core-vision-section fade-element" id="vision">
+        <div class="core-vision-container fade-element">
+            <div class="content-wrapper reveal-in">
                 <div class="section-header fade-element">
-                    <h1 class="section-title">我們的核心價值與未來願景</h1>
-                    <p class="section-subtitle">
-                        攜手打造保險資產的新未來——將保障轉化為可持續、穩定的</br>金融動能，實現長期價值增長與財富穩健傳承。
+                    <h1 class="section-title fade-element">盈利模式</h1>
+                    <p
+                        style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                        多元化收益管道，為用戶與平台創造雙贏價值
                     </p>
                 </div>
 
-                <div class="vision-grid">
+                <div class="vision-grid fade-element">
                     <div class="vision-item fade-element">
-                        <div class="vision-image philosophy-theme">
-                            <img src="./assets/images/philo-logo.png" alt="理念圖示" class="vision-icon-img" />
-                            <h3 class="vision-title">我們的理念</h3>
-                            <p class="vision-description">
-                                以誠信為根基，以創新為驅動，我們致力為每位客戶提供透明、安全、高效的保險資產管理體驗。相信每個人都應擁有最佳保障與財務安全。
-                            </p>
-                        </div>
+                        <img src="./assets/images/profit-logo1.png" alt="模擬交易" class="vision-icon-img" />
+                        <h3 class="vision-title">模擬交易分潤</h3>
+                        <p class="vision-description">
+                            透過模擬交易推廣拉新或激活用戶，向推廣者與活躍用戶發放虛擬獎勵或實物補貼；同時串接券商賬戶，從成功開戶用戶中獲取導流佣金。
+                        </p>
                     </div>
 
                     <div class="vision-item fade-element">
-                        <div class="vision-image vision-theme">
-                            <img src="./assets/images/vision-logo.png" alt="願景圖示" class="vision-icon-img" />
-                            <h3 class="vision-title">我們的願景</h3>
-                            <p class="vision-description">
-                                成為亞洲領先的數位保險資產管理平台——引領傳統保險向智能流動資產轉型，為每一份保單釋放更大金融價值。
-                            </p>
-                        </div>
+                        <img src="./assets/images/profit-logo2.png" alt="合約交易" class="vision-icon-img" />
+                        <h3 class="vision-title fade-element">合約交易分潤</h3>
+                        <p class="vision-description fade-element">
+                            當用戶產生交易手續費後，平台依約與交易所或經紀商分潤；對於盈利用戶，亦可依協議抽取一定比例作為平台佣金。
+                        </p>
                     </div>
 
                     <div class="vision-item fade-element">
-                        <div class="vision-image commitment-theme">
-                            <img src="./assets/images/commit-logo.png" alt="承諾圖示" class="vision-icon-img" />
-                            <h3 class="vision-title">我們的承諾</h3>
-                            <p class="vision-description">
-                                以客戶利益為核心，嚴格遵循監管標準，融合先進科技與專業服務，建立值得信賴的長期財富合作關係。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="providers-area">
-                <h3 class="providers-heading">合作的私人醫療保險機構包括</h3>
-                <div class="logo-carousel fade-element">
-                    <div class="logo-track">
-                        <!-- 第一轮 logo -->
-                        <div class="logo-item">
-                            <img src="./assets/images/logo1.png" alt="Aetna Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo2.png" alt="ALC Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo3.png" alt="Allianz Care Logo" width="100" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo4.png" alt="April Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo5.png" alt="AXA Logo" width="60" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo6.png" alt="Cigna Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo7.png" alt="FI Logo" width="60" height="40" />
-                        </div>
-
-                        <!-- 第二轮 logo（用于无缝循环） -->
-                        <div class="logo-item">
-                            <img src="./assets/images/logo1.png" alt="Aetna Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo2.png" alt="ALC Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo3.png" alt="Allianz Care Logo" width="100" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo4.png" alt="April Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo5.png" alt="AXA Logo" width="60" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo6.png" alt="Cigna Logo" width="80" height="40" />
-                        </div>
-                        <div class="logo-item">
-                            <img src="./assets/images/logo7.png" alt="FI Logo" width="60" height="40" />
-                        </div>
+                        <img src="./assets/images/profit-logo3.png" alt="跟單交易" class="vision-icon-img" />
+                        <h3 class="vision-title">跟單交易分潤</h3>
+                        <p class="vision-description">
+                            用戶透過跟單賺取收益後，平台與操盤高手按比例共享收益；而推薦人亦可從所推薦用戶的跟單收益中獲得層級獎勵。
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 頁腳 -->
-    <div class="section-footer">
-        <div class="footer-left">
-            <div class="footer-links">
-                <a href="#">條款</a><span>|</span>
-                <a href="#">隱私</a><span>|</span>
-                <a href="#">行為</a><span>|</span>
-                <a href="#">指南</a><span>|</span>
-                <a href="#">Cookies</a>
+    <!-- APP下載區域 -->
+    <div class="app-container fade-element">
+        <div class="app-left-section fade-element">
+            <img src="./assets/images/phone-mockup.png" alt="FX8 App 預覽圖" class="app-phone-img">
+            <div class="app-info">
+                <div class="app-title-row fade-element">
+                    <img src="./assets/images/fx-logo.png" alt="FX8 Logo" class="app-logo">
+                    <div class="app-title">APP 下載</div>
+                </div>
+                <div class="app-store-buttons fade-element">
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
             </div>
         </div>
 
-        <div class="footer-center">
-            <div class="footer-copyright">
-                <span>© 2025 — LIVI NEOASIA GROUP LTD</span>
+        <div class="app-right-section fade-element">
+            <h3 class="app-subtitle">推薦數位貨幣錢包下載</h3>
+            <div class="app-wallet-list fade-element">
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo1.png" alt="ImToken 圖示">
+                    <span>ImToken</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo2.png" alt="MetaMask 圖示">
+                    <span>MetaMask</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo3.png" alt="TokenPocket 圖示">
+                    <span>TokenPocket</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo4.png" alt="TP Wallet 圖示">
+                    <span>TP Wallet</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo5.png" alt="Trust Wallet 圖示">
+                    <span>Trust Wallet</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
             </div>
-        </div>
-
-        <div class="footer-right">
-            <a href="#"><img src="./assets/images/facebook.png" alt="臉書"></a>
-            <a href="#"><img src="./assets/images/ins.png" alt="Instagram"></a>
-            <a href="#"><img src="./assets/images/linkedin.png" alt="領英"></a>
-            <a href="#"><img src="./assets/images/ytb.png" alt="YouTube"></a>
-            <a href="#"><img src="./assets/images/wechat.png" alt="微信"></a>
         </div>
     </div>
 
-    <!-- script  -->
-    <script src="./assets/js/index.js"></script>
+
+    <!-- 合作機構 -->
+    <div class="providers-area fade-element">
+        <h3 class="providers-heading fade-element">合作機構</h3>
+        <div class="logo-carousel">
+            <div class="logo-track fade-element">
+                <!-- 第一輪 Logo -->
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo1.png" alt="合作夥伴 1" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo2.png" alt="合作夥伴 2" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo3.png" alt="合作夥伴 3" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo4.png" alt="合作夥伴 4" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo5.png" alt="合作夥伴 5" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo6.png" alt="合作夥伴 6" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo7.png" alt="合作夥伴 7" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo8.png" alt="合作夥伴 8" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo9.png" alt="合作夥伴 9" />
+                </div>
+
+                <!-- 第二輪 Logo（無縫輪播用） -->
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo1.png" alt="合作夥伴 1" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo2.png" alt="合作夥伴 2" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo3.png" alt="合作夥伴 3" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo4.png" alt="合作夥伴 4" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo5.png" alt="合作夥伴 5" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo6.png" alt="合作夥伴 6" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo7.png" alt="合作夥伴 7" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo8.png" alt="合作夥伴 8" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo9.png" alt="合作夥伴 9" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div class="footer-top fade-element">
+            <div class="footer-logo fade-element">
+                <img src="./assets/images/fx-logo.png" alt="FX8 標誌">
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="footer-social-link">
+                    <img src="./assets/images/telegram.png" alt="Telegram">
+                    Telegram
+                </a>
+                <a href="#" class="footer-social-link">
+                    <img src="./assets/images/whatsapp.png" alt="WhatsApp">
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-text">
+            本網站由 StoneX 集團公司（StoneX Group Inc.）旗下的全資子公司 FX8 與嘉盛環球市場有限公司（GAIN Global Markets, Inc.，"GGM"）共同運營。
+            StoneX Financial Ltd. 已於英國金融行為監管局（FCA）註冊並受其監管（FCA 號碼：446717）。
+            GGM 受開曼群島金融管理局監管（牌照號碼：25033）。在決定與 StoneX 集團公司旗下任何受監管公司進行交易前，
+            您應詳細閱讀並審慎考慮所有條款與條件、相關附件、聲明及政策內容。
+            <br><br>
+            版權所有 © 2025 FX8.com
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/demo.js"></script>
 </body>
 
 </html>

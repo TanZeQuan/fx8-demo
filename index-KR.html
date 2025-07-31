@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FX8 KR- 胜者为王 | 专业交易平台</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/demo.css" />
+</head>
+
+<body>
+    <!-- 헤더 섹션 -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="./assets/images/fx-logo.png" alt="FX8">
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">홈</a></li>
+                    <li><a href="#about">회사 소개</a></li>
+                    <li><a href="#vision">비전</a></li>
+                    <li><a href="#products">제품 소개</a></li>
+                    <li><a href="#contact">문의하기</a></li>
+                    <li><a href="./qualifi.html">기업 자격증</a></li>
+                    <li><a href="#whitepaper">백서</a></li>
+                    <li class="language-dropdown">
+                        <button class="dropdown-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i> 한국어
+                        </button>
+                        <div class="dropdown-content" id="languageDropdown">
+                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
+                            <a href="index-CN.html" onclick="changeLanguage('中文')">중국어 (간체)</a>
+                            <a href="index-TW.html" onclick="changeLanguage('中文')">중국어 (번체)</a>
+                            <a href="index-JP.html" onclick="changeLanguage('日语')">일본어</a>
+                            <a href="index-KR.html" onclick="changeLanguage('韩语')">한국어</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#download" class="download-btn fade-element">FX8 앱 다운로드</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- 히어로 섹션 -->
+    <section class="hero fade-element" id="home">
+        <div class="particles" id="particles"></div>
+
+        <video class="hero-bg-video" autoplay muted loop playsinline>
+            <source src="./assets/images/banner-bg-new.mp4" type="video/mp4" />
+        </video>
+
+        <div class="hero-container fade-element">
+            <div class="hero-content fade-element">
+                <h1>
+                    <span class="highlight fade-element">FX8. 승자는 왕이다</span><br />
+                    신규 계좌 개설 시 즉시 <span class="highlight">5달러</span> 지급
+                </h1>
+                <p>전문 거래 플랫폼으로 최고의 투자 경험을 제공합니다</p>
+                <button class="apply-btn fade-element" onclick="startTrading()">지금 거래 시작</button>
+
+                <!-- 앱 아이콘 섹션 -->
+                <div class="app-icons-section fade-element">
+                    <div class="app-icons-dock fade-element">
+                        <span class="app-icons-label">추천 지갑</span>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo1.png" alt="Wallet 1" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo2.png" alt="Wallet 2" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo3.png" alt="Wallet 3" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo4.png" alt="Wallet 4" />
+                        </div>
+                        <div class="app-icon">
+                            <img src="./assets/images/wallet-logo5.png" alt="Wallet 5" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 기능 배너 -->
+    <section class="features-banner fade-element">
+        <div class="features-slider fade-element">
+            <!-- 원본 기능 카드 -->
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i1.png" alt="IM">
+                </div>
+                <h3 class="feature-title">IM</h3>
+                <p class="feature-description">내장된 인스턴트 메신저로 친구와 원활하게 소통하고 언제 어디서든 시장 통찰과 투자 의견을 공유하세요.</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i2.png" alt="거래소 계약">
+                </div>
+                <h3 class="feature-title">거래소 계약</h3>
+                <p class="feature-description">주요 거래소와 연동된 다양한 계약 상품 제공, 지수 선물 등으로 헤지 및 투기 수요를 모두 만족시킵니다.</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i3.png" alt="자산 관리">
+                </div>
+                <h3 class="feature-title">자산 관리</h3>
+                <p class="feature-description">다양한 금융 상품 통합, 위험 성향 기반의 스마트 추천으로 자산을 안정적으로 성장시켜 드립니다.</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i4.png" alt="카피 트레이딩">
+                </div>
+                <h3 class="feature-title">카피 트레이딩</h3>
+                <p class="feature-description">전문 트레이더의 전략을 실시간으로 복사하여 손쉽게 수익률을 향상시킬 수 있습니다.</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i5.png" alt="모의 거래">
+                </div>
+                <h3 class="feature-title">모의 거래</h3>
+                <p class="feature-description">가상 자금을 활용한 위험 없는 거래 연습, 초보자도 안심하고 전략을 익힐 수 있는 환경을 제공합니다.</p>
+            </div>
+
+            <!-- 무한 루프용 복제 카드 -->
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i1.png" alt="IM">
+                </div>
+                <h3 class="feature-title">IM</h3>
+                <p class="feature-description">내장된 인스턴트 메신저로 친구와 원활하게 소통하고 언제 어디서든 시장 통찰과 투자 의견을 공유하세요.</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i2.png" alt="거래소 계약">
+                </div>
+                <h3 class="feature-title">거래소 계약</h3>
+                <p class="feature-description">주요 거래소와 연동된 다양한 계약 상품 제공, 지수 선물 등으로 헤지 및 투기 수요를 모두 만족시킵니다.</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i3.png" alt="자산 관리">
+                </div>
+                <h3 class="feature-title">자산 관리</h3>
+                <p class="feature-description">다양한 금융 상품 통합, 위험 성향 기반의 스마트 추천으로 자산을 안정적으로 성장시켜 드립니다.</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i4.png" alt="카피 트레이딩">
+                </div>
+                <h3 class="feature-title">카피 트레이딩</h3>
+                <p class="feature-description">전문 트레이더의 전략을 실시간으로 복사하여 손쉽게 수익률을 향상시킬 수 있습니다.</p>
+            </div>
+
+            <div class="feature-card fade-element">
+                <div class="feature-icon">
+                    <img src="./assets/images/slider-i5.png" alt="모의 거래">
+                </div>
+                <h3 class="feature-title">모의 거래</h3>
+                <p class="feature-description">가상 자금을 활용한 위험 없는 거래 연습, 초보자도 안심하고 전략을 익힐 수 있는 환경을 제공합니다.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 모의 거래 분석 -->
+    <div class="side-container reveal-in">
+        <div class="sidebar reveal-in">
+            <div
+                style="background: var(--bg-gradient); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; overflow: hidden;">
+                <video src="./assets/images/trade-bg.mp4" autoplay muted loop playsinline
+                    style="max-width: 150%; max-height: 100%; border-radius: inherit; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="main-content reveal-in">
+            <h1 class="main-title fade-element">모의 거래 분석</h1>
+            <p class="main-description fade-element">
+                가상의 거래 시나리오를 기반으로, 플랫폼은 사용자의 모의 거래 활동에서 발생한 트래픽 또는 홍보 성과를 평가하여 새로운 사용자를 초대하거나 고품질 전략 실행에 대해 보상을 제공합니다.
+                이를 통해 가상 경험을 실제 수익으로 전환하는 기회를 창출합니다.
+            </p>
+            <button class="start-button" onclick="startTrading()">지금 거래 시작하기</button>
+        </div>
+    </div>
+
+
+    <!-- 우리는 무엇을 하나요 -->
+    <section class="what-section" id="about">
+        <div class="what-container fade-element">
+            <div class="what-left reveal-in">
+                <h2 class="what-title fade-element">우리는 무엇을 하나요?</h2>
+                <p class="what-description fade-element">
+                    저희는 투자자들을 위해 통합적이고 다기능적인 금융 거래 및 서비스 플랫폼을 구축하는 주식 거래 소프트웨어를 개발하고 있습니다.
+                    이 소프트웨어는 모의 거래, 실시간 메시징(IM), 거래소 연계 계약 거래, 자산 운용, 카피 트레이딩 등 핵심 기능을 포함하여
+                    다양한 수준의 투자자들이 정보 교류, 전략 실행, 거래 수행, 자산 관리 등에서 필요한 요구를 충족할 수 있도록 설계되었습니다.
+                </p>
+                <a href="#" class="what-button fade-element" onclick="startTrading()">지금 거래 시작하기</a>
+                <div class="what-features fade-element">
+                    <div class="what-feature"><span class="circle-tick">✓</span> 스마트 지갑</div>
+                    <div class="what-feature"><span class="circle-tick">✓</span> 수익 설계 도우미</div>
+                    <div class="what-feature"><span class="circle-tick">✓</span> 자금 흐름 분석</div>
+                    <div class="what-feature"><span class="circle-tick">✓</span> 수수료 탐색기</div>
+                </div>
+            </div>
+            <div class="what-right reveal-in">
+                <div class="media-display fade-element">
+                    <video class="financial-video fade-element" autoplay muted loop playsinline>
+                        <source src="./assets/images/we-bg.mp4" type="video/mp4">
+                        귀하의 브라우저는 비디오 재생을 지원하지 않습니다.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 어떻게 하나요 -->
+    <section class="how-section fade-element">
+        <div class="how-container fade-element">
+            <div class="how-left fade-element">
+                <img src="./assets/images/what-banner.png" alt="Chart UI" class="how-img" />
+            </div>
+            <div class="how-right reveal-in">
+                <h2 class="how-title fade-element">어떻게 하나요?</h2>
+                <p class="how-description fade-element">
+                    저희는 투자자들을 위해 통합적이고 다기능적인 금융 거래 및 서비스 플랫폼을 구축하는 주식 거래 소프트웨어를 개발하고 있습니다.<br /><br />
+                    이 소프트웨어는 모의 거래, 실시간 메시징(IM), 거래소 연계 계약 거래, 자산 운용, 카피 트레이딩 등 핵심 기능을 포함하여,<br /><br />
+                    다양한 수준의 투자자들이 정보 교류, 전략 실습, 거래 실행 및 자산 관리 등 여러 측면의 요구를 충족할 수 있도록 설계되었습니다。
+                </p>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div
+                        style="background: rgba(26, 115, 232, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: rgb(121, 121, 204); font-weight: 500;">
+                        ▲ 전문 트레이딩
+                    </div>
+                    <div
+                        style="background: rgba(255, 107, 53, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: var(--accent-color); font-weight: 500;">
+                        ▲ 안전하고 신뢰할 수 있음
+                    </div>
+                    <div
+                        style="background: rgba(52, 168, 83, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: #34a853; font-weight: 500;">
+                        ▲ 사용자 친화적
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 수익 모델 -->
+    <div class="core-vision-section fade-element" id="vision">
+        <div class="core-vision-container fade-element">
+            <div class="content-wrapper reveal-in">
+                <div class="section-header fade-element">
+                    <h1 class="section-title fade-element">수익 모델</h1>
+                    <p
+                        style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                        다양한 수익 채널을 통해 사용자와 플랫폼 모두에게 윈윈 가치를 실현합니다
+                    </p>
+                </div>
+
+                <div class="vision-grid fade-element">
+                    <div class="vision-item fade-element">
+                        <img src="./assets/images/profit-logo1.png" alt="모의 거래" class="vision-icon-img" />
+                        <h3 class="vision-title">모의 거래 수수료 분배</h3>
+                        <p class="vision-description">
+                            모의 거래를 통해 신규 유입 또는 활성화를 유도하고, 프로모터 및 활발한 사용자에게 가상 보상 또는 실물 혜택을 제공합니다. 증권사 계좌 연동을 통해 성공적인 신규
+                            개설로부터 유입 수수료를 획득합니다.
+                        </p>
+                    </div>
+
+                    <div class="vision-item fade-element">
+                        <img src="./assets/images/profit-logo2.png" alt="계약 거래" class="vision-icon-img" />
+                        <h3 class="vision-title fade-element">계약 거래 수수료 분배</h3>
+                        <p class="vision-description fade-element">
+                            사용자가 거래를 통해 발생한 수수료는 플랫폼과 거래소, 중개사 간 비율에 따라 분배되며, 수익을 낸 사용자로부터는 일정 비율의 수익 수수료를 취득합니다.
+                        </p>
+                    </div>
+
+                    <div class="vision-item fade-element">
+                        <img src="./assets/images/profit-logo3.png" alt="카피 트레이딩" class="vision-icon-img" />
+                        <h3 class="vision-title">카피 트레이딩 수익 분배</h3>
+                        <p class="vision-description">
+                            팔로워가 카피 트레이딩을 통해 수익을 창출하면, 플랫폼은 고수 트레이더와 수익을 일정 비율로 분배하고, 추천인은 추천된 사용자의 수익 중에서 단계별 보상을 얻게
+                            됩니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 앱 다운로드 영역 -->
+    <div class="app-container fade-element">
+        <div class="app-left-section fade-element">
+            <img src="./assets/images/phone-mockup.png" alt="FX8 앱 목업" class="app-phone-img">
+            <div class="app-info">
+                <div class="app-title-row fade-element">
+                    <img src="./assets/images/fx-logo.png" alt="FX8 로고" class="app-logo">
+                    <div class="app-title">앱 다운로드</div>
+                </div>
+                <div class="app-store-buttons fade-element">
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+            </div>
+        </div>
+
+        <div class="app-right-section fade-element">
+            <h3 class="app-subtitle">추천 디지털 자산 지갑 다운로드</h3>
+            <div class="app-wallet-list fade-element">
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo1.png" alt="지갑 아이콘">
+                    <span>ImToken</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo2.png" alt="지갑 아이콘">
+                    <span>MetaMask</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo3.png" alt="지갑 아이콘">
+                    <span>TokenPocket</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo4.png" alt="지갑 아이콘">
+                    <span>TP Wallet</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+                <div class="app-wallet-item fade-element">
+                    <img src="./assets/images/wallet-logo5.png" alt="지갑 아이콘">
+                    <span>Trust Wallet</span>
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 제휴 기관 -->
+    <div class="providers-area fade-element">
+        <h3 class="providers-heading fade-element">제휴 기관</h3>
+        <div class="logo-carousel">
+            <div class="logo-track fade-element">
+                <!-- First set of logos -->
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo1.png" alt="파트너 1" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo2.png" alt="파트너 2" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo3.png" alt="파트너 3" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo4.png" alt="파트너 4" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo5.png" alt="파트너 5" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo6.png" alt="파트너 6" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo7.png" alt="파트너 7" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo8.png" alt="파트너 8" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo9.png" alt="파트너 9" />
+                </div>
+
+                <!-- Duplicate set for seamless loop -->
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo1.png" alt="파트너 1" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo2.png" alt="파트너 2" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo3.png" alt="파트너 3" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo4.png" alt="파트너 4" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo5.png" alt="파트너 5" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo6.png" alt="파트너 6" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo7.png" alt="파트너 7" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo8.png" alt="파트너 8" />
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/col-logo9.png" alt="파트너 9" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 푸터 -->
+    <footer class="footer-container">
+        <div class="footer-top fade-element">
+            <div class="footer-logo fade-element">
+                <img src="./assets/images/fx-logo.png" alt="FX8 로고">
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="footer-social-link">
+                    <img src="./assets/images/telegram.png" alt="텔레그램">
+                    텔레그램
+                </a>
+                <a href="#" class="footer-social-link">
+                    <img src="./assets/images/whatsapp.png" alt="왓츠앱">
+                    왓츠앱
+                </a>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-text">
+            본 웹사이트는 StoneX 그룹(StoneX Group Inc.)의 전액 출자 자회사인 FX8 및 GAIN Global Markets, Inc.("GGM")이 공동으로 운영합니다.
+            StoneX Financial Ltd.는 영국 금융행위감독청(FCA)에 등록되어 있으며 규제를 받고 있습니다(FCA 번호: 446717).
+            GGM은 케이맨 제도 금융관리국(CIMA)의 규제를 받고 있습니다(라이선스 번호: 25033).
+            StoneX 그룹 산하의 규제 대상 회사와 거래하기로 결정하기 전에,
+            모든 약관, 관련 문서, 고지 사항 및 정책을 신중히 읽고 고려하시기 바랍니다.
+            <br><br>
+            저작권 © 2025 FX8.com
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="./assets/js/demo.js"></script>
+</body>
+
+</html>
