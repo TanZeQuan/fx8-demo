@@ -1085,9 +1085,10 @@
      margin: 0 auto;
      display: flex;
      justify-content: space-between;
-     align-items: center;
+     align-items: flex-start;
+     /* 改为flex-start以适应两排按钮 */
      padding: 0 var(--container-padding);
-     margin-bottom: 2rem;
+     margin-bottom: 1rem;
  }
 
  .footer-logo img {
@@ -1096,7 +1097,15 @@
 
  .footer-socials {
      display: flex;
-     gap: clamp(1rem, 3vw, 2rem);
+     flex-direction: column;
+     /* 改为列方向以支持两排 */
+     gap: 1rem;
+ }
+
+ .footer-social-row {
+     display: flex;
+     flex-wrap: wrap;
+     gap: clamp(0.5rem, 1.5vw, 1rem);
  }
 
  .footer-social-link {
@@ -1121,6 +1130,35 @@
      height: clamp(20px, 4vw, 24px);
  }
 
+ /* 社交媒体图标样式 */
+ .social-icon {
+     width: clamp(20px, 4vw, 24px);
+     height: clamp(20px, 4vw, 24px);
+     border-radius: 4px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: clamp(12px, 3vw, 14px);
+     font-weight: bold;
+     color: white;
+ }
+
+ .facebook-icon {
+     background: #4267B2;
+ }
+
+ .instagram-icon {
+     background: linear-gradient(45deg, #f09433, #e6683c);
+ }
+
+ .whatsapp-social-icon {
+     background: #25d366;
+ }
+
+ .linkedin-icon {
+     background: #0077b5;
+ }
+
  .footer-divider {
      border: none;
      height: 1px;
@@ -1137,6 +1175,28 @@
      line-height: 1.6;
      opacity: 0.8;
      text-align: left;
+ }
+
+ /* 响应式设计 */
+ @media (max-width: 768px) {
+     .footer-top {
+         flex-direction: column;
+         gap: 1.5rem;
+         align-items: center;
+         text-align: center;
+     }
+
+     .footer-socials {
+         align-items: center;
+     }
+
+     .footer-social-row {
+         justify-content: center;
+     }
+
+     .footer-text {
+         text-align: center;
+     }
  }
 
  /* Animations */

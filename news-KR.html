@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>외환 라이선스 신청 정보</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #2c3e50;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .article-list {
+            max-width: 1300px;
+            margin: 8rem auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .article-content {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            gap: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .article-content:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+        }
+
+        .article-img-box {
+            position: relative;
+            width: 320px;
+            height: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .article-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.89;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(149, 17, 226, 0.678);
+            padding: 0.5rem 8rem;
+            border-radius: 6px;
+            font-size: 0.86rem;
+            color: #fff;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .overlay-text2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(231, 137, 15, 0.774);
+            padding: 0.5rem 8rem;
+            border-radius: 6px;
+            font-size: 0.86rem;
+            color: #fff;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .article-date {
+            min-width: 100px;
+            border-radius: 10px;
+            padding: 0.6rem 1rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 3.0rem;
+            color: #000000cc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .article-date::after {
+            content: "";
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 100px;
+            /* 或 100% 取决于你想要的视觉效果 */
+            width: 2px;
+            background-color: #d6d9db96;
+        }
+
+        .article-date span {
+            font-size: 1.3rem;
+            color: #7f8c8d;
+            margin-top: 0.2rem;
+        }
+
+        .article-text {
+            flex: 1;
+        }
+
+        .article-text h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #9738bd;
+            margin-bottom: 0.6rem;
+        }
+
+        .article-text p {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .article-text2 {
+            flex: 1;
+        }
+
+        .article-text2 h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #e67e22;
+            margin-bottom: 0.6rem;
+        }
+
+        .article-text2 p {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .arrow-box {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .arrow-box.orange {
+            background-color: #e67e22;
+            color: #fff;
+        }
+
+        .arrow-box.orange:hover {
+            background-color: #d35400;
+        }
+
+        .arrow-box.white {
+            background-color: #ffffff;
+            border: 2px solid #e67e22;
+            color: #e67e22;
+        }
+
+        .arrow-box.white:hover {
+            background-color: #fdf2e9;
+        }
+
+        @media (max-width: 768px) {
+            .article-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            .article-img-box {
+                width: 100%;
+                height: 180px;
+            }
+
+            .article-text h3 {
+                font-size: 1.25rem;
+            }
+
+            .article-text p {
+                font-size: 1rem;
+            }
+
+            .article-date::after {
+                display: none;
+            }
+
+            .overlay-text {
+                font-size: 0.78rem;
+            }
+
+            .overlay-text2 {
+                font-size: 0.78rem;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 헤더 영역 -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="./assets/images/fx-logo.png" alt="FX8 로고" />
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="./index-CN.html">홈</a></li>
+                    <li><a href="#about">회사 소개</a></li>
+                    <li><a href="#vision">비전</a></li>
+                    <li><a href="#products">제품 안내</a></li>
+                    <li><a href="#contact">문의하기</a></li>
+                    <li><a href="./qualifi.html">회사 자격</a></li>
+                    <li><a href="./news-KR.html">뉴스</a></li>
+                    <li class="language-dropdown">
+                        <button class="dropdown-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i> 한국어
+                        </button>
+                        <div class="dropdown-content" id="languageDropdown">
+                            <a href="#">English</a>
+                            <a href="#">Bahasa Malaysia</a>
+                            <a href="#">中文（간체）</a>
+                            <a href="#">中文（번체）</a>
+                            <a href="#">日本語</a>
+                            <a href="#">한국어</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#download" class="download-btn fade-element">FX8 앱 다운로드</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- 기사 리스트 -->
+    <div class="article-list">
+        <div class="article-content">
+            <div class="article-img-box">
+                <img src="./assets/images/forex-i.jpg" alt="정보1" />
+                <div class="overlay-text">외환 라이선스 신청: 최신 동향과 실전 전략</div>
+            </div>
+            <div class="article-date">
+                03<br /><span>2024-07</span>
+            </div>
+            <div class="article-text">
+                <h3>외환 기업 창업자가 말하는 외환 라이선스 신청의 트렌드와 경험 공유</h3>
+                <p>부제 1: 외환 라이선스 신청이란? 외환 라이선스 신청은 기업 또는 개인이 관련 기관의 규정을 따라 정식으로 거래 자격을 획득하는 절차입니다...</p>
+            </div>
+            <div class="arrow-box orange">→</div>
+        </div>
+
+        <div class="article-content">
+            <div class="article-img-box">
+                <img src="./assets/images/forex-i2.jpg" alt="정보2" />
+                <div class="overlay-text2">외환 라이선스 신청 시 유의해야 할 법적 리스크</div>
+            </div>
+            <div class="article-date">
+                03<br /><span>2024-07</span>
+            </div>
+            <div class="article-text2">
+                <h3>외환 라이선스 신청 시 꼭 알아야 할 법적 위험 요소 분석</h3>
+                <p>글로벌 경제와 무역 확대에 따라 외환 시장의 중요성이 증가하고 있습니다. 하지만 라이선스 신청 과정에는 다양한 법적 리스크가 존재하며, 이에 대한 충분한 이해가 필요합니다...
+                </p>
+            </div>
+            <div class="arrow-box white">→</div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

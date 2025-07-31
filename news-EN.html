@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forex License Application Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #2c3e50;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .article-list {
+            max-width: 1300px;
+            margin: 8rem auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .article-content {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            gap: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .article-content:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+        }
+
+        .article-img-box {
+            position: relative;
+            width: 320px;
+            height: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .article-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.89;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(149, 17, 226, 0.678);
+            padding: 0.5rem 8rem;
+            border-radius: 6px;
+            font-size: 0.86rem;
+            color: #fff;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .overlay-text2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(231, 137, 15, 0.774);
+            padding: 0.5rem 8rem;
+            border-radius: 6px;
+            font-size: 0.86rem;
+            color: #fff;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .article-date {
+            min-width: 100px;
+            border-radius: 10px;
+            padding: 0.6rem 1rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 3.0rem;
+            color: #000000cc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .article-date::after {
+            content: "";
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 100px;
+            /* 或 100% 取决于你想要的视觉效果 */
+            width: 2px;
+            background-color: #d6d9db96;
+        }
+
+        .article-date span {
+            font-size: 1.3rem;
+            color: #7f8c8d;
+            margin-top: 0.2rem;
+        }
+
+        .article-text {
+            flex: 1;
+        }
+
+        .article-text h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #9738bd;
+            margin-bottom: 0.6rem;
+        }
+
+        .article-text p {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .article-text2 {
+            flex: 1;
+        }
+
+        .article-text2 h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #e67e22;
+            margin-bottom: 0.6rem;
+        }
+
+        .article-text2 p {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .arrow-box {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .arrow-box.orange {
+            background-color: #e67e22;
+            color: #fff;
+        }
+
+        .arrow-box.orange:hover {
+            background-color: #d35400;
+        }
+
+        .arrow-box.white {
+            background-color: #ffffff;
+            border: 2px solid #e67e22;
+            color: #e67e22;
+        }
+
+        .arrow-box.white:hover {
+            background-color: #fdf2e9;
+        }
+
+        @media (max-width: 768px) {
+            .article-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            .article-img-box {
+                width: 100%;
+                height: 180px;
+            }
+
+            .article-text h3 {
+                font-size: 1.25rem;
+            }
+
+            .article-text p {
+                font-size: 1rem;
+            }
+
+            .article-date::after {
+                display: none;
+            }
+
+            .overlay-text {
+                font-size: 0.78rem;
+            }
+
+            .overlay-text2 {
+                font-size: 0.78rem;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="./assets/images/fx-logo.png" alt="FX8">
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="./index-EN.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#vision">Vision</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="./qualifi.html">Licenses</a></li>
+                    <li><a href="./news-EN.html">News</a></li>
+                    <li class="language-dropdown">
+                        <button class="dropdown-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i> English
+                        </button>
+                        <div class="dropdown-content" id="languageDropdown">
+                            <a href="#" onclick="changeLanguage('English')">English</a>
+                            <a href="#" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
+                            <a href="#" onclick="changeLanguage('Chinese')">Chinese (Simplified)</a>
+                            <a href="#" onclick="changeLanguage('Chinese Traditional')">Chinese (Traditional)</a>
+                            <a href="#" onclick="changeLanguage('Japanese')">Japanese</a>
+                            <a href="#" onclick="changeLanguage('Korean')">Korean</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#download" class="download-btn fade-element">Download FX8 APP</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="article-list">
+        <div class="article-content">
+            <div class="article-img-box">
+                <img src="./assets/images/forex-i.jpg" alt="info1" />
+                <div class="overlay-text">Forex License Application: Trends & Insights</div>
+            </div>
+            <div class="article-date">
+                03<br /><span>2024-07</span>
+            </div>
+            <div class="article-text">
+                <h3>Insights from Forex Company Founders: Key Trends & Experience in License Application</h3>
+                <p>Subtitle: What is a Forex License Application? A forex license application involves a formal process
+                    in which a company or individual seeks authorization from a regulatory authority to operate in the
+                    forex trading industry...</p>
+            </div>
+            <div class="arrow-box orange">→</div>
+        </div>
+
+        <div class="article-content">
+            <div class="article-img-box">
+                <img src="./assets/images/forex-i2.jpg" alt="info2" />
+                <div class="overlay-text2">Legal Risks in Forex License Application</div>
+            </div>
+            <div class="article-date">
+                03<br /><span>2024-07</span>
+            </div>
+            <div class="article-text2">
+                <h3>Comprehensive Legal Risk Analysis in Forex License Applications</h3>
+                <p>Legal risks are crucial to consider when applying for a forex license. With global economic expansion
+                    and increasing international trade, the importance of the forex market is growing. However...</p>
+            </div>
+            <div class="arrow-box white">→</div>
+        </div>
+
+    </div>
+    <!-- JavaScript -->
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

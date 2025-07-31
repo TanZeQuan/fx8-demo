@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>申請外匯牌照</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #2c3e50;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .article-list {
+            max-width: 1300px;
+            margin: 8rem auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .article-content {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            gap: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .article-content:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+        }
+
+        .article-img-box {
+            position: relative;
+            width: 320px;
+            height: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .article-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.89;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(149, 17, 226, 0.678);
+            padding: 0.5rem 8rem;
+            border-radius: 6px;
+            font-size: 0.86rem;
+            color: #fff;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .overlay-text2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(231, 137, 15, 0.774);
+            padding: 0.5rem 8rem;
+            border-radius: 6px;
+            font-size: 0.86rem;
+            color: #fff;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .article-date {
+            min-width: 100px;
+            border-radius: 10px;
+            padding: 0.6rem 1rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 3.0rem;
+            color: #000000cc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .article-date::after {
+            content: "";
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 100px;
+            /* 或 100% 取决于你想要的视觉效果 */
+            width: 2px;
+            background-color: #d6d9db96;
+        }
+
+        .article-date span {
+            font-size: 1.3rem;
+            color: #7f8c8d;
+            margin-top: 0.2rem;
+        }
+
+        .article-text {
+            flex: 1;
+        }
+
+        .article-text h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #9738bd;
+            margin-bottom: 0.6rem;
+        }
+
+        .article-text p {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .article-text2 {
+            flex: 1;
+        }
+
+        .article-text2 h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #e67e22;
+            margin-bottom: 0.6rem;
+        }
+
+        .article-text2 p {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .arrow-box {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .arrow-box.orange {
+            background-color: #e67e22;
+            color: #fff;
+        }
+
+        .arrow-box.orange:hover {
+            background-color: #d35400;
+        }
+
+        .arrow-box.white {
+            background-color: #ffffff;
+            border: 2px solid #e67e22;
+            color: #e67e22;
+        }
+
+        .arrow-box.white:hover {
+            background-color: #fdf2e9;
+        }
+
+        @media (max-width: 768px) {
+            .article-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            .article-img-box {
+                width: 100%;
+                height: 180px;
+            }
+
+            .article-text h3 {
+                font-size: 1.25rem;
+            }
+
+            .article-text p {
+                font-size: 1rem;
+            }
+
+            .article-date::after {
+                display: none;
+            }
+
+            .overlay-text {
+                font-size: 0.78rem;
+            }
+
+            .overlay-text2 {
+                font-size: 0.78rem;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 頁首區塊 -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="./assets/images/fx-logo.png" alt="FX8 標誌" />
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="./index-CN.html">首頁</a></li>
+                    <li><a href="#about">關於我們</a></li>
+                    <li><a href="#vision">願景</a></li>
+                    <li><a href="#products">產品介紹</a></li>
+                    <li><a href="#contact">聯絡我們</a></li>
+                    <li><a href="./qualifi.html">公司資質</a></li>
+                    <li><a href="./news-TW.html">新聞資訊</a></li>
+                    <li class="language-dropdown">
+                        <button class="dropdown-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i> 中文繁體
+                        </button>
+                        <div class="dropdown-content" id="languageDropdown">
+                            <a href="#">English</a>
+                            <a href="#">Bahasa Malaysia</a>
+                            <a href="#">中文（簡體）</a>
+                            <a href="#">中文（繁體）</a>
+                            <a href="#">日本語</a>
+                            <a href="#">韓語</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#download" class="download-btn fade-element">下載 FX8 APP</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- 文章列表區 -->
+    <div class="article-list">
+        <div class="article-content">
+            <div class="article-img-box">
+                <img src="./assets/images/forex-i.jpg" alt="info1" />
+                <div class="overlay-text">外匯牌照申請：市場趨勢與實戰分享</div>
+            </div>
+            <div class="article-date">
+                03<br /><span>2024-07</span>
+            </div>
+            <div class="article-text">
+                <h3>外匯公司創辦人揭密：外匯牌照申請的最新趨勢與實務經驗！</h3>
+                <p>副標題一：什麼是外匯牌照申請？外匯牌照申請是指企業或個人依照監管規範，向相關主管機關申請取得合法從事外匯交易的資格...</p>
+            </div>
+            <div class="arrow-box orange">→</div>
+        </div>
+
+        <div class="article-content">
+            <div class="article-img-box">
+                <img src="./assets/images/forex-i2.jpg" alt="info2" />
+                <div class="overlay-text2">申請外匯牌照的法律風險須知</div>
+            </div>
+            <div class="article-date">
+                03<br /><span>2024-07</span>
+            </div>
+            <div class="article-text2">
+                <h3>深入解析外匯牌照申請中常見的法律風險</h3>
+                <p>隨著全球經濟發展與國際貿易日益頻繁，外匯市場地位逐漸提升。然而，在申請外匯牌照的過程中，潛藏著不少法律風險與合規挑戰...</p>
+            </div>
+            <div class="arrow-box white">→</div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
