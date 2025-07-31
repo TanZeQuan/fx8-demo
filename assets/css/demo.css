@@ -41,7 +41,7 @@
  /* Header Styles */
  #header {
      background: rgba(0, 0, 0, 0.92);
-    backdrop-filter: blur(10px);
+     backdrop-filter: blur(10px);
      position: fixed;
      width: 100%;
      top: 0;
@@ -96,7 +96,7 @@
      text-decoration: none;
      color: white;
      font-weight: 500;
-     font-size: clamp(1.1rem, 1.5vw, 1rem);
+     font-size: clamp(0.90rem, 1.5vw, 1rem);
      transition: var(--transition);
      position: relative;
      white-space: nowrap;
@@ -126,6 +126,8 @@
  }
 
  .dropdown-btn {
+     position: relative;
+     overflow: hidden;
      background: none;
      border: 1px solid rgba(255, 255, 255, 0.2);
      color: white;
@@ -134,15 +136,40 @@
      display: flex;
      align-items: center;
      gap: 8px;
-     padding: clamp(6px, 1.5vw, 8px) clamp(12px, 3vw, 15px);
+     padding: 8px 15px;
      border-radius: 30px;
      transition: var(--transition);
-     font-size: clamp(0.85rem, 1.5vw, 1rem);
+     font-size: 1.1rem;
+     z-index: 1;
  }
 
+ /* 水流光动画伪元素 */
+ .dropdown-btn::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 200%;
+     height: 100%;
+     background: linear-gradient(120deg,
+             transparent,
+             rgba(255, 255, 255, 0.3),
+             transparent);
+     transform: skewX(-20deg);
+     transition: left 0.6s ease;
+     z-index: 0;
+ }
+
+ /* Hover 触发流光划过 */
+ .dropdown-btn:hover::before {
+     left: 100%;
+ }
+
+ /* Hover 背景变化 */
  .dropdown-btn:hover {
      background: rgba(255, 255, 255, 0.1);
      transform: translateY(-2px);
+     z-index: 2;
  }
 
  .dropdown-content {
@@ -196,11 +223,6 @@
      transition: var(--transition);
      position: relative;
      z-index: 2;
- }
-
- /* active 时 ▼ 向上旋转 */
- .dropdown-btn.active::after {
-     transform: rotate(180deg);
  }
 
  .download-btn {
@@ -1122,6 +1144,7 @@
 
      .features-slider {
          gap: 1rem;
+         animation-duration: 10s;
      }
 
      .feature-card {
