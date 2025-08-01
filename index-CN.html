@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-cn">
 
 <head>
     <meta charset="UTF-8">
@@ -23,7 +23,7 @@
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home">首页</a></li>
                     <li><a href="#about">关于我们</a></li>
-                    <li><a href="#vision">愿景</a></li>
+                    <li><a href="#vision">如何赚钱</a></li>
                     <li><a href="#products">产品介绍</a></li>
                     <li><a href="#contact">联系我们</a></li>
                     <li><a href="./qualifi.html">公司资质</a></li>
@@ -42,7 +42,7 @@
                         </div>
                     </li>
                 </ul>
-                <a href="#download" class="download-btn fade-element">下载 FX8 APP</a>
+                <a id="download-btn" href="#" class="download-btn fade-element">下载 FX8 APP</a>
             </div>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -66,26 +66,26 @@
                     新开户交易立即获得<span class="highlight">5美金</span>
                 </h1>
                 <p>专业的交易平台，为您提供最优质的投资体验</p>
-                <button class="apply-btn fade-element" onclick="startTrading()">立即开始交易</button>
+                <button class="apply-btn fade-element" id="start-trading-btn">立即开始交易</button>
 
                 <!-- App Icons Section -->
                 <div class="app-icons-section fade-element">
-                    <div class="app-icons-dock fade-element">
+                    <div class="app-icons-dock fade-element" id="wallet-icons">
                         <span class="app-icons-label">推荐钱包</span>
                         <div class="app-icon">
-                            <img src="./assets/images/wallet-logo1.png" alt="Wallet 1" />
+                            <img src="./assets/images/wallet-i1.png" alt="Wallet 1" />
                         </div>
                         <div class="app-icon">
-                            <img src="./assets/images/wallet-logo2.png" alt="Wallet 2" />
+                            <img src="./assets/images/wallet-i2.png" alt="Wallet 2" />
                         </div>
                         <div class="app-icon">
-                            <img src="./assets/images/wallet-logo3.png" alt="Wallet 3" />
+                            <img src="./assets/images/wallet-i3.png" alt="Wallet 3" />
                         </div>
                         <div class="app-icon">
-                            <img src="./assets/images/wallet-logo4.png" alt="Wallet 4" />
+                            <img src="./assets/images/wallet-i4.png" alt="Wallet 4" />
                         </div>
                         <div class="app-icon">
-                            <img src="./assets/images/wallet-logo5.png" alt="Wallet 5" />
+                            <img src="./assets/images/wallet-i5.png" alt="Wallet 5" />
                         </div>
                     </div>
                 </div>
@@ -197,7 +197,7 @@
             <p class="main-description fade-element">
                 基于虚拟交易场景，平台根据用户模拟操作产生的流量或推广效果，对邀请新用户参与模拟交易、优质策略行为给予奖励，实现虚拟经验向实际收益的转化
             </p>
-            <button class="start-button" onclick="startTrading()">立即开始交易</button>
+            <button id="start-button" class="start-button">立即开始交易</button>
         </div>
     </div>
 
@@ -211,7 +211,7 @@
                     软件涵盖模拟交易、即时通讯（IM）、交易所合约交易、理财以及跟单等核心功能模块，
                     满足不同层次投资者在信息交流、策略实践、交易执行与财富管理等多方面的需求。
                 </p>
-                <a href="#" class="what-button fade-element" onclick="startTrading()">立即开始交易</a>
+                <a href="#" id="start-trading-btn" class="what-button fade-element">立即开始交易</a>
                 <div class="what-features fade-element">
                     <div class="what-feature"><span class="circle-tick">✓</span> 智能钱包</div>
                     <div class="what-feature"><span class="circle-tick">✓</span> 利润规划师</div>
@@ -312,8 +312,8 @@
                     <div class="app-title">APP下载</div>
                 </div>
                 <div class="app-store-buttons fade-element">
-                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
-                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                    <img src="./assets/images/google-play-logo.png" alt="Google Play" data-store="google">
+                    <img src="./assets/images/app-store-logo.png" alt="App Store" data-store="apple">
                 </div>
             </div>
         </div>
@@ -321,33 +321,33 @@
         <div class="app-right-section fade-element">
             <h3 class="app-subtitle">推荐数字货币钱包下载</h3>
             <div class="app-wallet-list fade-element">
-                <div class="app-wallet-item fade-element">
-                    <img src="./assets/images/wallet-logo1.png" alt="Wallet Icon">
-                    <span>ImToken</span>
+                <div class="app-wallet-item fade-element" data-wallet="tronlink">
+                    <img src="./assets/images/wallet-i1.png" alt="Wallet Icon">
+                    <span>TronLink Pro</span>
                     <img src="./assets/images/google-play-logo.png" alt="Google Play">
                     <img src="./assets/images/app-store-logo.png" alt="App Store">
                 </div>
-                <div class="app-wallet-item fade-element">
-                    <img src="./assets/images/wallet-logo2.png" alt="Wallet Icon">
-                    <span>MetaMask</span>
+                <div class="app-wallet-item fade-element"  data-wallet="trustwallet">
+                    <img src="./assets/images/wallet-i2.png" alt="Wallet Icon">
+                    <span>Trust Wallet</span>
                     <img src="./assets/images/google-play-logo.png" alt="Google Play">
                     <img src="./assets/images/app-store-logo.png" alt="App Store">
                 </div>
-                <div class="app-wallet-item fade-element">
-                    <img src="./assets/images/wallet-logo3.png" alt="Wallet Icon">
+                <div class="app-wallet-item fade-element"  data-wallet="tokenpocket">
+                    <img src="./assets/images/wallet-i3.png" alt="Wallet Icon">
                     <span>TokenPocket</span>
                     <img src="./assets/images/google-play-logo.png" alt="Google Play">
                     <img src="./assets/images/app-store-logo.png" alt="App Store">
                 </div>
-                <div class="app-wallet-item fade-element">
-                    <img src="./assets/images/wallet-logo4.png" alt="Wallet Icon">
-                    <span>TP Wallet</span>
+                <div class="app-wallet-item fade-element"  data-wallet="metamask">
+                    <img src="./assets/images/wallet-i4.png" alt="Wallet Icon">
+                    <span>MetaMask</span>
                     <img src="./assets/images/google-play-logo.png" alt="Google Play">
                     <img src="./assets/images/app-store-logo.png" alt="App Store">
                 </div>
-                <div class="app-wallet-item fade-element">
-                    <img src="./assets/images/wallet-logo5.png" alt="Wallet Icon">
-                    <span>Trust Wallet</span>
+                <div class="app-wallet-item fade-element"  data-wallet="imtoken">
+                    <img src="./assets/images/wallet-i5.png" alt="Wallet Icon">
+                    <span>ImToken</span>
                     <img src="./assets/images/google-play-logo.png" alt="Google Play">
                     <img src="./assets/images/app-store-logo.png" alt="App Store">
                 </div>
@@ -421,6 +421,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="footer-container">
         <div class="footer-top fade-element">
             <div class="footer-logo fade-element">
@@ -428,6 +429,7 @@
             </div>
             <div class="footer-socials">
                 <!-- 第一排：原有的 Telegram 和 WhatsApp -->
+                <h3 class="footer-contact">联系我们</h3>
                 <div class="footer-social-row">
                     <a href="#" class="footer-social-link">
                         <img src="./assets/images/telegram.png" alt="Telegram">
@@ -438,24 +440,23 @@
                         WhatsApp
                     </a>
                 </div>
-                
+
                 <!-- 第二排：新增的社交媒体按钮 -->
-                <div class="footer-social-row">
+                <div class="footer-social-row" id="contact">
                     <a href="#" class="footer-social-link">
-                        <div class="social-icon facebook-icon">f</div>
-                       
+                        <img src="./assets/images/facebook.png" alt="Facebook" class="social-icon">
                     </a>
                     <a href="#" class="footer-social-link">
-                        <div class="social-icon instagram-icon">📷</div>
-                        
+                        <img src="./assets/images/instagram.png" alt="Instagram" class="social-icon">
                     </a>
                     <a href="#" class="footer-social-link">
-                        <div class="social-icon whatsapp-social-icon">💬</div>
-                        
+                        <img src="./assets/images/linkedin.png" alt="WhatsApp" class="social-icon">
                     </a>
                     <a href="#" class="footer-social-link">
-                        <div class="social-icon linkedin-icon">in</div>
-                        
+                        <img src="./assets/images/ytb.png" alt="LinkedIn" class="social-icon">
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/wechat.png" alt="LinkedIn" class="social-icon">
                     </a>
                 </div>
             </div>
@@ -475,6 +476,7 @@
 
     <!-- JavaScript -->
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/api.js"></script>
 </body>
 
 </html>
