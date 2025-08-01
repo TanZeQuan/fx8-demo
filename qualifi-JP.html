@@ -1,227 +1,129 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>外国為替ライセンス申請情報</title>
+    <title>Company Qualifications</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="./assets/css/index.css" />
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #f4f6f9;
-            color: #2c3e50;
-            font-size: 18px;
-            line-height: 1.6;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
         }
 
-        .article-list {
+        .qualification-section {
             max-width: 1300px;
             margin: 8rem auto;
-            padding: 0 1.5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
+            padding: 0 1rem;
         }
 
-        .article-content {
-            display: flex;
-            align-items: center;
-            background-color: #ffffff;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-            gap: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .article-content:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-        }
-
-        .article-img-box {
-            position: relative;
-            width: 320px;
-            height: 200px;
-            border-radius: 12px;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-
-        .article-img-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.89;
-        }
-
-        .overlay-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(149, 17, 226, 0.678);
-            padding: 0.5rem 8rem;
-            border-radius: 6px;
-            font-size: 0.86rem;
-            color: #fff;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .overlay-text2 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(231, 137, 15, 0.774);
-            padding: 0.5rem 8rem;
-            border-radius: 6px;
-            font-size: 0.86rem;
-            color: #fff;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .article-date {
-            min-width: 100px;
-            border-radius: 10px;
-            padding: 0.6rem 1rem;
+        h2 {
             text-align: center;
-            font-weight: 700;
-            font-size: 3.0rem;
-            color: #000000cc;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            color: #333;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .qua-image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
             align-items: center;
+        }
+
+        .qua-image-wrapper {
             position: relative;
+            cursor: zoom-in;
         }
 
-        .article-date::after {
-            content: "";
+        .qua-image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            object-fit: contain;
+            background-color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .qua-image-wrapper:hover img {
+            transform: scale(1.03);
+        }
+
+        .zoom-icon {
             position: absolute;
-            right: -10px;
             top: 50%;
-            transform: translateY(-50%);
-            height: 100px;
-            /* 或 100% 取决于你想要的视觉效果 */
-            width: 2px;
-            background-color: #d6d9db96;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1rem;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.5rem 0.8rem;
+            border-radius: 50%;
+            opacity: 0;
+            transition: 0.3s ease;
+            pointer-events: none;
         }
 
-        .article-date span {
-            font-size: 1.3rem;
-            color: #7f8c8d;
-            margin-top: 0.2rem;
+        .qua-image-wrapper:hover .zoom-icon {
+            opacity: 1;
         }
 
-        .article-text {
-            flex: 1;
-        }
-
-        .article-text h3 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #9738bd;
-            margin-bottom: 0.6rem;
-        }
-
-        .article-text p {
-            font-size: 1.05rem;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .article-text2 {
-            flex: 1;
-        }
-
-        .article-text2 h3 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #e67e22;
-            margin-bottom: 0.6rem;
-        }
-
-        .article-text2 p {
-            font-size: 1.05rem;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .arrow-box {
-            width: 60px;
-            height: 60px;
+        /* Modal styles */
+        .image-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
             display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s ease;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s ease;
         }
 
-        .arrow-box.orange {
-            background-color: #e67e22;
-            color: #fff;
+        .image-modal.active {
+            opacity: 1;
+            visibility: visible;
         }
 
-        .arrow-box.orange:hover {
-            background-color: #d35400;
-        }
-
-        .arrow-box.white {
-            background-color: #ffffff;
-            border: 2px solid #e67e22;
-            color: #e67e22;
-        }
-
-        .arrow-box.white:hover {
-            background-color: #fdf2e9;
+        .image-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            background: white;
+            padding: 10px;
         }
 
         @media (max-width: 768px) {
-            .article-content {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                padding: 1.5rem;
+            .qualification-section {
+                margin: 6rem auto;
+                padding: 0 1rem;
             }
 
-            .article-img-box {
-                width: 100%;
-                height: 180px;
+            h2 {
+                font-size: 1.6rem;
+                margin-bottom: 1.5rem;
             }
 
-            .article-text h3 {
-                font-size: 1.25rem;
+            .qua-image-grid {
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.4rem;
             }
 
-            .article-text p {
-                font-size: 1rem;
-            }
-
-            .article-date::after {
-                display: none;
-            }
-
-            .overlay-text {
-                font-size: 0.78rem;
-            }
-
-            .overlay-text2 {
-                font-size: 0.78rem;
-
+            .qua-image-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -268,40 +170,26 @@
         </nav>
     </header>
 
-    <!-- 記事リスト -->
-    <div class="article-list">
-        <div class="article-content">
-            <div class="article-img-box">
-                <img src="./assets/images/forex-i.jpg" alt="情報1" />
-                <div class="overlay-text">外国為替ライセンス申請：最新トレンドと実践の共有</div>
+    <div class="qualification-section">
+        <h2>企業認証のご紹介</h2>
+        <div class="qua-image-grid">
+            <div class="qua-image-wrapper">
+                <img src="./assets/images/info1.jpg" alt="Qualification 1" onclick="openModal(this.src)">
+                <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
             </div>
-            <div class="article-date">
-                03<br /><span>2024年7月</span>
+            <div class="qua-image-wrapper">
+                <img src="./assets/images/info2.jpg" alt="Qualification 2" onclick="openModal(this.src)">
+                <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
             </div>
-            <div class="article-text">
-                <h3>外国為替会社の創業者が語る：外国為替ライセンス申請の最前線と実体験！</h3>
-                <p>サブタイトル1：外国為替ライセンス申請とは？外国為替ライセンス申請とは、企業や個人が関連機関に必要な手続きを行い、取引ライセンスを取得することです...</p>
+            <div class="qua-image-wrapper">
+                <img src="./assets/images/info3.jpg" alt="Qualification 3" onclick="openModal(this.src)">
+                <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
             </div>
-            <div class="arrow-box orange">→</div>
-        </div>
-
-        <div class="article-content">
-            <div class="article-img-box">
-                <img src="./assets/images/forex-i2.jpg" alt="情報2" />
-                <div class="overlay-text2">外国為替ライセンス申請時の法的リスク</div>
-            </div>
-            <div class="article-date">
-                03<br /><span>2024年7月</span>
-            </div>
-            <div class="article-text2">
-                <h3>外国為替ライセンス申請で注意すべき法的リスクを徹底解説！</h3>
-                <p>国際貿易と経済の発展により、外国為替市場の重要性が高まっています。しかし、ライセンス申請にはさまざまな法的リスクが伴います。本記事ではそのポイントを詳しく解説します...</p>
-            </div>
-            <div class="arrow-box white">→</div>
         </div>
     </div>
 
-     <!-- フッター -->
+
+    <!-- フッター -->
     <footer class="footer-container">
         <div class="footer-top fade-element">
             <div class="footer-logo fade-element">
@@ -354,7 +242,25 @@
             © 2025 FX8.com. 無断転載を禁じます。
         </div>
     </footer>
+    
+    <!-- Modal -->
+    <div class="image-modal" id="imageModal" onclick="closeModal()">
+        <img id="modalImage" src="" alt="Enlarged">
+    </div>
 
+    <script>
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = src;
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+        }
+    </script>
     <!-- JavaScript -->
     <script src="./assets/js/index.js"></script>
 </body>

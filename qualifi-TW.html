@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Qualifications</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+        }
+
+        .qualification-section {
+            max-width: 1300px;
+            margin: 8rem auto;
+            padding: 0 1rem;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .qua-image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .qua-image-wrapper {
+            position: relative;
+            cursor: zoom-in;
+        }
+
+        .qua-image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            object-fit: contain;
+            background-color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .qua-image-wrapper:hover img {
+            transform: scale(1.03);
+        }
+
+        .zoom-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1rem;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.5rem 0.8rem;
+            border-radius: 50%;
+            opacity: 0;
+            transition: 0.3s ease;
+            pointer-events: none;
+        }
+
+        .qua-image-wrapper:hover .zoom-icon {
+            opacity: 1;
+        }
+
+        /* Modal styles */
+        .image-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s ease;
+        }
+
+        .image-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .image-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            background: white;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .qualification-section {
+                margin: 6rem auto;
+                padding: 0 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .qua-image-grid {
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .qua-image-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 頁首區塊 -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="./assets/images/fx-logo.png" alt="FX8 標誌" />
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="./index-CN.html">首頁</a></li>
+                    <li><a href="./index-TW.html#about">關於我們</a></li>
+                    <li><a href="./index-TW.html#vision">如何賺錢</a></li>
+                    <li><a href="./product-TW.html">產品介紹</a></li>
+                    <li><a href="#contact">聯絡我們</a></li>
+                    <li><a href="./qualifi-TW.html">公司資質</a></li>
+                    <li><a href="./news-TW.html">新聞資訊</a></li>
+                    <li class="language-dropdown">
+                        <button class="dropdown-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i> 中文繁體
+                        </button>
+                        <div class="dropdown-content" id="languageDropdown">
+                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
+                            <a href="index-CN.html" onclick="changeLanguage('中文')">中文（簡體）</a>
+                            <a href="index-TW.html" onclick="changeLanguage('中文')">中文（繁體）</a>
+                            <a href="index-JP.html" onclick="changeLanguage('日語')">日語</a>
+                            <a href="index-KR.html" onclick="changeLanguage('韓語')">韓語</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#download" class="download-btn fade-element">下載 FX8 APP</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="qualification-section">
+        <h2>公司資質展示</h2>
+        <div class="qua-image-grid">
+            <div class="qua-image-wrapper">
+                <img src="./assets/images/info1.jpg" alt="Qualification 1" onclick="openModal(this.src)">
+                <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="qua-image-wrapper">
+                <img src="./assets/images/info2.jpg" alt="Qualification 2" onclick="openModal(this.src)">
+                <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="qua-image-wrapper">
+                <img src="./assets/images/info3.jpg" alt="Qualification 3" onclick="openModal(this.src)">
+                <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="image-modal" id="imageModal" onclick="closeModal()">
+        <img id="modalImage" src="" alt="Enlarged">
+    </div>
+
+
+     <!-- 頁尾 -->
+    <footer class="footer-container">
+        <div class="footer-top fade-element">
+            <div class="footer-logo fade-element">
+                <img src="./assets/images/fx-logo.png" alt="FX8 標誌">
+            </div>
+            <div class="footer-socials">
+                <!-- 第一排：Telegram 和 WhatsApp -->
+                <h3 class="footer-contact">聯絡我們</h3>
+                <div class="footer-social-row">
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/telegram.png" alt="Telegram">
+                        Telegram
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/whatsapp.png" alt="WhatsApp">
+                        WhatsApp
+                    </a>
+                </div>
+
+                <!-- 第二排：社群媒體圖示 -->
+                <div class="footer-social-row" id="contact">
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/facebook.png" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/instagram.png" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/linkedin.png" alt="LinkedIn" class="social-icon">
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/ytb.png" alt="YouTube" class="social-icon">
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/wechat.png" alt="WeChat" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-text">
+            FX8 數位貨幣交易所 — 重新定義數位資產交易生態。
+            FX8 以 MetaQuotes 為核心，並以創新為驅動，致力打造全球領先的多方共贏型數位資產平台。
+            通過自主研發的 A 盤模擬分潤、B 盤合約分潤及跟單分潤三大體系，我們不僅提供交易服務，更構建一個開放、透明、可持續成長的金融生態系統。
+            讓每一位參與者——交易者、策略開發者、社群領袖與合作夥伴——皆可共享數位經濟的成長紅利。
+            技術驅動未來，分潤實現共贏。FX8 不僅是交易平台，更是數位資產生態的基礎設施，推動行業邁向更高效、公平且充滿活力的新紀元。
+            <br><br>
+            © 2025 FX8.com. 版權所有。
+        </div>
+    </footer>
+
+    <script>
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = src;
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+        }
+    </script>
+    <!-- JavaScript -->
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

@@ -140,27 +140,28 @@
             </div>
             <div class="nav-right">
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="./index-CN.html">首页</a></li>
-                    <li><a href="./index-CN.html#about">关于我们</a></li>
-                    <li><a href="./index-CN.html#vision">如何赚钱</a></li>
-                    <li><a href="#contact">联系我们</a></li>
-                    <li><a href="./qualifi.html">公司资质</a></li>
-                    <li><a href="./news-CN.html">新闻资讯</a></li>
+                    <li><a href="./index-EN.html#home">Home</a></li>
+                    <li><a href="./index-EN.html#about">About Us</a></li>
+                    <li><a href="./index-EN.html#vision">How to Earn</a></li>
+                    <li><a href="./product-EN.html">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="./qualifi-EN.html">Licenses</a></li>
+                    <li><a href="./news-EN.html">News</a></li>
                     <li class="language-dropdown">
                         <button class="dropdown-btn" id="languageBtn">
-                            <i class="fas fa-globe"></i> 中文简体
+                            <i class="fas fa-globe"></i> English
                         </button>
                         <div class="dropdown-content" id="languageDropdown">
-                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                           <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
                             <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
-                            <a href="index-CN.html" onclick="changeLanguage('中文')">中文（简体）</a>
-                            <a href="index-TW.html" onclick="changeLanguage('中文')">中文（繁体）</a>
-                            <a href="index-JP.html" onclick="changeLanguage('日语')">日语</a>
-                            <a href="index-KR.html" onclick="changeLanguage('韩语')">韩语</a>
+                            <a href="index-CN.html" onclick="changeLanguage('Simplified Chinese')">中文（简体）</a>
+                            <a href="index-TW.html" onclick="changeLanguage('Traditional Chinese')">中文（繁體）</a>
+                            <a href="index-JP.html" onclick="changeLanguage('Japanese')">Japan</a>
+                            <a href="index-KR.html" onclick="changeLanguage('Korean')">Korea</a>
                         </div>
                     </li>
                 </ul>
-                <a href="#download" class="download-btn fade-element">FX8app下载</a>
+                <a href="#download" class="download-btn fade-element">Download FX8 APP</a>
             </div>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -170,7 +171,7 @@
     </header>
 
     <div class="qualification-section">
-        <h2>公司资质展示</h2>
+        <h2>Company Credentials</h2>
         <div class="qua-image-grid">
             <div class="qua-image-wrapper">
                 <img src="./assets/images/info1.jpg" alt="Qualification 1" onclick="openModal(this.src)">
@@ -192,6 +193,65 @@
         <img id="modalImage" src="" alt="Enlarged">
     </div>
 
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div class="footer-top fade-element">
+            <div class="footer-logo fade-element">
+                <img src="./assets/images/fx-logo.png" alt="FX8 Logo">
+            </div>
+            <div class="footer-socials">
+                <!-- Row 1: Telegram and WhatsApp -->
+                <h3 class="footer-contact">Contact Us</h3>
+                <div class="footer-social-row">
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/telegram.png" alt="Telegram">
+                        Telegram
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/whatsapp.png" alt="WhatsApp">
+                        WhatsApp
+                    </a>
+                </div>
+
+                <!-- Row 2: Additional social media -->
+                <div class="footer-social-row" id="contact">
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/facebook.png" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/instagram.png" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/linkedin.png" alt="LinkedIn" class="social-icon">
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/ytb.png" alt="YouTube" class="social-icon">
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/wechat.png" alt="WeChat" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-text">
+            FX8 Digital Asset Exchange — Redefining the Digital Trading Ecosystem.
+            Centered around MetaQuotes and driven by innovation, FX8 is committed to building a globally leading,
+            multi-role, win-win digital asset platform.
+            With our unique three-tier profit-sharing system — Simulation (A-Book), Contract (B-Book), and Copy Trading
+            — we go beyond trading services to foster an open, transparent, and sustainable financial ecosystem.
+            Every participant — traders, strategy developers, community leaders, and partners — can share in the growth
+            of the digital economy.
+            Technology drives the future. Profit-sharing empowers success. FX8 is more than a trading platform — it's
+            the foundational infrastructure of a vibrant digital asset ecosystem, advancing the industry toward greater
+            efficiency, fairness, and innovation.
+            <br><br>
+            © 2025 FX8.com. All rights reserved.
+        </div>
+    </footer>
+    
     <script>
         function openModal(src) {
             const modal = document.getElementById('imageModal');
