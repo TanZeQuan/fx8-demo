@@ -711,6 +711,8 @@
      padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
      text-decoration: none;
      border-radius: 12px;
+     border:none;
+     cursor: pointer;
      font-weight: 600;
      transition: var(--transition);
      margin-bottom: 2rem;

@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "img": "./uploads/default1.jpg",
+    "overlayText": "示例文字1",
+    "date": "01",
+    "month": "2024-08",
+    "title": "标题1",
+    "desc": "内容...",
+    "link": "./news-info-CN.html?id=1",
+    "arrowColor": "orange"
+  },
+  {
+    "id": 2,
+    "img": "./uploads/default1.jpg",
+    "overlayText": "示例文字2",
+    "date": "02",
+    "month": "2025-08",
+    "title": "标题2",
+    "desc": "不同内容...",
+    "link": "./news-info-CN.html?id=2",
+    "arrowColor": "blue"
+  }
+]

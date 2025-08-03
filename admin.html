@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>后台链接管理</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      input[type="text"],
+      input[type="file"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+      }
+      h3 {
+        margin-top: 30px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>按钮链接设置</h2>
+    <form action="save.php" method="POST" enctype="multipart/form-data">
+      <label>FX APP 链接：</label>
+      <input type="text" name="app_link" required />
+
+      <label>FX APP 按钮文字：</label>
+      <input type="text" name="app_text" required />
+
+      <label>立即开始交易链接：</label>
+      <input type="text" name="start_trading" required />
+
+      <label>模拟分析链接：</label>
+      <input type="text" name="demo_analysis" required />
+
+      <label>关于我们链接：</label>
+      <input type="text" name="about_us" required />
+
+      <h3>推荐钱包设置（上传图片 + 设置跳转链接）</h3>
+      <script>
+        for (let i = 1; i <= 5; i++) {
+          document.write(`
+            <label>钱包 ${i} 图片上传：</label>
+            <input type="file" name="wallet_img_${i}" accept="image/*" required>
+            <label>钱包 ${i} 跳转链接：</label>
+            <input type="text" name="wallet_link_${i}" required>
+          `);
+        }
+      </script>
+
+      <button type="submit">保存</button>
+    </form>
+  </body>
+</html>

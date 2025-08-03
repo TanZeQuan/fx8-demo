@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>文章管理后台</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      background: #f5f7fa;
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    #article-form {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .article-box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      margin-bottom: 2rem;
+    }
+
+    .article-box h3 {
+      margin-top: 0;
+      color: #8e44ad;
+    }
+
+    .article-box input[type="text"],
+    .article-box textarea,
+    .article-box select {
+      width: 100%;
+      margin: 0.3rem 0 1rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    .article-box img {
+      max-width: 300px;
+      margin: 0.5rem 0;
+      border-radius: 8px;
+    }
+
+    button[type="submit"] {
+      display: block;
+      margin: 2rem auto;
+      padding: 0.75rem 2rem;
+      background-color: #8e44ad;
+      color: #fff;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #732d91;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h2>文章管理后台</h2>
+  <form id="article-form" enctype="multipart/form-data">
+    <div id="article-container"></div>
+    <button type="submit">保存所有文章</button>
+  </form>
+
+  <script>
+    fetch("get_articles.php")
+      .then((res) => res.json())
+      .then((data) => {
+        const container = document.getElementById("article-container");
+        container.innerHTML = "";
+
+        data.forEach((item, index) => {
+          const box = document.createElement("div");
+          box.className = "article-box";
+          box.innerHTML = `
+            <h3>文章 ${index + 1}</h3>
+
+            <div class="form-group">
+              <label>文章 ID（唯一）</label>
+              <input type="text" name="articles[${index}][id]" value="${item.id || index + 1}" required>
+            </div>
+
+            <div class="form-group">
+              <label>当前图片</label><br>
+              <img src="${item.img}" id="preview_${index}">
+            </div>
+
+            <div class="form-group">
+              <label>上传新图片</label>
+              <input type="file" name="image_${index}" onchange="previewImage(event, ${index})">
+            </div>
+
+            <div class="form-group">
+              <label>覆盖文字</label>
+              <input type="text" name="articles[${index}][overlayText]" value="${item.overlayText || ""}">
+            </div>
+
+            <div class="form-group">
+              <label>日期</label>
+              <input type="text" name="articles[${index}][date]" value="${item.date || ""}">
+            </div>
+
+            <div class="form-group">
+              <label>月份</label>
+              <input type="text" name="articles[${index}][month]" value="${item.month || ""}">
+            </div>
+
+            <div class="form-group">
+              <label>标题</label>
+              <input type="text" name="articles[${index}][title]" value="${item.title || ""}" required>
+            </div>
+
+            <div class="form-group">
+              <label>简述</label>
+              <textarea name="articles[${index}][desc]" rows="3">${item.desc || ""}</textarea>
+            </div>
+
+            <div class="form-group">
+              <label>详情页链接地址</label>
+              <input type="text" name="articles[${index}][link]" value="${item.link || ""}">
+            </div>
+
+            <div class="form-group">
+              <label>箭头颜色</label>
+              <select name="articles[${index}][arrowColor]">
+                <option value="orange" ${item.arrowColor === "orange" ? "selected" : ""}>橙色</option>
+                <option value="white" ${item.arrowColor === "white" ? "selected" : ""}>白色</option>
+              </select>
+            </div>
+          `;
+          container.appendChild(box);
+        });
+      })
+      .catch(() => {
+        alert("❌ 加载文章失败，请检查服务器或 JSON 文件！");
+      });
+
+    function previewImage(event, index) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        document.getElementById(`preview_${index}`).src = reader.result;
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+
+    document.getElementById("article-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+
+      fetch("save_articles.php", {
+        method: "POST",
+        body: formData,
+      })
+        .then((res) => res.text())
+        .then((msg) => {
+          alert("✅ " + msg);
+          location.reload();
+        })
+        .catch(() => {
+          alert("❌ 保存失败，请稍后重试！");
+        });
+    });
+  </script>
+</body>
+</html>

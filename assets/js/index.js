@@ -79,20 +79,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Create particles continuously
     setInterval(createParticle, 300);
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
 });
 // mobile toggle dropdown //
 document.addEventListener('DOMContentLoaded', function () {

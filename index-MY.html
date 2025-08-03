@@ -1,516 +1,771 @@
 <!DOCTYPE html>
 <html lang="ms">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FX8 MY- 胜者为王 | 专业交易平台</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/index.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Header Section -->
     <header id="header">
-        <nav class="container">
-            <div class="logo">
-                <a href="#home">
-                    <img src="./assets/images/fx-logo.png" alt="FX8">
-                </a>
-            </div>
-            <div class="nav-right">
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#home">Utama</a></li>
-                    <li><a href="#about">Tentang</a></li>
-                    <li><a href="#vision">Cara Menjana Pendapatan</a></li>
-                    <li><a href="./product-MY.html">Produk</a></li>
-                    <li><a href="#contact">Hubungi</a></li>
-                    <li><a href="./qualifi-MY.html">Kelayakan</a></li>
-                    <li><a href="./news-MY.html">Berita</a></li>
-                    <li class="language-dropdown">
-                        <button class="dropdown-btn" id="languageBtn">
-                            <i class="fas fa-globe"></i> Bahasa
-                        </button>
-                        <div class="dropdown-content" id="languageDropdown">
-                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
-                            <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
-                            <a href="index-CN.html" onclick="changeLanguage('中文')">中文（简体）</a>
-                            <a href="index-TW.html" onclick="changeLanguage('中文')">中文（繁体）</a>
-                            <a href="index-JP.html" onclick="changeLanguage('日语')">Bahasa Jepun</a>
-                            <a href="index-KR.html" onclick="changeLanguage('韩语')">Bahasa Korea</a>
-                        </div>
-                    </li>
-                </ul>
-                <a href="#download" class="download-btn fade-element">Download FX8 APP</a>
-            </div>
+      <nav class="container">
+        <div class="logo">
+          <a href="#home">
+            <img src="./assets/images/fx-logo.png" alt="FX8" />
+          </a>
+        </div>
+        <div class="nav-right">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Utama</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#vision">Cara Menjana Pendapatan</a></li>
+            <li><a href="./product-MY.html">Produk</a></li>
+            <li><a href="#contact">Hubungi</a></li>
+            <li><a href="./qualifi-MY.html">Kelayakan</a></li>
+            <li><a href="./news-MY.html">Berita</a></li>
+            <li class="language-dropdown">
+              <button class="dropdown-btn" id="languageBtn">
+                <i class="fas fa-globe"></i> Bahasa
+              </button>
+              <div class="dropdown-content" id="languageDropdown">
+                <a href="index-EN.html" onclick="changeLanguage('English')"
+                  >English</a
+                >
+                <a
+                  href="index-MY.html"
+                  onclick="changeLanguage('Bahasa Malaysia')"
+                  >Bahasa Malaysia</a
+                >
+                <a href="index-CN.html" onclick="changeLanguage('中文')"
+                  >中文（简体）</a
+                >
+                <a href="index-TW.html" onclick="changeLanguage('中文')"
+                  >中文（繁体）</a
+                >
+                <a href="index-JP.html" onclick="changeLanguage('日语')"
+                  >Bahasa Jepun</a
+                >
+                <a href="index-KR.html" onclick="changeLanguage('韩语')"
+                  >Bahasa Korea</a
+                >
+              </div>
+            </li>
+          </ul>
 
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
+          <a
+            id="custom-btn"
+            href="#"
+            class="download-btn fade-element"
+            target="_blank"
+            >Download FX8 APP</a
+          >
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero fade-element" id="home">
-        <div class="particles" id="particles"></div>
+      <div class="particles" id="particles"></div>
 
-        <video class="hero-bg-video" autoplay muted loop playsinline>
-            <source src="./assets/images/hero-bg.mp4" type="video/mp4" />
-        </video>
+      <video class="hero-bg-video" autoplay muted loop playsinline>
+        <source src="./assets/images/hero-bg.mp4" type="video/mp4" />
+      </video>
 
-        <div class="hero-container fade-element">
-            <div class="hero-content fade-element">
-                <h1>
-                    <span class="highlight fade-element">FX8. Pemenang Terbaik</span><br />
-                    Daftar & Dapat <span class="highlight">USD 5</span>
-                </h1>
-                <p>Platform dagangan profesional untuk pengalaman pelaburan unggul</p>
-                <button class="apply-btn fade-element" onclick="startTrading()">Mula Dagangan</button>
+      <div class="hero-container fade-element">
+        <div class="hero-content fade-element">
+          <h1>
+            <span class="highlight fade-element">FX8. Pemenang Terbaik</span
+            ><br />
+            Daftar & Dapat <span class="highlight">USD 5</span>
+          </h1>
+          <p>Platform dagangan profesional untuk pengalaman pelaburan unggul</p>
+            <button class="apply-btn fade-element" id="start-trading-btn">
+             Mula Dagangan
+          </button>
 
-                <!-- App Icons Section -->
-                <div class="app-icons-section fade-element">
-                    <div class="app-icons-dock fade-element">
-                        <span class="app-icons-label">Dompet Disyorkan</span>
-                        <div class="app-icon">
-                            <img src="./assets/images/wallet-i1.png" alt="Wallet 1" />
-                        </div>
-                        <div class="app-icon">
-                            <img src="./assets/images/wallet-i2.png" alt="Wallet 2" />
-                        </div>
-                        <div class="app-icon">
-                            <img src="./assets/images/wallet-i3.png" alt="Wallet 3" />
-                        </div>
-                        <div class="app-icon">
-                            <img src="./assets/images/wallet-i4.png" alt="Wallet 4" />
-                        </div>
-                        <div class="app-icon">
-                            <img src="./assets/images/wallet-i5.png" alt="Wallet 5" />
-                        </div>
-                    </div>
-                </div>
+           <!-- App Icons Section -->
+          <div class="app-icons-section fade-element">
+            <div class="app-icons-dock fade-element" id="wallet-icons">
+              <span class="app-icons-label">Dompet Disyorkan</span>
+              <!-- JS 自动填充钱包图标 -->
+                <div class="app-icon">
+                <img src="./assets/images/wallet-i1.png" alt="Wallet 1" />
+              </div>
+              <div class="app-icon">
+                <img src="./assets/images/wallet-i2.png" alt="Wallet 2" />
+              </div>
+              <div class="app-icon">
+                <img src="./assets/images/wallet-i3.png" alt="Wallet 3" />
+              </div>
+              <div class="app-icon">
+                <img src="./assets/images/wallet-i4.png" alt="Wallet 4" />
+              </div>
+              <div class="app-icon">
+                <img src="./assets/images/wallet-i5.png" alt="Wallet 5" />
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
-
 
     <!-- Features Banner -->
     <section class="features-banner fade-element">
-        <div class="features-slider fade-element">
-            <!-- Kad Ciri Asal -->
-            <div class="feature-card fade-element">
-                <div class="feature-icon">
-                    <img src="./assets/images/slider-i1.png" alt="IM">
-                </div>
-                <h3 class="feature-title">IM</h3>
-                <p class="feature-description">Sistem pemesejan segera terbina dalam – berkomunikasi dengan rakan
-                    pelaburan, berkongsi pandangan pasaran bila-bila masa, di mana sahaja.</p>
-            </div>
-
-            <div class="feature-card fade-element">
-                <div class="feature-icon">
-                    <img src="./assets/images/slider-i2.png" alt="Kontrak Bursa">
-                </div>
-                <h3 class="feature-title">Kontrak Bursa</h3>
-                <p class="feature-description">Disepadukan dengan pelbagai bursa utama, menawarkan pelbagai jenis
-                    kontrak seperti niaga hadapan indeks saham – sesuai untuk lindung nilai dan spekulasi.</p>
-            </div>
-
-            <div class="feature-card fade-element">
-                <div class="feature-icon">
-                    <img src="./assets/images/slider-i3.png" alt="Pengurusan Kewangan">
-                </div>
-                <h3 class="feature-title">Pengurusan Kewangan</h3>
-                <p class="feature-description">Gabungan produk kewangan yang pelbagai, disesuaikan mengikut toleransi
-                    risiko anda – perancangan kekayaan sehenti untuk pertumbuhan aset yang stabil.</p>
-            </div>
-
-            <div class="feature-card fade-element">
-                <div class="feature-icon">
-                    <img src="./assets/images/slider-i4.png" alt="Salin Dagangan">
-                </div>
-                <h3 class="feature-title">Salin Dagangan</h3>
-                <p class="feature-description">Ikuti langkah pakar pelaburan, salin strategi secara automatik dalam masa
-                    nyata – mudah dan menjimatkan masa, hasil maksimum dengan usaha minimum.</p>
-            </div>
-
-            <div class="feature-card fade-element">
-                <div class="feature-icon">
-                    <img src="./assets/images/slider-i5.png" alt="Akaun Simulasi">
-                </div>
-                <h3 class="feature-title">Akaun Simulasi</h3>
-                <p class="feature-description">Berlatih menggunakan dana maya dalam persekitaran bebas risiko – tempat
-                    pembelajaran ideal untuk pedagang baharu.</p>
-            </div>
-
-            <!-- Kad Salinan untuk Gelung Lancar -->
-            <div class="feature-card fade-element">
-                <div class="feature-icon">
-                    <img src="./assets/images/slider-i1.png" alt="IM">
-                </div>
-                <h3 class="feature-title">IM</h3>
-                <p class="feature-description">Sistem pemesejan segera terbina dalam – berkomunikasi dengan rakan
-                    pelaburan, berkongsi pandangan pasaran bila-bila masa, di mana sahaja.</p>
-            </div>
-
-            <div class="feature-card fade-element">
-                <div class="feature-icon">
-                    <img src="./assets/images/slider-i2.png" alt="Kontrak Bursa">
-                </div>
-                <h3 class="feature-title">Kontrak Bursa</h3>
-                <p class="feature-description">Disepadukan dengan pelbagai bursa utama, menawarkan pelbagai jenis
-                    kontrak seperti niaga hadapan indeks saham – sesuai untuk lindung nilai dan spekulasi.</p>
-            </div>
-
-            <div class="feature-card fade-element">
-                <div class="feature-icon">
-                    <img src="./assets/images/slider-i3.png" alt="Pengurusan Kewangan">
-                </div>
-                <h3 class="feature-title">Pengurusan Kewangan</h3>
-                <p class="feature-description">Gabungan produk kewangan yang pelbagai, disesuaikan mengikut toleransi
-                    risiko anda – perancangan kekayaan sehenti untuk pertumbuhan aset yang stabil.</p>
-            </div>
-
-            <div class="feature-card fade-element">
-                <div class="feature-icon">
-                    <img src="./assets/images/slider-i4.png" alt="Salin Dagangan">
-                </div>
-                <h3 class="feature-title">Salin Dagangan</h3>
-                <p class="feature-description">Ikuti langkah pakar pelaburan, salin strategi secara automatik dalam masa
-                    nyata – mudah dan menjimatkan masa, hasil maksimum dengan usaha minimum.</p>
-            </div>
-
-            <div class="feature-card fade-element">
-                <div class="feature-icon">
-                    <img src="./assets/images/slider-i5.png" alt="Akaun Simulasi">
-                </div>
-                <h3 class="feature-title">Akaun Simulasi</h3>
-                <p class="feature-description">Berlatih menggunakan dana maya dalam persekitaran bebas risiko – tempat
-                    pembelajaran ideal untuk pedagang baharu.</p>
-            </div>
+      <div class="features-slider fade-element">
+        <!-- Kad Ciri Asal -->
+        <div class="feature-card fade-element">
+          <div class="feature-icon">
+            <img src="./assets/images/slider-i1.png" alt="IM" />
+          </div>
+          <h3 class="feature-title">IM</h3>
+          <p class="feature-description">
+            Sistem pemesejan segera terbina dalam – berkomunikasi dengan rakan
+            pelaburan, berkongsi pandangan pasaran bila-bila masa, di mana
+            sahaja.
+          </p>
         </div>
-    </section>
 
+        <div class="feature-card fade-element">
+          <div class="feature-icon">
+            <img src="./assets/images/slider-i2.png" alt="Kontrak Bursa" />
+          </div>
+          <h3 class="feature-title">Kontrak Bursa</h3>
+          <p class="feature-description">
+            Disepadukan dengan pelbagai bursa utama, menawarkan pelbagai jenis
+            kontrak seperti niaga hadapan indeks saham – sesuai untuk lindung
+            nilai dan spekulasi.
+          </p>
+        </div>
+
+        <div class="feature-card fade-element">
+          <div class="feature-icon">
+            <img
+              src="./assets/images/slider-i3.png"
+              alt="Pengurusan Kewangan"
+            />
+          </div>
+          <h3 class="feature-title">Pengurusan Kewangan</h3>
+          <p class="feature-description">
+            Gabungan produk kewangan yang pelbagai, disesuaikan mengikut
+            toleransi risiko anda – perancangan kekayaan sehenti untuk
+            pertumbuhan aset yang stabil.
+          </p>
+        </div>
+
+        <div class="feature-card fade-element">
+          <div class="feature-icon">
+            <img src="./assets/images/slider-i4.png" alt="Salin Dagangan" />
+          </div>
+          <h3 class="feature-title">Salin Dagangan</h3>
+          <p class="feature-description">
+            Ikuti langkah pakar pelaburan, salin strategi secara automatik dalam
+            masa nyata – mudah dan menjimatkan masa, hasil maksimum dengan usaha
+            minimum.
+          </p>
+        </div>
+
+        <div class="feature-card fade-element">
+          <div class="feature-icon">
+            <img src="./assets/images/slider-i5.png" alt="Akaun Simulasi" />
+          </div>
+          <h3 class="feature-title">Akaun Simulasi</h3>
+          <p class="feature-description">
+            Berlatih menggunakan dana maya dalam persekitaran bebas risiko –
+            tempat pembelajaran ideal untuk pedagang baharu.
+          </p>
+        </div>
+
+        <!-- Kad Salinan untuk Gelung Lancar -->
+        <div class="feature-card fade-element">
+          <div class="feature-icon">
+            <img src="./assets/images/slider-i1.png" alt="IM" />
+          </div>
+          <h3 class="feature-title">IM</h3>
+          <p class="feature-description">
+            Sistem pemesejan segera terbina dalam – berkomunikasi dengan rakan
+            pelaburan, berkongsi pandangan pasaran bila-bila masa, di mana
+            sahaja.
+          </p>
+        </div>
+
+        <div class="feature-card fade-element">
+          <div class="feature-icon">
+            <img src="./assets/images/slider-i2.png" alt="Kontrak Bursa" />
+          </div>
+          <h3 class="feature-title">Kontrak Bursa</h3>
+          <p class="feature-description">
+            Disepadukan dengan pelbagai bursa utama, menawarkan pelbagai jenis
+            kontrak seperti niaga hadapan indeks saham – sesuai untuk lindung
+            nilai dan spekulasi.
+          </p>
+        </div>
+
+        <div class="feature-card fade-element">
+          <div class="feature-icon">
+            <img
+              src="./assets/images/slider-i3.png"
+              alt="Pengurusan Kewangan"
+            />
+          </div>
+          <h3 class="feature-title">Pengurusan Kewangan</h3>
+          <p class="feature-description">
+            Gabungan produk kewangan yang pelbagai, disesuaikan mengikut
+            toleransi risiko anda – perancangan kekayaan sehenti untuk
+            pertumbuhan aset yang stabil.
+          </p>
+        </div>
+
+        <div class="feature-card fade-element">
+          <div class="feature-icon">
+            <img src="./assets/images/slider-i4.png" alt="Salin Dagangan" />
+          </div>
+          <h3 class="feature-title">Salin Dagangan</h3>
+          <p class="feature-description">
+            Ikuti langkah pakar pelaburan, salin strategi secara automatik dalam
+            masa nyata – mudah dan menjimatkan masa, hasil maksimum dengan usaha
+            minimum.
+          </p>
+        </div>
+
+        <div class="feature-card fade-element">
+          <div class="feature-icon">
+            <img src="./assets/images/slider-i5.png" alt="Akaun Simulasi" />
+          </div>
+          <h3 class="feature-title">Akaun Simulasi</h3>
+          <p class="feature-description">
+            Berlatih menggunakan dana maya dalam persekitaran bebas risiko –
+            tempat pembelajaran ideal untuk pedagang baharu.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- Analisis Dagangan Simulasi -->
     <div class="side-container reveal-in">
-        <div class="sidebar reveal-in">
-            <div
-                style="background: var(--bg-gradient); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; overflow: hidden;">
-                <video src="./assets/images/trade-bg.mp4" autoplay muted loop playsinline
-                    style="max-width: 150%; max-height: 100%; border-radius: inherit; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+      <div class="sidebar reveal-in">
+        <div
+          style="
+            background: var(--bg-gradient);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            overflow: hidden;
+          "
+        >
+          <video
+            src="./assets/images/trade-bg.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            style="
+              max-width: 150%;
+              max-height: 100%;
+              border-radius: inherit;
+              box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            "
+          >
+            Your browser does not support the video tag.
+          </video>
         </div>
+      </div>
 
-        <div class="main-content reveal-in">
-            <h1 class="main-title fade-element">Analisis Dagangan Simulasi</h1>
-            <p class="main-description fade-element">
-                Ganjaran diberikan berdasarkan prestasi simulasi dan keberkesanan promosi — tukarkan pengalaman maya
-                kepada pulangan sebenar.
-            </p>
-            <button class="start-button" onclick="startTrading()">Mula Berdagang Sekarang</button>
-        </div>
+      <div class="main-content reveal-in">
+        <h1 class="main-title fade-element">Analisis Dagangan Simulasi</h1>
+        <p class="main-description fade-element">
+          Ganjaran diberikan berdasarkan prestasi simulasi dan keberkesanan
+          promosi — tukarkan pengalaman maya kepada pulangan sebenar.
+        </p>
+        <button id="demo-trading-btn" class="start-button">
+         Mula Berdagang Sekarang
+        </button>
+      </div>
     </div>
 
     <!-- Apa yang Kami Lakukan -->
     <section class="what-section" id="about">
-        <div class="what-container fade-element">
-            <div class="what-left reveal-in">
-                <h2 class="what-title fade-element">Apa yang Kami Lakukan?</h2>
-                <p class="what-description fade-element">
-                    Kami membangunkan perisian dagangan saham yang bersepadu dan pelbagai fungsi, direka untuk
-                    menyediakan pelabur dengan platform komprehensif untuk dagangan dan perkhidmatan kewangan.
-                    Perisian ini merangkumi fungsi utama seperti dagangan simulasi, pemesejan segera (IM), kontrak
-                    bursa, pengurusan kewangan dan salin dagangan — memenuhi keperluan pelabur pelbagai tahap dalam
-                    komunikasi maklumat, strategi pelaburan, pelaksanaan dagangan dan pengurusan kekayaan.
-                </p>
-                <a href="#" class="what-button fade-element" onclick="startTrading()">Mula Berdagang Sekarang</a>
-                <div class="what-features fade-element">
-                    <div class="what-feature"><span class="circle-tick">✓</span> Dompet Pintar</div>
-                    <div class="what-feature"><span class="circle-tick">✓</span> Perancang Keuntungan</div>
-                    <div class="what-feature"><span class="circle-tick">✓</span> Aliran Dana</div>
-                    <div class="what-feature"><span class="circle-tick">✓</span> Penjelajah Yuran</div>
-                </div>
+      <div class="what-container fade-element">
+        <div class="what-left reveal-in">
+          <h2 class="what-title fade-element">Apa yang Kami Lakukan?</h2>
+          <p class="what-description fade-element">
+            Kami membangunkan perisian dagangan saham yang bersepadu dan
+            pelbagai fungsi, direka untuk menyediakan pelabur dengan platform
+            komprehensif untuk dagangan dan perkhidmatan kewangan. Perisian ini
+            merangkumi fungsi utama seperti dagangan simulasi, pemesejan segera
+            (IM), kontrak bursa, pengurusan kewangan dan salin dagangan —
+            memenuhi keperluan pelabur pelbagai tahap dalam komunikasi maklumat,
+            strategi pelaburan, pelaksanaan dagangan dan pengurusan kekayaan.
+          </p>
+           <button id="about-us-btn" class="what-button fade-element">
+            Mula Berdagang Sekarang
+          </button>
+          <div class="what-features fade-element">
+            <div class="what-feature">
+              <span class="circle-tick">✓</span> Dompet Pintar
             </div>
-            <div class="what-right reveal-in">
-                <div class="media-display fade-element">
-                    <video class="financial-video fade-element" autoplay muted loop playsinline>
-                        <source src="./assets/images/we-bg.mp4" type="video/mp4">
-                        Penyemak imbas anda tidak menyokong main semula video.
-                    </video>
-                </div>
+            <div class="what-feature">
+              <span class="circle-tick">✓</span> Perancang Keuntungan
             </div>
+            <div class="what-feature">
+              <span class="circle-tick">✓</span> Aliran Dana
+            </div>
+            <div class="what-feature">
+              <span class="circle-tick">✓</span> Penjelajah Yuran
+            </div>
+          </div>
         </div>
+        <div class="what-right reveal-in">
+          <div class="media-display fade-element">
+            <video
+              class="financial-video fade-element"
+              autoplay
+              muted
+              loop
+              playsinline
+            >
+              <source src="./assets/images/we-bg.mp4" type="video/mp4" />
+              Penyemak imbas anda tidak menyokong main semula video.
+            </video>
+          </div>
+        </div>
+      </div>
     </section>
-
 
     <!-- Bagaimana Ia Berfungsi -->
     <section class="how-section fade-element">
-        <div class="how-container fade-element">
-            <div class="how-left fade-element">
-                <img src="./assets/images/what-banner.png" alt="Carta Dagangan" class="how-img" />
-            </div>
-            <div class="how-right reveal-in">
-                <h2 class="how-title fade-element">Bagaimana Ia Berfungsi?</h2>
-                <p class="how-description fade-element">
-                    Kami membangunkan perisian dagangan saham bersepadu dan pelbagai fungsi untuk menyediakan pelabur
-                    dengan platform kewangan yang komprehensif.<br /><br />
-                    Perisian ini merangkumi dagangan simulasi, pemesejan segera (IM), kontrak bursa, pengurusan
-                    kewangan, dan fungsi salin dagangan.<br /><br />
-                    Ia memenuhi keperluan pelabur dari pelbagai peringkat, termasuk komunikasi maklumat, pelaksanaan
-                    strategi, urus niaga, dan pengurusan kekayaan.
-                </p>
-                <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-                    <div
-                        style="background: rgba(26, 115, 232, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: rgb(121, 121, 204); font-weight: 500;">
-                        ▲ Dagangan Profesional
-                    </div>
-                    <div
-                        style="background: rgba(255, 107, 53, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: var(--accent-color); font-weight: 500;">
-                        ▲ Selamat dan Boleh Dipercayai
-                    </div>
-                    <div
-                        style="background: rgba(52, 168, 83, 0.1); padding: 0.5rem 1rem; border-radius: 20px; color: #34a853; font-weight: 500;">
-                        ▲ Mesra Pengguna
-                    </div>
-                </div>
-            </div>
+      <div class="how-container fade-element">
+        <div class="how-left fade-element">
+          <img
+            src="./assets/images/what-banner.png"
+            alt="Carta Dagangan"
+            class="how-img"
+          />
         </div>
+        <div class="how-right reveal-in">
+          <h2 class="how-title fade-element">Bagaimana Ia Berfungsi?</h2>
+          <p class="how-description fade-element">
+            Kami membangunkan perisian dagangan saham bersepadu dan pelbagai
+            fungsi untuk menyediakan pelabur dengan platform kewangan yang
+            komprehensif.<br /><br />
+            Perisian ini merangkumi dagangan simulasi, pemesejan segera (IM),
+            kontrak bursa, pengurusan kewangan, dan fungsi salin dagangan.<br /><br />
+            Ia memenuhi keperluan pelabur dari pelbagai peringkat, termasuk
+            komunikasi maklumat, pelaksanaan strategi, urus niaga, dan
+            pengurusan kekayaan.
+          </p>
+          <div
+            style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap"
+          >
+            <div
+              style="
+                background: rgba(26, 115, 232, 0.1);
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+                color: rgb(121, 121, 204);
+                font-weight: 500;
+              "
+            >
+              ▲ Dagangan Profesional
+            </div>
+            <div
+              style="
+                background: rgba(255, 107, 53, 0.1);
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+                color: var(--accent-color);
+                font-weight: 500;
+              "
+            >
+              ▲ Selamat dan Boleh Dipercayai
+            </div>
+            <div
+              style="
+                background: rgba(52, 168, 83, 0.1);
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+                color: #34a853;
+                font-weight: 500;
+              "
+            >
+              ▲ Mesra Pengguna
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Model Keuntungan -->
     <div class="core-vision-section fade-element" id="vision">
-        <div class="core-vision-container fade-element">
-            <div class="content-wrapper reveal-in">
-                <div class="section-header fade-element">
-                    <h1 class="section-title fade-element">Model Keuntungan</h1>
-                    <p
-                        style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">
-                        Pelbagai saluran pendapatan untuk mewujudkan nilai menang-menang bagi pengguna dan platform
-                    </p>
-                </div>
+      <div class="core-vision-container fade-element">
+        <div class="content-wrapper reveal-in">
+          <div class="section-header fade-element">
+            <h1 class="section-title fade-element">Model Keuntungan</h1>
+            <p
+              style="
+                text-align: center;
+                font-size: 1.2rem;
+                color: var(--text-secondary);
+                margin-bottom: 2rem;
+              "
+            >
+              Pelbagai saluran pendapatan untuk mewujudkan nilai menang-menang
+              bagi pengguna dan platform
+            </p>
+          </div>
 
-                <div class="vision-grid fade-element">
-                    <div class="vision-item fade-element">
-                        <img src="./assets/images/profit-logo1.png" alt="Dagangan Simulasi" class="vision-icon-img" />
-                        <h3 class="vision-title">Komisen Dagangan Simulasi</h3>
-                        <p class="vision-description">
-                            Ganjaran maya atau subsidi diberikan kepada pengguna aktif atau penaja yang membawa pengguna
-                            baharu melalui dagangan simulasi; pendapatan komisen diperoleh daripada pendaftaran akaun
-                            broker melalui saluran platform.
-                        </p>
-                    </div>
-
-                    <div class="vision-item fade-element">
-                        <img src="./assets/images/profit-logo2.png" alt="Dagangan Kontrak" class="vision-icon-img" />
-                        <h3 class="vision-title fade-element">Komisen Dagangan Kontrak</h3>
-                        <p class="vision-description fade-element">
-                            Apabila pengguna menjalankan dagangan dan dikenakan yuran transaksi, platform akan berkongsi
-                            hasil tersebut bersama bursa dan broker; sebahagian keuntungan pengguna juga akan dikenakan
-                            komisen mengikut perjanjian.
-                        </p>
-                    </div>
-
-                    <div class="vision-item fade-element">
-                        <img src="./assets/images/profit-logo3.png" alt="Dagangan Ikut" class="vision-icon-img" />
-                        <h3 class="vision-title">Komisen Dagangan Ikut</h3>
-                        <p class="vision-description">
-                            Keuntungan daripada pengguna yang mengikuti pedagang profesional akan dikongsi antara
-                            platform dan pedagang; penaja akan menerima ganjaran berperingkat berdasarkan keuntungan
-                            pengikut yang dirujuk.
-                        </p>
-                    </div>
-                </div>
+          <div class="vision-grid fade-element">
+            <div class="vision-item fade-element">
+              <img
+                src="./assets/images/profit-logo1.png"
+                alt="Dagangan Simulasi"
+                class="vision-icon-img"
+              />
+              <h3 class="vision-title">Komisen Dagangan Simulasi</h3>
+              <p class="vision-description">
+                Ganjaran maya atau subsidi diberikan kepada pengguna aktif atau
+                penaja yang membawa pengguna baharu melalui dagangan simulasi;
+                pendapatan komisen diperoleh daripada pendaftaran akaun broker
+                melalui saluran platform.
+              </p>
             </div>
+
+            <div class="vision-item fade-element">
+              <img
+                src="./assets/images/profit-logo2.png"
+                alt="Dagangan Kontrak"
+                class="vision-icon-img"
+              />
+              <h3 class="vision-title fade-element">
+                Komisen Dagangan Kontrak
+              </h3>
+              <p class="vision-description fade-element">
+                Apabila pengguna menjalankan dagangan dan dikenakan yuran
+                transaksi, platform akan berkongsi hasil tersebut bersama bursa
+                dan broker; sebahagian keuntungan pengguna juga akan dikenakan
+                komisen mengikut perjanjian.
+              </p>
+            </div>
+
+            <div class="vision-item fade-element">
+              <img
+                src="./assets/images/profit-logo3.png"
+                alt="Dagangan Ikut"
+                class="vision-icon-img"
+              />
+              <h3 class="vision-title">Komisen Dagangan Ikut</h3>
+              <p class="vision-description">
+                Keuntungan daripada pengguna yang mengikuti pedagang profesional
+                akan dikongsi antara platform dan pedagang; penaja akan menerima
+                ganjaran berperingkat berdasarkan keuntungan pengikut yang
+                dirujuk.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Muat Turun Aplikasi -->
     <div class="app-container fade-element">
-        <div class="app-left-section fade-element">
-            <img src="./assets/images/phone-mockup.png" alt="FX8 Paparan Aplikasi" class="app-phone-img">
-            <div class="app-info">
-                <div class="app-title-row fade-element">
-                    <img src="./assets/images/fx-logo.png" alt="Logo FX8" class="app-logo">
-                    <div class="app-title">Muat Turun APP</div>
-                </div>
-                <div class="app-store-buttons fade-element">
-                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
-                    <img src="./assets/images/app-store-logo.png" alt="App Store">
-                </div>
-            </div>
+      <div class="app-left-section fade-element">
+        <img
+          src="./assets/images/phone-mockup.png"
+          alt="FX8 Paparan Aplikasi"
+          class="app-phone-img"
+        />
+        <div class="app-info">
+          <div class="app-title-row fade-element">
+            <img
+              src="./assets/images/fx-logo.png"
+              alt="Logo FX8"
+              class="app-logo"
+            />
+            <div class="app-title">Muat Turun APP</div>
+          </div>
+          <div class="app-store-buttons fade-element">
+            <!-- 初始结构，JS 会填充链接 -->
+            <a id="google-link" href="#" target="_blank">
+              <img
+                src="./assets/images/google-play-logo.png"
+                alt="Google Play"
+                data-store="google"
+              />
+            </a>
+            <a id="apple-link" href="#" target="_blank">
+              <img
+                src="./assets/images/app-store-logo.png"
+                alt="App Store"
+                data-store="apple"
+              />
+            </a>
+          </div>
         </div>
+      </div>
 
-        <div class="app-right-section fade-element">
-            <h3 class="app-subtitle">Cadangan Dompet Kripto untuk Dimuat Turun</h3>
-            <div class="app-wallet-list fade-element">
-                <div class="app-wallet-item fade-element">
-                    <img src="./assets/images/wallet-i1.png" alt="Ikon Dompet">
-                    <span>TronLink Pro</span>
-                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
-                    <img src="./assets/images/app-store-logo.png" alt="App Store">
-                </div>
-                <div class="app-wallet-item fade-element">
-                    <img src="./assets/images/wallet-i2.png" alt="Ikon Dompet">
-                    <span>Trust Wallet</span>
-                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
-                    <img src="./assets/images/app-store-logo.png" alt="App Store">
-                </div>
-                <div class="app-wallet-item fade-element">
-                    <img src="./assets/images/wallet-i3.png" alt="Ikon Dompet">
-                    <span>TokenPocket</span>
-                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
-                    <img src="./assets/images/app-store-logo.png" alt="App Store">
-                </div>
-                <div class="app-wallet-item fade-element">
-                    <img src="./assets/images/wallet-i4.png" alt="Ikon Dompet">
-                    <span>MetaMask</span>
-                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
-                    <img src="./assets/images/app-store-logo.png" alt="App Store">
-                </div>
-                <div class="app-wallet-item fade-element">
-                    <img src="./assets/images/wallet-i5.png" alt="Ikon Dompet">
-                    <span>ImToken</span>
-                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
-                    <img src="./assets/images/app-store-logo.png" alt="App Store">
-                </div>
-            </div>
+       <script>
+        fetch("./data/wallets.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const googleLink = data.fx8.google || "#";
+            const appleLink = data.fx8.apple || "#";
+
+            document.getElementById("google-link").href = googleLink;
+            document.getElementById("apple-link").href = appleLink;
+          })
+          .catch((error) => {
+            console.error("加载钱包信息失败:", error);
+          });
+      </script>
+
+      <div class="app-right-section fade-element">
+        <h3 class="app-subtitle">Cadangan Dompet Kripto untuk Dimuat Turun</h3>
+        <div class="app-wallet-list fade-element">
+          <div class="app-wallet-item fade-element">
+            <img src="./assets/images/wallet-i1.png" alt="Ikon Dompet" />
+            <span>TronLink Pro</span>
+            <img src="./assets/images/google-play-logo.png" alt="Google Play" />
+            <img src="./assets/images/app-store-logo.png" alt="App Store" />
+          </div>
+          <div class="app-wallet-item fade-element">
+            <img src="./assets/images/wallet-i2.png" alt="Ikon Dompet" />
+            <span>Trust Wallet</span>
+            <img src="./assets/images/google-play-logo.png" alt="Google Play" />
+            <img src="./assets/images/app-store-logo.png" alt="App Store" />
+          </div>
+          <div class="app-wallet-item fade-element">
+            <img src="./assets/images/wallet-i3.png" alt="Ikon Dompet" />
+            <span>TokenPocket</span>
+            <img src="./assets/images/google-play-logo.png" alt="Google Play" />
+            <img src="./assets/images/app-store-logo.png" alt="App Store" />
+          </div>
+          <div class="app-wallet-item fade-element">
+            <img src="./assets/images/wallet-i4.png" alt="Ikon Dompet" />
+            <span>MetaMask</span>
+            <img src="./assets/images/google-play-logo.png" alt="Google Play" />
+            <img src="./assets/images/app-store-logo.png" alt="App Store" />
+          </div>
+          <div class="app-wallet-item fade-element">
+            <img src="./assets/images/wallet-i5.png" alt="Ikon Dompet" />
+            <span>ImToken</span>
+            <img src="./assets/images/google-play-logo.png" alt="Google Play" />
+            <img src="./assets/images/app-store-logo.png" alt="App Store" />
+          </div>
         </div>
+      </div>
     </div>
-
 
     <!-- Rakan Kerjasama -->
     <div class="providers-area fade-element">
-        <h3 class="providers-heading fade-element">Rakan Kerjasama</h3>
-        <div class="logo-carousel">
-            <div class="logo-track fade-element">
-                <!-- Set pertama logo -->
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo1.png" alt="Rakan 1" />
-                </div>
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo2.png" alt="Rakan 2" />
-                </div>
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo3.png" alt="Rakan 3" />
-                </div>
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo4.png" alt="Rakan 4" />
-                </div>
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo5.png" alt="Rakan 5" />
-                </div>
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo6.png" alt="Rakan 6" />
-                </div>
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo7.png" alt="Rakan 7" />
-                </div>
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo8.png" alt="Rakan 8" />
-                </div>
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo9.png" alt="Rakan 9" />
-                </div>
+      <h3 class="providers-heading fade-element">Rakan Kerjasama</h3>
+      <div class="logo-carousel">
+        <div class="logo-track fade-element">
+          <!-- Set pertama logo -->
+          <div class="logo-item">
+            <img src="./assets/images/col-logo1.png" alt="Rakan 1" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/images/col-logo2.png" alt="Rakan 2" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/images/col-logo3.png" alt="Rakan 3" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/images/col-logo4.png" alt="Rakan 4" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/images/col-logo5.png" alt="Rakan 5" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/images/col-logo6.png" alt="Rakan 6" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/images/col-logo7.png" alt="Rakan 7" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/images/col-logo8.png" alt="Rakan 8" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/images/col-logo9.png" alt="Rakan 9" />
+          </div>
 
-                <!-- Set pendua untuk gelung lancar -->
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo1.png" alt="Rakan 1" />
-                </div>
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo2.png" alt="Rakan 2" />
-                </div>
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo3.png" alt="Rakan 3" />
-                </div>
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo4.png" alt="Rakan 4" />
-                </div>
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo5.png" alt="Rakan 5" />
-                </div>
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo6.png" alt="Rakan 6" />
-                </div>
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo7.png" alt="Rakan 7" />
-                </div>
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo8.png" alt="Rakan 8" />
-                </div>
-                <div class="logo-item">
-                    <img src="./assets/images/col-logo9.png" alt="Rakan 9" />
-                </div>
-            </div>
+          <!-- Set pendua untuk gelung lancar -->
+          <div class="logo-item">
+            <img src="./assets/images/col-logo1.png" alt="Rakan 1" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/images/col-logo2.png" alt="Rakan 2" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/images/col-logo3.png" alt="Rakan 3" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/images/col-logo4.png" alt="Rakan 4" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/images/col-logo5.png" alt="Rakan 5" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/images/col-logo6.png" alt="Rakan 6" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/images/col-logo7.png" alt="Rakan 7" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/images/col-logo8.png" alt="Rakan 8" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/images/col-logo9.png" alt="Rakan 9" />
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer-container">
-        <div class="footer-top fade-element">
-            <div class="footer-logo fade-element">
-                <img src="./assets/images/fx-logo.png" alt="Logo FX8">
-            </div>
-            <div class="footer-socials">
-                <!-- Baris 1: Telegram dan WhatsApp -->
-                <h3 class="footer-contact">Hubungi Kami</h3>
-                <div class="footer-social-row">
-                    <a href="#" class="footer-social-link">
-                        <img src="./assets/images/telegram.png" alt="Telegram">
-                        Telegram
-                    </a>
-                    <a href="#" class="footer-social-link">
-                        <img src="./assets/images/whatsapp.png" alt="WhatsApp">
-                        WhatsApp
-                    </a>
-                </div>
-
-                <!-- Baris 2: Ikon media sosial tambahan -->
-                <div class="footer-social-row" id="contact">
-                    <a href="#" class="footer-social-link">
-                        <img src="./assets/images/facebook.png" alt="Facebook" class="social-icon">
-                    </a>
-                    <a href="#" class="footer-social-link">
-                        <img src="./assets/images/instagram.png" alt="Instagram" class="social-icon">
-                    </a>
-                    <a href="#" class="footer-social-link">
-                        <img src="./assets/images/linkedin.png" alt="LinkedIn" class="social-icon">
-                    </a>
-                    <a href="#" class="footer-social-link">
-                        <img src="./assets/images/ytb.png" alt="YouTube" class="social-icon">
-                    </a>
-                    <a href="#" class="footer-social-link">
-                        <img src="./assets/images/wechat.png" alt="WeChat" class="social-icon">
-                    </a>
-                </div>
-            </div>
+      <div class="footer-top fade-element">
+        <div class="footer-logo fade-element">
+          <img src="./assets/images/fx-logo.png" alt="Logo FX8" />
         </div>
+        <div class="footer-socials">
+          <!-- Baris 1: Telegram dan WhatsApp -->
+          <h3 class="footer-contact">Hubungi Kami</h3>
+          <div class="footer-social-row">
+            <a href="#" class="footer-social-link">
+              <img src="./assets/images/telegram.png" alt="Telegram" />
+              Telegram
+            </a>
+            <a href="#" class="footer-social-link">
+              <img src="./assets/images/whatsapp.png" alt="WhatsApp" />
+              WhatsApp
+            </a>
+          </div>
 
-        <hr class="footer-divider">
-
-        <div class="footer-text">
-            FX8 Bursa Aset Digital — Mendefinisikan semula ekosistem perdagangan aset digital.
-            FX8, yang berteraskan MetaQuotes dan dipacu oleh inovasi, berkomitmen untuk membina platform aset digital
-            global yang menyokong kerjasama pelbagai pihak.
-            Melalui tiga sistem unik kami — Pembahagian Keuntungan Simulasi A-Book, Pembahagian Keuntungan Kontrak
-            B-Book, dan Pembahagian Keuntungan Salin Dagangan — kami bukan sahaja menyediakan perkhidmatan dagangan,
-            tetapi juga membentuk ekosistem kewangan yang terbuka, telus, dan mampan.
-            Semua peserta — pedagang, pembangun strategi, pemimpin komuniti, dan rakan kongsi — dapat berkongsi manfaat
-            daripada pertumbuhan ekonomi digital.
-            Didorong oleh teknologi dan diperkukuh melalui pembahagian keuntungan, FX8 bukan sekadar platform dagangan,
-            tetapi juga infrastruktur utama bagi ekosistem aset digital, memacu industri ke arah era yang lebih cekap,
-            adil dan dinamik.
-            <br><br>
-            © 2025 FX8.com. Hak cipta terpelihara.
+          <!-- Baris 2: Ikon media sosial tambahan -->
+          <div class="footer-social-row" id="contact">
+            <a href="#" class="footer-social-link">
+              <img
+                src="./assets/images/facebook.png"
+                alt="Facebook"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="footer-social-link">
+              <img
+                src="./assets/images/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="footer-social-link">
+              <img
+                src="./assets/images/linkedin.png"
+                alt="LinkedIn"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="footer-social-link">
+              <img
+                src="./assets/images/ytb.png"
+                alt="YouTube"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="footer-social-link">
+              <img
+                src="./assets/images/wechat.png"
+                alt="WeChat"
+                class="social-icon"
+              />
+            </a>
+          </div>
         </div>
+      </div>
 
+      <hr class="footer-divider" />
+
+      <div class="footer-text">
+        FX8 Bursa Aset Digital — Mendefinisikan semula ekosistem perdagangan
+        aset digital. FX8, yang berteraskan MetaQuotes dan dipacu oleh inovasi,
+        berkomitmen untuk membina platform aset digital global yang menyokong
+        kerjasama pelbagai pihak. Melalui tiga sistem unik kami — Pembahagian
+        Keuntungan Simulasi A-Book, Pembahagian Keuntungan Kontrak B-Book, dan
+        Pembahagian Keuntungan Salin Dagangan — kami bukan sahaja menyediakan
+        perkhidmatan dagangan, tetapi juga membentuk ekosistem kewangan yang
+        terbuka, telus, dan mampan. Semua peserta — pedagang, pembangun
+        strategi, pemimpin komuniti, dan rakan kongsi — dapat berkongsi manfaat
+        daripada pertumbuhan ekonomi digital. Didorong oleh teknologi dan
+        diperkukuh melalui pembahagian keuntungan, FX8 bukan sekadar platform
+        dagangan, tetapi juga infrastruktur utama bagi ekosistem aset digital,
+        memacu industri ke arah era yang lebih cekap, adil dan dinamik.
+        <br /><br />
+        © 2025 FX8.com. Hak cipta terpelihara.
+      </div>
     </footer>
-
 
     <!-- JavaScript -->
     <script src="./assets/js/index.js"></script>
-</body>
+    <script>
+      fetch("get_links.php")
+        .then((res) => res.json())
+        .then((data) => {
+          // 按钮链接设置
+          document.getElementById("custom-btn").href = data.app.link;
 
+          document.getElementById("start-trading-btn").onclick = () => {
+            window.open(data.startTrading, "_blank");
+          };
+
+          document.getElementById("demo-trading-btn").onclick = () => {
+            window.open(data.demoAnalysis, "_blank");
+          };
+
+          document.getElementById("about-us-btn").onclick = () => {
+            window.open(data.aboutUs, "_blank");
+          };
+
+          // 推荐钱包图标设置
+          const walletContainer = document.getElementById("wallet-icons");
+
+          // 清除旧图标（保留标签文字）
+          [...walletContainer.children].forEach((child) => {
+            if (!child.classList.contains("app-icons-label")) child.remove();
+          });
+
+          // 加载每个钱包图标
+          data.wallets.forEach((wallet) => {
+            const div = document.createElement("div");
+            div.className = "app-icon";
+
+            const link = document.createElement("a");
+            link.href = wallet.link;
+            link.target = "_blank";
+
+            const img = document.createElement("img");
+            img.src = wallet.img;
+            img.alt = "Wallet";
+
+            link.appendChild(img);
+            div.appendChild(link);
+            walletContainer.appendChild(div);
+          });
+        });
+    </script>
+  </body>
 </html>

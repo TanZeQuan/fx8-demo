@@ -1,0 +1,7 @@
+{
+  "fx8": {
+    "google": "https://play.google.com/store/apps/details?id=example",
+    "apple": "https://apps.apple.com/app/id1234567890"
+  },
+  "wallets": []
+}

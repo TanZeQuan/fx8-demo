@@ -1,0 +1,17 @@
+{
+  "app": {
+    "link": "https://example.com/download",
+    "text": ""
+  },
+  "startTrading": "https://example.com/trade",
+  "demoAnalysis": "https://example.com/demo",
+  "aboutUs": "https://example.com/about",
+  "wallets": [
+    { "img": "./assets/images/wallet-i1.png", "link": "https://wallet1.com" },
+    { "img": "./assets/images/wallet-i2.png", "link": "https://wallet2.com" },
+    { "img": "./assets/images/wallet-i3.png", "link": "https://wallet3.com" },
+    { "img": "./assets/images/wallet-i4.png", "link": "https://wallet4.com" },
+    { "img": "./assets/images/wallet-i5.png", "link": "https://wallet5.com" }
+  ]
+  
+}
