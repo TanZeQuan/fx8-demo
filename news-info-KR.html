@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>외환 라이선스 신청 정보</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <style>
+        .new-info-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 100px 20px;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .new-info-section {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .new-info-header {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            padding: 25px 30px;
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* .new-info-number {
+            background: rgba(255, 255, 255, 0.2);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+        } */
+
+        .new-info-content {
+            padding: 30px;
+        }
+
+        .new-info-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+
+        .new-info-image {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+        }
+
+        .new-info-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .new-info-section:hover .new-info-image img {
+            transform: scale(1.02);
+        }
+
+        .new-info-highlight {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .new-info-quote {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%);
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .new-info-container {
+                padding: 80px 15px;
+            }
+
+            .new-info-header {
+                padding: 20px;
+                font-size: 20px;
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .new-info-content {
+                padding: 20px;
+            }
+
+            .new-info-text {
+                font-size: 15px;
+            }
+
+            .new-info-image img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+  <!-- 헤더 영역 -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="./assets/images/fx-logo.png" alt="FX8 로고" />
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="./index-KR.html#home">홈</a></li>
+                    <li><a href="./index-KR.html#about">회사 소개</a></li>
+                    <li><a href="./index-KR.html#vision">수익 창출 방법</a></li>
+                    <li><a href="./product-KR.html">제품 안내</a></li>
+                    <li><a href="#contact">문의하기</a></li>
+                    <li><a href="./qualifi-KR.html">기업 자격증</a></li>
+                    <li><a href="./news-KR.html">뉴스</a></li>
+                    <li class="language-dropdown">
+                        <button class="dropdown-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i> 한국어
+                        </button>
+                        <div class="dropdown-content" id="languageDropdown">
+                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
+                            <a href="index-CN.html" onclick="changeLanguage('中文')">중국어 (간체)</a>
+                            <a href="index-TW.html" onclick="changeLanguage('中文')">중국어 (번체)</a>
+                            <a href="index-JP.html" onclick="changeLanguage('日语')">일본어</a>
+                            <a href="index-KR.html" onclick="changeLanguage('韩语')">한국어</a>
+                        </div>
+                    </li>
+                </ul>
+                 <a id="download-btn" href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer"
+                    class="download-btn fade-element">
+                    FX8 앱 다운로드
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+  <div class="new-info-container">
+    <!-- Section 1 -->
+    <div class="new-info-section">
+      <div class="new-info-header">
+        <!-- <div class="new-info-number">1</div> -->
+        <span>외환 창업자가 직접 말하는: 최신 라이선스 신청 동향과 실무 경험!</span>
+      </div>
+      <div class="new-info-content">
+        <p class="new-info-text">
+          외환 라이선스 신청은 기업 또는 개인이 관련 기관의 규정된 절차를 통해 외환 거래 사업을 수행할 법적 자격을 얻는 것을 의미합니다.
+          글로벌 금융 시장의 자유화가 가속화됨에 따라 외환 거래는 국제 무역과 투자에서 핵심적인 역할을 하며,
+          정식 라이선스를 보유하는 것은 업계 진입의 필수 조건이 되었습니다.
+        </p>
+
+        <div class="new-info-image">
+          <img src="./assets/images/forex-i.jpg" alt="외환 데이터 분석">
+        </div>
+
+        <p class="new-info-text">
+          외환 기업 창업자로서 라이선스 신청 과정이 얼마나 복잡하고 도전적인지 잘 알고 있습니다.
+          <span class="new-info-highlight">적절한 관할권 선택, 신청 서류 준비, 리스크 관리 시스템 구축</span> 등은 성공의 핵심 요소입니다.
+        </p>
+
+        <div class="new-info-quote">
+          제 경험에 따르면 가장 중요한 것은 '인내심'과 '전문가 팀의 지원'입니다.
+          신청 절차는 단기간에 완료되지 않으며, 감독 기관과의 원활한 소통과 신속한 대응이 성공의 열쇠입니다.
+        </div>
+
+        <p class="new-info-text">
+          최근 외환 라이선스 신청 트렌드에는 변화가 있으며, 규제가 강화되고 컴플라이언스 비용도 증가하고 있습니다.
+          하지만 핀테크 기술의 발전으로 신청 및 보고 절차의 디지털화가 가속화되면서 효율성도 향상되고 있습니다.
+          전문가와 함께 철저히 준비하면 성공 확률을 높일 수 있습니다.
+        </p>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="new-info-section">
+      <div class="new-info-header">
+        <!-- <div class="new-info-number">2</div> -->
+        <span>외환 라이선스 신청 시 주의해야 할 법적 리스크 총정리!</span>
+      </div>
+      <div class="new-info-content">
+        <p class="new-info-text">
+          글로벌 경제의 확장과 함께 외환 시장의 중요성도 높아지고 있습니다.
+          그러나 라이선스를 신청하는 과정에는 다양한 법적 리스크가 존재하며,
+          적절히 대응하지 않으면 신청 실패뿐만 아니라 법적 제재까지 받을 수 있습니다.
+        </p>
+
+        <div class="new-info-quote">
+          컴플라이언스 리스크는 가장 큰 법적 리스크입니다.
+          자본금, 고객 실명 인증, 자금세탁방지 등 각국은 엄격한 기준을 가지고 있습니다.
+        </div>
+
+        <p class="new-info-text">
+          가장 먼저 고려해야 할 것은 <span class="new-info-highlight">규제 준수 리스크</span>입니다.
+          각 관할권마다 규제가 다르기 때문에 신청자는 현지 법률과 요건을 정확히 이해하고 이에 맞춰 준비해야 합니다.
+          자본 요건, 주주 검토, 경영진 자격, 고객 자산 분리 등 모든 항목이 중요합니다.
+        </p>
+
+        <div class="new-info-image">
+          <img src="./assets/images/forex-i2.jpg" alt="법률 문서 및 저울">
+        </div>
+
+        <p class="new-info-text">
+          두 번째는 운영상의 컴플라이언스 리스크입니다.
+          라이선스 취득 이후에도 정기 보고, 민원 처리, 보안 관리, 직원 교육 등 다양한 측면에서 규정을 지속적으로 준수해야 합니다.
+          <span class="new-info-highlight">내부 컴플라이언스 및 리스크 관리 체계</span>는 지속 가능한 운영의 기반입니다.
+        </p>
+
+        <p class="new-info-text">
+          마지막으로 국경 간 거래에서 발생하는 법적 리스크도 무시할 수 없습니다.
+          외환 거래는 다수의 국가 법률이 적용되기 때문에 세무, 데이터 보호, 소비자 보호 등 다양한 법적 요소를 사전에 검토하고 대비해야 합니다.
+          전문 로펌과 협업하여 철저히 리스크를 관리하는 것이 중요합니다.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-container">
+    <div class="footer-top fade-element">
+      <div class="footer-logo fade-element">
+        <img src="./assets/images/fx-logo.png" alt="FX8 Logo">
+      </div>
+      <div class="footer-socials">
+        <h3 class="footer-contact">문의하기</h3>
+        <div class="footer-social-row">
+          <a href="#" class="footer-social-link"><img src="./assets/images/telegram.png" alt="Telegram"> Telegram</a>
+          <a href="#" class="footer-social-link"><img src="./assets/images/whatsapp.png" alt="WhatsApp"> WhatsApp</a>
+        </div>
+        <div class="footer-social-row" id="contact">
+          <a href="#" class="footer-social-link"><img src="./assets/images/facebook.png" alt="Facebook"></a>
+          <a href="#" class="footer-social-link"><img src="./assets/images/instagram.png" alt="Instagram"></a>
+          <a href="#" class="footer-social-link"><img src="./assets/images/linkedin.png" alt="LinkedIn"></a>
+          <a href="#" class="footer-social-link"><img src="./assets/images/ytb.png" alt="YouTube"></a>
+          <a href="#" class="footer-social-link"><img src="./assets/images/wechat.png" alt="WeChat"></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-text">
+      FX8 디지털 자산 거래소 — 디지털 금융 생태계의 새로운 기준을 제시합니다.
+      MetaQuotes 기술을 기반으로 혁신을 주도하며, FX8은 세계적인 다기능 디지털 자산 플랫폼을 구축해 나가고 있습니다.
+      독창적인 A북 시뮬레이션 분배, B북 계약 분배, 카피 트레이딩 시스템을 통해 단순한 거래 플랫폼을 넘어
+      모든 참여자에게 지속 가능한 성장을 제공합니다.
+      <br><br>
+      © 2025 FX8.com. All rights reserved.
+    </div>
+  </footer>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>

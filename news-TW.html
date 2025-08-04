@@ -92,6 +92,11 @@
             white-space: nowrap;
         }
 
+        .arrow-link {
+            text-decoration: none;
+            display: inline-block;
+        }
+
         .article-date {
             min-width: 100px;
             border-radius: 10px;
@@ -238,7 +243,7 @@
             </div>
             <div class="nav-right">
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="./index-CN.html">首頁</a></li>
+                    <li><a href="./index-TW.html#home">首頁</a></li>
                     <li><a href="./index-TW.html#about">關於我們</a></li>
                     <li><a href="./index-TW.html#vision">如何賺錢</a></li>
                     <li><a href="./product-TW.html">產品介紹</a></li>
@@ -250,7 +255,7 @@
                             <i class="fas fa-globe"></i> 中文繁體
                         </button>
                         <div class="dropdown-content" id="languageDropdown">
-                              <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
                             <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
                             <a href="index-CN.html" onclick="changeLanguage('中文')">中文（簡體）</a>
                             <a href="index-TW.html" onclick="changeLanguage('中文')">中文（繁體）</a>
@@ -259,7 +264,10 @@
                         </div>
                     </li>
                 </ul>
-                <a href="#download" class="download-btn fade-element">下載 FX8 APP</a>
+                <a id="download-btn" href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer"
+                    class="download-btn fade-element">
+                   下載 FX8 APP
+                </a>
             </div>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -282,7 +290,9 @@
                 <h3>外匯公司創辦人揭密：外匯牌照申請的最新趨勢與實務經驗！</h3>
                 <p>副標題一：什麼是外匯牌照申請？外匯牌照申請是指企業或個人依照監管規範，向相關主管機關申請取得合法從事外匯交易的資格...</p>
             </div>
-            <div class="arrow-box orange">→</div>
+            <a href="news-info-TW.html" class="arrow-link">
+                <div class="arrow-box orange">→</div>
+            </a>
         </div>
 
         <div class="article-content">
@@ -297,11 +307,13 @@
                 <h3>深入解析外匯牌照申請中常見的法律風險</h3>
                 <p>隨著全球經濟發展與國際貿易日益頻繁，外匯市場地位逐漸提升。然而，在申請外匯牌照的過程中，潛藏著不少法律風險與合規挑戰...</p>
             </div>
-            <div class="arrow-box white">→</div>
+            <a href="news-info-TW.html" class="arrow-link">
+                <div class="arrow-box white">→</div>
+            </a>
         </div>
     </div>
 
-     <!-- 頁尾 -->
+    <!-- 頁尾 -->
     <footer class="footer-container">
         <div class="footer-top fade-element">
             <div class="footer-logo fade-element">

@@ -202,3 +202,13 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.animate-zoom-rotate').forEach((el) => {
     observer.observe(el);
 });
+
+// button link testing
+ document.getElementById("start-trading-btn").addEventListener("click", function () {
+    window.open("https://www.baidu.com/", "_blank");
+  });
+
+  document.getElementById("start-button").addEventListener("click", function () {
+    window.open("https://www.baidu.com/", "_blank");
+  });
+  

@@ -43,6 +43,11 @@
             transition: all 0.3s ease;
         }
 
+        .arrow-link {
+            text-decoration: none;
+            display: inline-block;
+        }
+
         .article-content:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
@@ -238,7 +243,7 @@
             </div>
             <div class="nav-right">
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="./index-CN.html">Utama</a></li>
+                    <li><a href="./index-MY.html#home">Utama</a></li>
                     <li><a href="./index-MY.html#about">Tentang</a></li>
                     <li><a href="./index-MY.html#vision">Cara Menjana Pendapatan</a></li>
                     <li><a href="./product-MY.html">Produk</a></li>
@@ -250,7 +255,7 @@
                             <i class="fas fa-globe"></i> Bahasa
                         </button>
                         <div class="dropdown-content" id="languageDropdown">
-                             <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
                             <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
                             <a href="index-CN.html" onclick="changeLanguage('中文')">中文（简体）</a>
                             <a href="index-TW.html" onclick="changeLanguage('中文')">中文（繁体）</a>
@@ -259,7 +264,10 @@
                         </div>
                     </li>
                 </ul>
-                <a href="#download" class="download-btn fade-element">Download FX8 APP</a>
+                 <a id="download-btn" href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer"
+                    class="download-btn fade-element">
+                    Download FX8 APP
+                </a>
             </div>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -283,7 +291,9 @@
                 <p>Subtajuk 1: Apa itu Permohonan Lesen Forex? Ia merujuk kepada proses memohon kelulusan rasmi daripada
                     badan berkuasa untuk menjalankan aktiviti perdagangan mata wang asing...</p>
             </div>
-            <div class="arrow-box orange">→</div>
+            <a href="news-info-MY.html" class="arrow-link">
+                <div class="arrow-box orange">→</div>
+            </a>
         </div>
 
         <div class="article-content">
@@ -300,11 +310,13 @@
                     penting. Namun, terdapat pelbagai risiko undang-undang dalam proses permohonan yang perlu difahami
                     dengan jelas...</p>
             </div>
-            <div class="arrow-box white">→</div>
+            <a href="news-info-MY.html" class="arrow-link">
+                <div class="arrow-box white">→</div>
+            </a>
         </div>
     </div>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer-container">
         <div class="footer-top fade-element">
             <div class="footer-logo fade-element">

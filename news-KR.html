@@ -48,6 +48,11 @@
             box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
         }
 
+        .arrow-link {
+            text-decoration: none;
+            display: inline-block;
+        }
+
         .article-img-box {
             position: relative;
             width: 320px;
@@ -238,7 +243,7 @@
             </div>
             <div class="nav-right">
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="./index-CN.html">홈</a></li>
+                    <li><a href="./index-KR.html#home">홈</a></li>
                     <li><a href="./index-KR.html#about">회사 소개</a></li>
                     <li><a href="./index-KR.html#vision">수익 창출 방법</a></li>
                     <li><a href="./product-KR.html">제품 안내</a></li>
@@ -250,7 +255,7 @@
                             <i class="fas fa-globe"></i> 한국어
                         </button>
                         <div class="dropdown-content" id="languageDropdown">
-                           <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
                             <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
                             <a href="index-CN.html" onclick="changeLanguage('中文')">중국어 (간체)</a>
                             <a href="index-TW.html" onclick="changeLanguage('中文')">중국어 (번체)</a>
@@ -259,7 +264,10 @@
                         </div>
                     </li>
                 </ul>
-                <a href="#download" class="download-btn fade-element">FX8 앱 다운로드</a>
+                 <a id="download-btn" href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer"
+                    class="download-btn fade-element">
+                    FX8 앱 다운로드
+                </a>
             </div>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -282,7 +290,9 @@
                 <h3>외환 기업 창업자가 말하는 외환 라이선스 신청의 트렌드와 경험 공유</h3>
                 <p>부제 1: 외환 라이선스 신청이란? 외환 라이선스 신청은 기업 또는 개인이 관련 기관의 규정을 따라 정식으로 거래 자격을 획득하는 절차입니다...</p>
             </div>
-            <div class="arrow-box orange">→</div>
+            <a href="news-info-KR.html" class="arrow-link">
+                <div class="arrow-box orange">→</div>
+            </a>
         </div>
 
         <div class="article-content">
@@ -298,12 +308,14 @@
                 <p>글로벌 경제와 무역 확대에 따라 외환 시장의 중요성이 증가하고 있습니다. 하지만 라이선스 신청 과정에는 다양한 법적 리스크가 존재하며, 이에 대한 충분한 이해가 필요합니다...
                 </p>
             </div>
-            <div class="arrow-box white">→</div>
+            <a href="news-info-KR.html" class="arrow-link">
+                <div class="arrow-box white">→</div>
+            </a>
         </div>
     </div>
 
 
-     <!-- 푸터 -->
+    <!-- 푸터 -->
     <footer class="footer-container">
         <div class="footer-top fade-element">
             <div class="footer-logo fade-element">

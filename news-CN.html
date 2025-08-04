@@ -64,6 +64,11 @@
             white-space: nowrap;
         }
 
+        .arrow-link {
+            text-decoration: none;
+            display: inline-block;
+        }
+
         .overlay-text2 {
             position: absolute;
             top: 50%;
@@ -215,7 +220,7 @@
             </div>
             <div class="nav-right">
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="./index-CN.html">首页</a></li>
+                    <li><a href="./index-CN.html#home">首页</a></li>
                     <li><a href="./index-CN.html#about">关于我们</a></li>
                     <li><a href="./index-CN.html#vision">如何赚钱</a></li>
                     <li><a href="./product-CN.html">产品介绍</a></li>
@@ -227,7 +232,7 @@
                             <i class="fas fa-globe"></i> 中文简体
                         </button>
                         <div class="dropdown-content" id="languageDropdown">
-                           <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
                             <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
                             <a href="index-CN.html" onclick="changeLanguage('中文')">中文（简体）</a>
                             <a href="index-TW.html" onclick="changeLanguage('中文')">中文（繁体）</a>
@@ -236,7 +241,10 @@
                         </div>
                     </li>
                 </ul>
-                <a href="#download" class="download-btn fade-element">下载 FX8 APP</a>
+                <a id="download-btn" href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer"
+                    class="download-btn fade-element">
+                    下载 FX8 APP
+                </a>
             </div>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -258,7 +266,10 @@
                 <h3>外汇公司创始人分享：外汇牌照申请的前沿趋势及经验大揭秘！</h3>
                 <p>副标题一： 什么是外汇牌照申请外汇牌照申请是指一个公司或个人通过一系列程序和规定，向相关机构申请获得从...</p>
             </div>
-            <div class="arrow-box orange">→</div>
+            <a href="news-info-CN.html" class="arrow-link">
+                <div class="arrow-box orange">→</div>
+            </a>
+
         </div>
 
         <div class="article-content">
@@ -273,7 +284,10 @@
                 <h3>全面解析外汇牌照申请中需要注意的法律风险！</h3>
                 <p>外汇牌照申请中需要注意的法律风险随着全球经济的发展和国际贸易的增加，外汇交易市场的重要性日益凸显。然...</p>
             </div>
-            <div class="arrow-box white">→</div>
+            <a href="news-info-CN.html" class="arrow-link">
+                <div class="arrow-box white">→</div>
+            </a>
+
         </div>
     </div>
 
@@ -333,7 +347,6 @@
 
     <!-- JavaScript -->
     <script src="./assets/js/index.js"></script>
-    <script src="./assets/js/news-api.js"></script>
 </body>
 
 </html>

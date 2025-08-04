@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maklumat Permohonan Lesen Forex</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <style>
+        .new-info-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 100px 20px;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .new-info-section {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .new-info-header {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            padding: 25px 30px;
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* .new-info-number {
+            background: rgba(255, 255, 255, 0.2);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+        } */
+
+        .new-info-content {
+            padding: 30px;
+        }
+
+        .new-info-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+
+        .new-info-image {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+        }
+
+        .new-info-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .new-info-section:hover .new-info-image img {
+            transform: scale(1.02);
+        }
+
+        .new-info-highlight {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .new-info-quote {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%);
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .new-info-container {
+                padding: 80px 15px;
+            }
+
+            .new-info-header {
+                padding: 20px;
+                font-size: 20px;
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .new-info-content {
+                padding: 20px;
+            }
+
+            .new-info-text {
+                font-size: 15px;
+            }
+
+            .new-info-image img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+ <!-- Bahagian Header -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="./assets/images/fx-logo.png" alt="Logo FX8" />
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="./index-MY.html#home">Utama</a></li>
+                    <li><a href="./index-MY.html#about">Tentang</a></li>
+                    <li><a href="./index-MY.html#vision">Cara Menjana Pendapatan</a></li>
+                    <li><a href="./product-MY.html">Produk</a></li>
+                    <li><a href="#contact">Hubungi</a></li>
+                    <li><a href="./qualifi-MY.html">Kelayakan</a></li>
+                    <li><a href="./news-MY.html">Berita</a></li>
+                    <li class="language-dropdown">
+                        <button class="dropdown-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i> Bahasa
+                        </button>
+                        <div class="dropdown-content" id="languageDropdown">
+                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
+                            <a href="index-CN.html" onclick="changeLanguage('中文')">中文（简体）</a>
+                            <a href="index-TW.html" onclick="changeLanguage('中文')">中文（繁体）</a>
+                            <a href="index-JP.html" onclick="changeLanguage('日语')">Bahasa Jepun</a>
+                            <a href="index-KR.html" onclick="changeLanguage('韩语')">Bahasa Korea</a>
+                        </div>
+                    </li>
+                </ul>
+                 <a id="download-btn" href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer"
+                    class="download-btn fade-element">
+                    Download FX8 APP
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+  <div class="new-info-container">
+    <!-- Section 1 -->
+    <div class="new-info-section">
+      <div class="new-info-header">
+        <!-- <div class="new-info-number">1</div> -->
+        <span>Pengasas Forex Berkongsi: Trend Terkini Permohonan Lesen & Pengalaman Praktikal</span>
+      </div>
+      <div class="new-info-content">
+        <p class="new-info-text">
+          Permohonan lesen forex bermaksud syarikat atau individu memohon kebenaran undang-undang daripada pihak berkuasa untuk menjalankan perniagaan perdagangan forex secara sah.
+          Dengan pemodenan pasaran kewangan global, perdagangan forex memainkan peranan penting dalam perdagangan dan pelaburan antarabangsa,
+          dan memiliki lesen rasmi menjadi syarat utama untuk memasuki industri ini.
+        </p>
+
+        <div class="new-info-image">
+          <img src="./assets/images/forex-i.jpg" alt="Analisis Data Forex">
+        </div>
+
+        <p class="new-info-text">
+          Sebagai pengasas syarikat forex, saya memahami cabaran dan kerumitan dalam memohon lesen ini.
+          <span class="new-info-highlight">Memilih bidang kuasa yang sesuai, menyediakan dokumen permohonan, dan membina sistem kawalan risiko</span>
+          adalah kunci kejayaan.
+        </p>
+
+        <div class="new-info-quote">
+          Berdasarkan pengalaman saya, dua perkara paling penting ialah 'kesabaran' dan 'sokongan pasukan profesional'.
+          Proses ini tidak boleh diselesaikan dalam masa singkat, dan komunikasi yang baik dengan pengawal selia adalah kunci utama.
+        </div>
+
+        <p class="new-info-text">
+          Trend permohonan lesen forex semakin berubah.
+          Di satu pihak, pengawalseliaan semakin ketat dan kos pematuhan meningkat;
+          namun di pihak lain, kemajuan teknologi fintech telah mempermudah proses permohonan dan pelaporan melalui digitalisasi.
+          Dengan persiapan menyeluruh dan bantuan profesional, peluang untuk berjaya sangat tinggi.
+        </p>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="new-info-section">
+      <div class="new-info-header">
+        <!-- <div class="new-info-number">2</div> -->
+        <span>Risiko Undang-undang Utama Dalam Permohonan Lesen Forex</span>
+      </div>
+      <div class="new-info-content">
+        <p class="new-info-text">
+          Seiring dengan perkembangan ekonomi global, kepentingan pasaran forex semakin menonjol.
+          Namun, proses permohonan lesen turut melibatkan pelbagai risiko undang-undang yang tidak boleh diabaikan.
+        </p>
+
+        <div class="new-info-quote">
+          Risiko pematuhan merupakan risiko undang-undang terbesar.
+          Setiap negara mempunyai keperluan ketat berkaitan modal berbayar, pengesahan pelanggan, dan pencegahan penggubahan wang haram.
+        </div>
+
+        <p class="new-info-text">
+          Risiko pertama yang perlu diberi perhatian ialah <span class="new-info-highlight">pematuhan kepada undang-undang</span>.
+          Setiap bidang kuasa mempunyai peraturan tersendiri, dan pemohon lesen mesti memahami dan mematuhi semua keperluan termasuk modal minimum, semakan latar belakang pemegang saham,
+          kelayakan pengurusan, dan pemisahan dana pelanggan.
+        </p>
+
+        <div class="new-info-image">
+          <img src="./assets/images/forex-i2.jpg" alt="Dokumen Undang-undang & Timbangan">
+        </div>
+
+        <p class="new-info-text">
+          Risiko kedua adalah <span class="new-info-highlight">risiko pematuhan operasi</span>.
+          Selepas mendapatkan lesen, syarikat mesti terus mematuhi peraturan seperti pelaporan berkala, pengurusan aduan, keselamatan maklumat dan latihan kakitangan.
+          Sistem kawalan dalaman dan pengurusan risiko yang mantap amat diperlukan untuk memastikan operasi yang mampan.
+        </p>
+
+        <p class="new-info-text">
+          Risiko terakhir ialah risiko rentas sempadan.
+          Perdagangan forex sering melibatkan pelbagai negara dan undang-undang, termasuk percukaian, perlindungan data, dan hak pengguna.
+          Adalah disyorkan untuk bekerjasama dengan firma guaman profesional bagi memastikan pematuhan sepenuhnya dan mengelakkan penalti undang-undang.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-container">
+    <div class="footer-top fade-element">
+      <div class="footer-logo fade-element">
+        <img src="./assets/images/fx-logo.png" alt="FX8 Logo">
+      </div>
+      <div class="footer-socials">
+        <h3 class="footer-contact">Hubungi Kami</h3>
+        <div class="footer-social-row">
+          <a href="#" class="footer-social-link"><img src="./assets/images/telegram.png" alt="Telegram"> Telegram</a>
+          <a href="#" class="footer-social-link"><img src="./assets/images/whatsapp.png" alt="WhatsApp"> WhatsApp</a>
+        </div>
+        <div class="footer-social-row" id="contact">
+          <a href="#" class="footer-social-link"><img src="./assets/images/facebook.png" alt="Facebook"></a>
+          <a href="#" class="footer-social-link"><img src="./assets/images/instagram.png" alt="Instagram"></a>
+          <a href="#" class="footer-social-link"><img src="./assets/images/linkedin.png" alt="LinkedIn"></a>
+          <a href="#" class="footer-social-link"><img src="./assets/images/ytb.png" alt="YouTube"></a>
+          <a href="#" class="footer-social-link"><img src="./assets/images/wechat.png" alt="WeChat"></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-text">
+      FX8 Exchange — Mencipta piawaian baharu dalam ekosistem kewangan digital.
+      Dengan teknologi MetaQuotes sebagai teras, FX8 sedang membina platform aset digital pelbagai fungsi bertaraf global.
+      Sistem agihan simulasi A-Book, perjanjian B-Book, dan salin perdagangan kami menyediakan bukan sahaja perkhidmatan dagangan,
+      tetapi juga menyokong pertumbuhan mampan untuk semua peserta.
+      <br><br>
+      © 2025 FX8.com. Semua Hak Terpelihara.
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>外匯牌照申請資訊</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <style>
+        .new-info-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .new-info-section {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .new-info-header {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            padding: 25px 30px;
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* .new-info-number {
+            background: rgba(255, 255, 255, 0.2);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+        } */
+
+        .new-info-content {
+            padding: 30px;
+        }
+
+        .new-info-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+
+        .new-info-image {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+        }
+
+        .new-info-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .new-info-section:hover .new-info-image img {
+            transform: scale(1.02);
+        }
+
+        .new-info-highlight {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .new-info-quote {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%);
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .new-info-container {
+                padding: 80px 15px;
+            }
+
+            .new-info-header {
+                padding: 20px;
+                font-size: 20px;
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .new-info-content {
+                padding: 20px;
+            }
+
+            .new-info-text {
+                font-size: 15px;
+            }
+
+            .new-info-image img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+  <!-- 頁首區塊 -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="./assets/images/fx-logo.png" alt="FX8 標誌" />
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="./index-TW.html#home">首頁</a></li>
+                    <li><a href="./index-TW.html#about">關於我們</a></li>
+                    <li><a href="./index-TW.html#vision">如何賺錢</a></li>
+                    <li><a href="./product-TW.html">產品介紹</a></li>
+                    <li><a href="#contact">聯絡我們</a></li>
+                    <li><a href="./qualifi-TW.html">公司資質</a></li>
+                    <li><a href="./news-TW.html">新聞資訊</a></li>
+                    <li class="language-dropdown">
+                        <button class="dropdown-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i> 中文繁體
+                        </button>
+                        <div class="dropdown-content" id="languageDropdown">
+                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
+                            <a href="index-CN.html" onclick="changeLanguage('中文')">中文（簡體）</a>
+                            <a href="index-TW.html" onclick="changeLanguage('中文')">中文（繁體）</a>
+                            <a href="index-JP.html" onclick="changeLanguage('日語')">日語</a>
+                            <a href="index-KR.html" onclick="changeLanguage('韓語')">韓語</a>
+                        </div>
+                    </li>
+                </ul>
+                <a id="download-btn" href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer"
+                    class="download-btn fade-element">
+                   下載 FX8 APP
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+  <div class="new-info-container">
+    <!-- Section 1 -->
+    <div class="new-info-section">
+      <div class="new-info-header">
+        <!-- <div class="new-info-number">1</div> -->
+        <span>外匯創辦人分享：申請牌照最新趨勢與實戰經驗</span>
+      </div>
+      <div class="new-info-content">
+        <p class="new-info-text">
+          外匯牌照申請是指企業或個人向監管機構申請合法經營外匯交易業務的許可。
+          隨著全球金融市場的發展，外匯交易成為國際貿易與投資的重要環節，
+          擁有正規牌照也成為進入此行業的基本門檻。
+        </p>
+
+        <div class="new-info-image">
+          <img src="./assets/images/forex-i.jpg" alt="外匯數據圖示">
+        </div>
+
+        <p class="new-info-text">
+          作為外匯公司創辦人，我深知申請牌照的挑戰與複雜性。
+          <span class="new-info-highlight">選擇合適的監管區域、準備申請資料、建立合規體系</span>
+          是成功的關鍵。
+        </p>
+
+        <div class="new-info-quote">
+          根據我的經驗，最重要的是「耐心」與「專業團隊的支持」。
+          整個過程無法一蹴而就，與監管單位的良好溝通也是成功關鍵。
+        </div>
+
+        <p class="new-info-text">
+          目前外匯牌照申請出現兩大趨勢：
+          一方面監管日益嚴格，合規成本提高；
+          另一方面金融科技進步，讓申請與回報流程更數位化、更高效率。
+          只要有充分準備與專業支援，成功取得牌照並非難事。
+        </p>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="new-info-section">
+      <div class="new-info-header">
+        <!-- <div class="new-info-number">2</div> -->
+        <span>外匯牌照申請常見的法律風險</span>
+      </div>
+      <div class="new-info-content">
+        <p class="new-info-text">
+          隨著全球經濟一體化發展，外匯市場的重要性不斷上升，
+          但同時，牌照申請所涉及的法律風險也不容忽視。
+        </p>
+
+        <div class="new-info-quote">
+          合規風險是法律風險中的核心。
+          各國針對資本額、KYC（客戶身分認證）、反洗錢都有極嚴格的規範。
+        </div>
+
+        <p class="new-info-text">
+          首要關注的是 <span class="new-info-highlight">法律合規風險</span>。
+          每個司法管轄區都有不同法規與要求，申請者需遵守如最低註冊資本、
+          股東背景審查、經營團隊資格、客戶資金隔離等多項規定。
+        </p>
+
+        <div class="new-info-image">
+          <img src="./assets/images/forex-i2.jpg" alt="法律文件與秤盤">
+        </div>
+
+        <p class="new-info-text">
+          第二是 <span class="new-info-highlight">運營合規風險</span>。
+          取得牌照後仍需長期履行監管要求，如定期報告、內控審核、資訊安全與員工培訓等，
+          這些都考驗公司的風險管理體系。
+        </p>
+
+        <p class="new-info-text">
+          最後是跨境風險。
+          外匯交易往往涉及多國監管與稅務、數據保護、消費者權益等問題。
+          建議尋求專業法律機構協助，確保全面合規，避免法律制裁。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-container">
+    <div class="footer-top fade-element">
+      <div class="footer-logo fade-element">
+        <img src="./assets/images/fx-logo.png" alt="FX8 Logo">
+      </div>
+      <div class="footer-socials">
+        <h3 class="footer-contact">聯絡我們</h3>
+        <div class="footer-social-row">
+          <a href="#" class="footer-social-link"><img src="./assets/images/telegram.png" alt="Telegram"> Telegram</a>
+          <a href="#" class="footer-social-link"><img src="./assets/images/whatsapp.png" alt="WhatsApp"> WhatsApp</a>
+        </div>
+        <div class="footer-social-row" id="contact">
+          <a href="#" class="footer-social-link"><img src="./assets/images/facebook.png" alt="Facebook"></a>
+          <a href="#" class="footer-social-link"><img src="./assets/images/instagram.png" alt="Instagram"></a>
+          <a href="#" class="footer-social-link"><img src="./assets/images/linkedin.png" alt="LinkedIn"></a>
+          <a href="#" class="footer-social-link"><img src="./assets/images/ytb.png" alt="YouTube"></a>
+          <a href="#" class="footer-social-link"><img src="./assets/images/wechat.png" alt="WeChat"></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-text">
+      FX8 交易所 — 開創數位金融新標準。
+      以 MetaQuotes 技術為核心，FX8 正打造全球多功能數位資產交易平台。
+      結合模擬 A-Book 分流、B-Book 對賭協議與跟單交易，FX8 不僅提供交易服務，
+      也促進生態共榮發展。
+      <br><br>
+      © 2025 FX8.com. 版權所有。
+    </div>
+  </footer>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>

@@ -43,6 +43,11 @@
             transition: all 0.3s ease;
         }
 
+        .arrow-link {
+            text-decoration: none;
+            display: inline-block;
+        }
+
         .article-content:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
@@ -238,19 +243,19 @@
             </div>
             <div class="nav-right">
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="./index-CN.html#home">ホーム</a></li>
-                    <li><a href="./index-JP.html#about">会社概要</a></li>
+                    <li><a href="./index-JP.html#home">ホーム</a></li>
+                    <li><a href="./index-JP.html#about">私たちについて</a></li>
                     <li><a href="./index-JP.html#vision">収益を得る方法</a></li>
                     <li><a href="./product-JP.html">製品紹介</a></li>
                     <li><a href="#contact">お問い合わせ</a></li>
-                    <li><a href="./qualifi-JP.html">企業資格</a></li>
+                    <li><a href="./qualifi-JP.html">会社資格</a></li>
                     <li><a href="./news-JP.html">ニュース</a></li>
                     <li class="language-dropdown">
                         <button class="dropdown-btn" id="languageBtn">
                             <i class="fas fa-globe"></i> 日本語
                         </button>
                         <div class="dropdown-content" id="languageDropdown">
-                             <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
                             <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
                             <a href="index-CN.html" onclick="changeLanguage('中文')">中文 (简体)</a>
                             <a href="index-TW.html" onclick="changeLanguage('中文')">中文 (繁體)</a>
@@ -259,7 +264,10 @@
                         </div>
                     </li>
                 </ul>
-                <a href="#download" class="download-btn fade-element">FX8アプリをダウンロード</a>
+                 <a id="download-btn" href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer"
+                    class="download-btn fade-element">
+                    FX8アプリをダウンロード
+                </a>
             </div>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -282,7 +290,9 @@
                 <h3>外国為替会社の創業者が語る：外国為替ライセンス申請の最前線と実体験！</h3>
                 <p>サブタイトル1：外国為替ライセンス申請とは？外国為替ライセンス申請とは、企業や個人が関連機関に必要な手続きを行い、取引ライセンスを取得することです...</p>
             </div>
-            <div class="arrow-box orange">→</div>
+            <a href="news-info-JP.html" class="arrow-link">
+                <div class="arrow-box orange">→</div>
+            </a>
         </div>
 
         <div class="article-content">
@@ -297,11 +307,13 @@
                 <h3>外国為替ライセンス申請で注意すべき法的リスクを徹底解説！</h3>
                 <p>国際貿易と経済の発展により、外国為替市場の重要性が高まっています。しかし、ライセンス申請にはさまざまな法的リスクが伴います。本記事ではそのポイントを詳しく解説します...</p>
             </div>
-            <div class="arrow-box white">→</div>
+            <a href="news-info-JP.html" class="arrow-link">
+                <div class="arrow-box white">→</div>
+            </a>
         </div>
     </div>
 
-     <!-- フッター -->
+    <!-- フッター -->
     <footer class="footer-container">
         <div class="footer-top fade-element">
             <div class="footer-logo fade-element">

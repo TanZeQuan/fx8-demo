@@ -42,7 +42,10 @@
                         </div>
                     </li>
                 </ul>
-                <a href="#download" class="download-btn fade-element">FX8アプリをダウンロード</a>
+                <a id="download-btn" href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer"
+                    class="download-btn fade-element">
+                    FX8アプリをダウンロード
+                </a>
             </div>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -67,26 +70,35 @@
                     新規口座開設で<span class="highlight">5ドル</span>を即時プレゼント
                 </h1>
                 <p>プロフェッショナルな取引プラットフォームで、最高の投資体験を提供します</p>
-                <button class="apply-btn fade-element" onclick="startTrading()">今すぐ取引を始める</button>
-
+                <button class="apply-btn fade-element" id="start-trading-btn">今すぐ取引を始める</button>
                 <!-- App Icons Section -->
                 <div class="app-icons-section fade-element">
                     <div class="app-icons-dock fade-element">
-                        <span class="app-icons-label">おすすめウォレット</span>
+                        <span class="app-icons-label">おすすめ</span>
                         <div class="app-icon">
-                            <img src="./assets/images/wallet-i1.png" alt="Wallet 1" />
+                           <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="./assets/images/wallet-i1.png" alt="Wallet 1" />
+                            </a>
                         </div>
                         <div class="app-icon">
-                            <img src="./assets/images/wallet-i2.png" alt="Wallet 2" />
+                            <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="./assets/images/wallet-i2.png" alt="Wallet 2" />
+                            </a>
                         </div>
                         <div class="app-icon">
-                            <img src="./assets/images/wallet-i3.png" alt="Wallet 3" />
+                            <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="./assets/images/wallet-i3.png" alt="Wallet 3" />
+                            </a>
                         </div>
                         <div class="app-icon">
-                            <img src="./assets/images/wallet-i4.png" alt="Wallet 4" />
+                              <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="./assets/images/wallet-i4.png" alt="Wallet 4" />
+                            </a>
                         </div>
                         <div class="app-icon">
-                            <img src="./assets/images/wallet-i5.png" alt="Wallet 5" />
+                             <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="./assets/images/wallet-i5.png" alt="Wallet 5" />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -200,7 +212,7 @@
                 仮想取引環境に基づき、プラットフォームはユーザーの模擬操作によるトラフィックやプロモーション成果に応じて、
                 新規ユーザーの招待や優れた取引戦略に報酬を付与し、仮想体験を実際の収益へと転換します。
             </p>
-            <button class="start-button" onclick="startTrading()">今すぐ取引を始める</button>
+            <button id="start-button" class="start-button">今すぐ取引を始める</button>
         </div>
     </div>
 
@@ -215,7 +227,10 @@
                     アプリは、デモ取引、インスタントメッセージング（IM）、取引所契約取引、資産運用、コピー取引などの主要機能を網羅し、
                     情報共有、戦略実践、取引実行、資産管理といった多方面で、様々なレベルの投資家のニーズに応えます。
                 </p>
-                <a href="#" class="what-button fade-element" onclick="startTrading()">今すぐ取引を始める</a>
+                 <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer" id="start-trading-btn"
+                    class="what-button fade-element">
+                    今すぐ取引を始める
+                </a>
                 <div class="what-features fade-element">
                     <div class="what-feature"><span class="circle-tick">✓</span> スマートウォレット</div>
                     <div class="what-feature"><span class="circle-tick">✓</span> 利益プランナー</div>
@@ -317,9 +332,13 @@
                     <img src="./assets/images/fx-logo.png" alt="FX8 ロゴ" class="app-logo">
                     <div class="app-title">アプリダウンロード</div>
                 </div>
-                <div class="app-store-buttons fade-element">
-                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
-                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+              <div class="app-store-buttons fade-element">
+                    <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/images/google-play-logo.png" alt="Google Play" data-store="google">
+                    </a>
+                    <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/images/app-store-logo.png" alt="App Store" data-store="apple">
+                    </a>
                 </div>
             </div>
         </div>
@@ -327,35 +346,74 @@
         <div class="app-right-section fade-element">
             <h3 class="app-subtitle">おすすめの暗号資産ウォレット</h3>
             <div class="app-wallet-list fade-element">
-                <div class="app-wallet-item fade-element">
-                    <img src="./assets/images/wallet-i1.png" alt="ウォレットアイコン">
-                    <span>TronLink Pro</span>
-                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
-                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                <div class="app-wallet-item">
+                    <div class="app-wallet-left">
+                        <img src="./assets/images/wallet-i1.png" alt="Wallet Icon">
+                        <span>TronLink Pro</span>
+                    </div>
+                    <div class="download-buttons">
+                        <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer"><img
+                                src="./assets/images/google-play-logo.png" alt="Google Play"></a>
+                        <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer"><img
+                                src="./assets/images/app-store-logo.png" alt="App Store"></a>
+                    </div>
                 </div>
-                <div class="app-wallet-item fade-element">
-                    <img src="./assets/images/wallet-i2.png" alt="ウォレットアイコン">
-                    <span>Trust Wallet</span>
-                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
-                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+
+                <div class="app-wallet-item fade-element" data-wallet="trustwallet">
+                    <div class="app-wallet-left">
+                        <img src="./assets/images/wallet-i2.png" alt="Wallet Icon">
+                        <span>Trust Wallet</span>
+                    </div>
+                    <div class="download-buttons">
+                        <div class="download-buttons">
+                            <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer"><img
+                                    src="./assets/images/google-play-logo.png" alt="Google Play"></a>
+                            <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer"><img
+                                    src="./assets/images/app-store-logo.png" alt="App Store"></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="app-wallet-item fade-element">
-                    <img src="./assets/images/wallet-i3.png" alt="ウォレットアイコン">
-                    <span>TokenPocket</span>
-                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
-                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                <div class="app-wallet-item fade-element" data-wallet="tokenpocket">
+                    <div class="app-wallet-left">
+                        <img src="./assets/images/wallet-i3.png" alt="Wallet Icon">
+                        <span>TokenPocket</span>
+                    </div>
+                    <div class="download-buttons">
+                        <div class="download-buttons">
+                            <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer"><img
+                                    src="./assets/images/google-play-logo.png" alt="Google Play"></a>
+                            <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer"><img
+                                    src="./assets/images/app-store-logo.png" alt="App Store"></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="app-wallet-item fade-element">
-                    <img src="./assets/images/wallet-i4.png" alt="ウォレットアイコン">
-                    <span>MetaMask</span>
-                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
-                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                <div class="app-wallet-item fade-element" data-wallet="metamask">
+                    <div class="app-wallet-left">
+                        <img src="./assets/images/wallet-i4.png" alt="Wallet Icon">
+                        <span>MetaMask</span>
+                    </div>
+                    <div class="download-buttons">
+                        <div class="download-buttons">
+                            <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer"><img
+                                    src="./assets/images/google-play-logo.png" alt="Google Play"></a>
+                            <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer"><img
+                                    src="./assets/images/app-store-logo.png" alt="App Store"></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="app-wallet-item fade-element">
-                    <img src="./assets/images/wallet-i5.png" alt="ウォレットアイコン">
-                    <span>ImToken</span>
-                    <img src="./assets/images/google-play-logo.png" alt="Google Play">
-                    <img src="./assets/images/app-store-logo.png" alt="App Store">
+                <div class="app-wallet-item fade-element" data-wallet="imtoken">
+                    <div class="app-wallet-left">
+                        <img src="./assets/images/wallet-i5.png" alt="Wallet Icon">
+                        <span>ImToken</span>
+                    </div>
+                    <div class="download-buttons">
+                        <div class="download-buttons">
+                            <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer"><img
+                                    src="./assets/images/google-play-logo.png" alt="Google Play"></a>
+                            <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer"><img
+                                    src="./assets/images/app-store-logo.png" alt="App Store"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

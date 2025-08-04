@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>外国為替ライセンス申請情報</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <style>
+        .new-info-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 100px 20px;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .new-info-section {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .new-info-header {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            padding: 25px 30px;
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* .new-info-number {
+            background: rgba(255, 255, 255, 0.2);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+        } */
+
+        .new-info-content {
+            padding: 30px;
+        }
+
+        .new-info-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+
+        .new-info-image {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+        }
+
+        .new-info-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .new-info-section:hover .new-info-image img {
+            transform: scale(1.02);
+        }
+
+        .new-info-highlight {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .new-info-quote {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%);
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .new-info-container {
+                padding: 80px 15px;
+            }
+
+            .new-info-header {
+                padding: 20px;
+                font-size: 20px;
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .new-info-content {
+                padding: 20px;
+            }
+
+            .new-info-text {
+                font-size: 15px;
+            }
+
+            .new-info-image img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ヘッダーセクション -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="./assets/images/fx-logo.png" alt="FX8">
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="./index-JP.html#home">ホーム</a></li>
+                    <li><a href="./index-JP.html#about">私たちについて</a></li>
+                    <li><a href="./index-JP.html#vision">収益を得る方法</a></li>
+                    <li><a href="./product-JP.html">製品紹介</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                    <li><a href="./qualifi-JP.html">会社資格</a></li>
+                    <li><a href="./news-JP.html">ニュース</a></li>
+                    <li class="language-dropdown">
+                        <button class="dropdown-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i> 日本語
+                        </button>
+                        <div class="dropdown-content" id="languageDropdown">
+                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
+                            <a href="index-CN.html" onclick="changeLanguage('中文')">中文 (简体)</a>
+                            <a href="index-TW.html" onclick="changeLanguage('中文')">中文 (繁體)</a>
+                            <a href="index-JP.html" onclick="changeLanguage('日本語')">日本語</a>
+                            <a href="index-KR.html" onclick="changeLanguage('韓国語')">韓国語</a>
+                        </div>
+                    </li>
+                </ul>
+                 <a id="download-btn" href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer"
+                    class="download-btn fade-element">
+                    FX8アプリをダウンロード
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="new-info-container">
+        <!-- セクション1 -->
+        <div class="new-info-section">
+            <div class="new-info-header">
+                <!-- <div class="new-info-number">一</div> -->
+                <span>外国為替会社創業者が語る：最新のライセンス申請動向と実践的な体験談！</span>
+            </div>
+            <div class="new-info-content">
+                <p class="new-info-text">
+                    外国為替ライセンス申請とは、企業または個人が規定の手続きを経て、関連当局から外国為替取引業務を行うための合法的な資格を取得することを指します。
+                    グローバル金融市場の自由化が進む中、外国為替取引は国際貿易と投資の中核的役割を果たしており、正規のライセンス取得は業界参入に必要不可欠な条件となっています。
+                </p>
+
+                <div class="new-info-image">
+                    <img src="./assets/images/forex-i.jpg" alt="外国為替データ分析">
+                </div>
+
+                <p class="new-info-text">
+                    外国為替会社の創業者として、ライセンス申請のプロセスがいかに複雑か、またその挑戦性を深く理解しています。
+                    <span class="new-info-highlight">適切な法域の選定、申請資料の準備、リスク管理体制の構築</span>など、いずれも成功の鍵となります。
+                </p>
+
+                <div class="new-info-quote">
+                    私の経験上、最も重要なのは「忍耐力」と「専門チームのサポート」です。申請は一朝一夕に終わるものではなく、監督当局との円滑なコミュニケーションと迅速な対応が成功のカギとなります。
+                </div>
+
+                <p class="new-info-text">
+                    近年、外国為替ライセンス申請のトレンドには変化があり、規制の厳格化やコンプライアンスコストの上昇が見られます。
+                    その一方で、フィンテックの進展により、申請や報告プロセスのデジタル化が進み、利便性も向上しています。
+                    専門チームと準備を整えた上で臨めば、高い成功率を実現できるでしょう。
+                </p>
+            </div>
+        </div>
+
+        <!-- セクション2 -->
+        <div class="new-info-section">
+            <div class="new-info-header">
+                <!-- <div class="new-info-number">二</div> -->
+                <span>外国為替ライセンス申請時に注意すべき法的リスクを徹底解説！</span>
+            </div>
+            <div class="new-info-content">
+                <p class="new-info-text">
+                    グローバル経済の拡大に伴い、外国為替市場の重要性は日々高まっています。
+                    しかしながら、ライセンス申請には様々な法的リスクが伴い、対応を誤ると申請失敗だけでなく、法的制裁を受ける可能性もあります。
+                </p>
+
+                <div class="new-info-quote">
+                    コンプライアンスリスクは最大の法的リスクです。資本金、顧客確認、マネーロンダリング防止など各国には厳格な基準があります。
+                </div>
+
+                <p class="new-info-text">
+                    まず挙げられるのは<span class="new-info-highlight">規制遵守リスク</span>です。
+                    法域によって規制内容は大きく異なり、申請者は現地の法律や要件を正確に理解・対応する必要があります。
+                    資本金要件、株主審査、経営陣の資格、顧客資産分離など、どの項目も見逃せません。
+                </p>
+
+                <div class="new-info-image">
+                    <img src="./assets/images/forex-i2.jpg" alt="法的文書とバランススケール">
+                </div>
+
+                <p class="new-info-text">
+                    次に、運営面でのコンプライアンスリスクです。
+                    ライセンス取得後も、定期報告、苦情処理、セキュリティ、社員教育など、多方面で規制を満たし続ける必要があります。
+                    <span class="new-info-highlight">内部コンプライアンスとリスク管理体制の構築</span>は継続的な事業運営の基盤です。
+                </p>
+
+                <p class="new-info-text">
+                    最後に、クロスボーダー業務に伴う法的リスクです。
+                    外国為替業務は複数の法域にまたがるため、税務、データ保護、顧客保護など、国際的なリーガルサポートが不可欠です。
+                    専門弁護士と連携し、事前に法的な精査と対策を行うことが肝要です。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div class="footer-top fade-element">
+            <div class="footer-logo fade-element">
+                <img src="./assets/images/fx-logo.png" alt="FX8 Logo">
+            </div>
+            <div class="footer-socials">
+                <h3 class="footer-contact">お問い合わせ</h3>
+                <div class="footer-social-row">
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/telegram.png" alt="Telegram"> Telegram
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/whatsapp.png" alt="WhatsApp"> WhatsApp
+                    </a>
+                </div>
+                <div class="footer-social-row" id="contact">
+                    <a href="#" class="footer-social-link"><img src="./assets/images/facebook.png" alt="Facebook"></a>
+                    <a href="#" class="footer-social-link"><img src="./assets/images/instagram.png" alt="Instagram"></a>
+                    <a href="#" class="footer-social-link"><img src="./assets/images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="#" class="footer-social-link"><img src="./assets/images/ytb.png" alt="YouTube"></a>
+                    <a href="#" class="footer-social-link"><img src="./assets/images/wechat.png" alt="WeChat"></a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-text">
+            FX8仮想通貨取引所 — デジタル資産取引の新たなエコシステムを再定義。
+            MetaQuotesを中核に、革新性を原動力とし、FX8は世界をリードする多機能型仮想通貨取引プラットフォームの構築に努めています。
+            独自のA帳簿シミュレーション分配、B帳簿契約分配、コピー取引分配の3大システムにより、
+            単なる取引機能にとどまらず、すべての参加者に持続可能な成長の恩恵を提供します。
+            <br><br>
+            © 2025 FX8.com. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

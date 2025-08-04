@@ -912,6 +912,7 @@
      }
  }
 
+ /* App Title Row */
  .app-title-row {
      display: flex;
      align-items: center;
@@ -927,18 +928,20 @@
      filter: brightness(0) grayscale(100%);
  }
 
-
  .app-title {
      font-size: clamp(1.2rem, 3vw, 1.5rem);
      font-weight: 600;
      color: var(--text-primary);
  }
 
+ /* App Store Buttons */
  .app-store-buttons {
      display: flex;
      gap: clamp(0.8rem, 2vw, 1rem);
-     justify-content: center;
+     justify-content: flex-start;
+     /* Align left */
      flex-wrap: wrap;
+     margin-left: 8rem;
  }
 
  .app-store-buttons img {
@@ -952,10 +955,14 @@
      transform: scale(1.1);
  }
 
+ /* Right Section Container */
  .app-right-section {
      padding: 0 var(--container-padding);
+     padding-left: 1rem;
+     /* Shift content left */
  }
 
+ /* Section Subtitle */
  .app-subtitle {
      font-size: clamp(1.2rem, 3.5vw, 2rem);
      font-weight: 600;
@@ -963,49 +970,107 @@
      color: var(--text-primary);
  }
 
+ /* Wallet List */
  .app-wallet-list {
      display: flex;
      flex-direction: column;
-     gap: clamp(1rem, 2.5vw, 1.5rem);
+     gap: 20px;
  }
 
+ /* Wallet Item Box */
  .app-wallet-item {
      display: flex;
      align-items: center;
-     gap: clamp(0.8rem, 2vw, 1rem);
-     padding: clamp(0.8rem, 2.5vw, 1rem);
-     background: #f8fafc;
-     border-radius: 12px;
-     transition: var(--transition);
+     justify-content: space-between;
+     padding: 18px;
+     background: #fafafa;
+     border-radius: 16px;
+     border: 1px solid #f0f0f0;
+     gap: 20px;
+     flex-wrap: wrap;
+     transition: all 0.3s ease;
  }
 
  .app-wallet-item:hover {
-     background: #e2e8f0;
-     transform: translateX(10px);
+     background: #f5f5f5;
+     transform: translateY(-2px);
+     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
  }
 
- .app-wallet-item img:first-child {
-     width: clamp(32px, 6vw, 40px);
-     height: clamp(32px, 6vw, 40px);
-     border-radius: 8px;
-     flex-shrink: 0;
- }
-
- .app-wallet-item span {
+ /* Wallet Left (Icon + Name) */
+ .app-wallet-left {
+     display: flex;
+     align-items: center;
+     gap: 16px;
      flex: 1;
-     font-weight: 500;
-     font-size: clamp(0.9rem, 2vw, 1rem);
+     min-width: 200px;
  }
 
- .app-wallet-item img:not(:first-child) {
-     height: clamp(24px, 5vw, 30px);
-     width: auto;
-     cursor: pointer;
+ .app-wallet-left img {
+     width: 50px;
+     height: 50px;
+     border-radius: 12px;
+     object-fit: cover;
+ }
+
+ .app-wallet-left span {
+     font-size: 18px;
+     font-weight: 500;
+     color: #333;
+ }
+
+ /* App Store Links */
+ .app-wallet-item .download-buttons {
+     display: flex;
+     gap: 0.5rem;
+     flex-wrap: wrap;
+     justify-content: flex-end;
+ }
+
+ .app-wallet-item a {
+     display: inline-block;
+     line-height: 0;
+     border-radius: 6px;
      transition: var(--transition);
  }
 
- .app-wallet-item img:not(:first-child):hover {
+ .app-wallet-item a img {
+     height: 45px;
+     min-width: 165px;
+     width: auto;
+     border-radius: 8px;
+     object-fit: contain;
+     cursor: pointer;
+ }
+
+ .app-wallet-item a:hover img {
      transform: scale(1.1);
+ }
+
+ /* Responsive: Center align on small screens */
+ @media (max-width: 768px) {
+     .app-wallet-left img {
+         width: 40px;
+         height: 40px;
+     }
+
+     .app-wallet-left span {
+         font-size: 16px;
+         margin-top: 6px;
+     }
+
+     .app-wallet-item .download-buttons {
+         justify-content: center;
+     }
+
+     .app-subtitle {
+         text-align: center;
+     }
+
+     .app-wallet-item a img {
+         height: 40px;
+         min-width: 140px;
+     }
  }
 
  /* Logo Carousel */

@@ -32,6 +32,11 @@
             gap: 2.5rem;
         }
 
+        .arrow-link {
+            text-decoration: none;
+            display: inline-block;
+        }
+
         .article-content {
             display: flex;
             align-items: center;
@@ -243,14 +248,14 @@
                     <li><a href="./index-EN.html#vision">How to Earn</a></li>
                     <li><a href="./product-EN.html">Products</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="./qualifi-EN.html">Licenses</a></li>
+                    <li><a href="./qualifi-EN.html">Certifications</a></li>
                     <li><a href="./news-EN.html">News</a></li>
                     <li class="language-dropdown">
                         <button class="dropdown-btn" id="languageBtn">
                             <i class="fas fa-globe"></i> English
                         </button>
                         <div class="dropdown-content" id="languageDropdown">
-                           <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
                             <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
                             <a href="index-CN.html" onclick="changeLanguage('Simplified Chinese')">中文（简体）</a>
                             <a href="index-TW.html" onclick="changeLanguage('Traditional Chinese')">中文（繁體）</a>
@@ -259,7 +264,10 @@
                         </div>
                     </li>
                 </ul>
-                <a href="#download" class="download-btn fade-element">Download FX8 APP</a>
+                 <a id="download-btn" href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer"
+                    class="download-btn fade-element">
+                    Download FX8 APP
+                </a>
             </div>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -283,7 +291,9 @@
                     in which a company or individual seeks authorization from a regulatory authority to operate in the
                     forex trading industry...</p>
             </div>
-            <div class="arrow-box orange">→</div>
+            <a href="news-info-EN.html" class="arrow-link">
+                <div class="arrow-box orange">→</div>
+            </a>
         </div>
 
         <div class="article-content">
@@ -299,7 +309,9 @@
                 <p>Legal risks are crucial to consider when applying for a forex license. With global economic expansion
                     and increasing international trade, the importance of the forex market is growing. However...</p>
             </div>
-            <div class="arrow-box white">→</div>
+            <a href="news-info-EN.html" class="arrow-link">
+                <div class="arrow-box white">→</div>
+            </a>
         </div>
     </div>
     <!-- Footer -->

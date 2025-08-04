@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex License Application Insights</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <style>
+        .new-info-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 100px 20px;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .new-info-section {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .new-info-header {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            padding: 25px 30px;
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* .new-info-number {
+            background: rgba(255, 255, 255, 0.2);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+        } */
+
+        .new-info-content {
+            padding: 30px;
+        }
+
+        .new-info-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+
+        .new-info-image {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+        }
+
+        .new-info-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .new-info-section:hover .new-info-image img {
+            transform: scale(1.02);
+        }
+
+        .new-info-highlight {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .new-info-quote {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%);
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .new-info-container {
+                padding: 80px 15px;
+            }
+
+            .new-info-header {
+                padding: 20px;
+                font-size: 20px;
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .new-info-content {
+                padding: 20px;
+            }
+
+            .new-info-text {
+                font-size: 15px;
+            }
+
+            .new-info-image img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="./assets/images/fx-logo.png" alt="FX8">
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="./index-EN.html#home">Home</a></li>
+                    <li><a href="./index-EN.html#about">About Us</a></li>
+                    <li><a href="./index-EN.html#vision">How to Earn</a></li>
+                    <li><a href="./product-EN.html">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="./qualifi-EN.html">Certifications</a></li>
+                    <li><a href="./news-EN.html">News</a></li>
+                    <li class="language-dropdown">
+                        <button class="dropdown-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i> English
+                        </button>
+                        <div class="dropdown-content" id="languageDropdown">
+                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
+                            <a href="index-CN.html" onclick="changeLanguage('Simplified Chinese')">中文（简体）</a>
+                            <a href="index-TW.html" onclick="changeLanguage('Traditional Chinese')">中文（繁體）</a>
+                            <a href="index-JP.html" onclick="changeLanguage('Japanese')">Japan</a>
+                            <a href="index-KR.html" onclick="changeLanguage('Korean')">Korea</a>
+                        </div>
+                    </li>
+                </ul>
+                 <a id="download-btn" href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer"
+                    class="download-btn fade-element">
+                    Download FX8 APP
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="new-info-container">
+        <!-- Section 1: Founder's Insights -->
+        <div class="new-info-section">
+            <div class="new-info-header">
+                <!-- <div class="new-info-number">1</div> -->
+                <span>Forex Company Founder's Insights: Key Trends & Experience in License Applications</span>
+            </div>
+            <div class="new-info-content">
+                <p class="new-info-text">
+                    What is a Forex license application? It refers to the process where a company or individual applies
+                    to relevant regulatory bodies to obtain legal authorization for conducting forex business. In
+                    today’s increasingly open global financial markets, forex trading has become a vital part of
+                    international trade and investment. Obtaining a compliant forex license is a crucial step for any
+                    company looking to enter this industry.
+                </p>
+
+                <div class="new-info-image">
+                    <img src="./assets/images/forex-i.jpg" alt="Forex Data Analysis">
+                </div>
+
+                <p class="new-info-text">
+                    As the founder of a forex company, I deeply understand the complexities and challenges of the
+                    license application process. From initial market research to final regulatory approval, the journey
+                    requires not only sufficient capital but also a thorough understanding of local laws and
+                    regulations. <span class="new-info-highlight">Choosing the right jurisdiction, preparing
+                        comprehensive application documents, and establishing a solid risk management system</span> are
+                    critical factors for success.
+                </p>
+
+                <div class="new-info-quote">
+                    In my experience, patience and a professional support team are essential. Applying for a forex
+                    license is not an overnight process. Maintaining good communication with regulators and promptly
+                    responding to their requirements is key.
+                </div>
+
+                <p class="new-info-text">
+                    Current trends show that forex license applications are facing stricter regulations and rising
+                    compliance costs. However, the advancement of financial technologies has also brought conveniences
+                    such as digital application processes and online regulatory reporting systems. For companies aiming
+                    to enter the forex market, thorough preparation and partnering with experienced professional teams
+                    significantly increase the chances of success.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 2: Legal Risks -->
+        <div class="new-info-section">
+            <div class="new-info-header">
+                <!-- <div class="new-info-number">2</div> -->
+                <span>Comprehensive Analysis of Legal Risks in Forex License Applications</span>
+            </div>
+            <div class="new-info-content">
+                <p class="new-info-text">
+                    With global economic growth and increasing international trade, the importance of forex trading
+                    markets continues to rise. However, companies face numerous legal risks when applying for forex
+                    licenses. Mishandling these risks can lead not only to application failure but also to serious legal
+                    consequences.
+                </p>
+
+                <div class="new-info-quote">
+                    Compliance risk is the primary legal concern in forex license applications. Every country has strict
+                    regulations for forex businesses, including capital adequacy, customer identity verification, and
+                    anti-money laundering measures.
+                </div>
+
+                <p class="new-info-text">
+                    Firstly, <span class="new-info-highlight">regulatory compliance risk</span> varies significantly
+                    across jurisdictions. Applicants must fully understand and comply with all relevant local laws and
+                    regulations, including but not limited to: minimum capital requirements, shareholder background
+                    checks, management qualifications, business scope limitations, and client fund segregation. Any
+                    oversight in these areas can result in application rejection or future regulatory penalties.
+                </p>
+
+                <div class="new-info-image">
+                    <img src="./assets/images/forex-i2.jpg" alt="Legal Documents and Justice Scale">
+                </div>
+
+                <p class="new-info-text">
+                    Secondly, there are operational compliance risks. Obtaining the license is just the first step.
+                    Ongoing operations must continuously meet regulatory standards, including regular financial
+                    reporting, customer complaint handling, system security maintenance, and staff training. <span
+                        class="new-info-highlight">Establishing a comprehensive internal compliance and risk management
+                        system</span> is crucial for sustainable and compliant business operations. Companies must also
+                    stay updated with regulatory changes and adjust their strategies accordingly.
+                </p>
+
+                <p class="new-info-text">
+                    Lastly, legal risks in cross-border operations should not be overlooked. Forex businesses often
+                    involve multiple jurisdictions, requiring compliance with various legal frameworks simultaneously.
+                    Matters such as tax planning, data protection, and client rights protection demand professional
+                    legal support. Therefore, it is highly recommended to engage experienced legal advisors for a
+                    thorough risk assessment and compliance strategy before applying for a forex license.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div class="footer-top fade-element">
+            <div class="footer-logo fade-element">
+                <img src="./assets/images/fx-logo.png" alt="FX8 Logo">
+            </div>
+            <div class="footer-socials">
+                <h3 class="footer-contact">Contact Us</h3>
+                <div class="footer-social-row">
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/telegram.png" alt="Telegram">
+                        Telegram
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/whatsapp.png" alt="WhatsApp">
+                        WhatsApp
+                    </a>
+                </div>
+
+                <div class="footer-social-row" id="contact">
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/facebook.png" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/instagram.png" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/linkedin.png" alt="LinkedIn" class="social-icon">
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/ytb.png" alt="YouTube" class="social-icon">
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="./assets/images/wechat.png" alt="WeChat" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-text">
+            FX8 Digital Asset Exchange — Redefining the Digital Trading Ecosystem.
+            Centered around MetaQuotes, driven by innovation, FX8 aims to build a globally leading multi-role, win-win
+            digital asset platform.
+            Through our unique A-Book simulated profit-sharing, B-Book contract sharing, and copy-trading revenue
+            models,
+            we offer not just trading services, but a transparent, sustainable financial ecosystem where traders,
+            strategy developers, community leaders, and partners all share in the digital economy’s growth.
+            Technology drives the future, profit-sharing creates win-win outcomes. FX8 is not just a trading platform,
+            but the foundation of a digital asset ecosystem, propelling the industry towards a more efficient, fair, and
+            dynamic new era.
+            <br><br>
+            © 2025 FX8.com. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
