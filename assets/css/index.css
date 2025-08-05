@@ -1187,13 +1187,13 @@
  }
 
  .footer-social-link:hover {
-     background: rgba(255, 255, 255, 0.1);
-     transform: translateY(-2px);
+     transform: scale(1.2);
  }
 
+
  .footer-social-link img {
-     width: clamp(20px, 3vw, 26px);
-     height: clamp(20px, 3vw, 26px);
+     width: clamp(24px, 4vw, 36px);
+     height: clamp(24px, 4vw, 36px);
  }
 
  .footer-contact {
@@ -1355,6 +1355,11 @@
 
      .hero-content p {
          font-size: 0.89rem;
+     }
+
+     .footer-social-link img {
+         width: clamp(28px, 4vw, 40px);
+         height: clamp(28px, 4vw, 40px);
      }
 
      .app-icons-dock {
