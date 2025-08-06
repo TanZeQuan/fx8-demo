@@ -107,6 +107,11 @@
  .nav-links a:hover {
      color: var(--accent-color);
  }
+.nav-links a.active {
+  color: #f39c12; /* 或你想要的高亮颜色 */
+  font-weight: bold;
+  border-bottom: 2px solid #f39c12; /* 可选：下划线高亮 */
+}
 
  .nav-links a::after {
      content: '';
@@ -426,6 +431,7 @@
      border: 1px solid rgba(255, 255, 255, 0.2);
      transition: all 0.3s ease;
      cursor: pointer;
+     padding-top: 5px;
      display: flex;
      align-items: center;
      justify-content: center;

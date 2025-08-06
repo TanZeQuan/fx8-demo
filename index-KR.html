@@ -22,7 +22,7 @@
             </div>
             <div class="nav-right">
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#home">홈</a></li>
+                    <li><a href="#home" class="active">홈</a></li>
                     <li><a href="#about">회사 소개</a></li>
                     <li><a href="#vision">수익 창출 방법</a></li>
                     <li><a href="./product-KR.html">제품 소개</a></li>
@@ -34,7 +34,7 @@
                             <i class="fas fa-globe"></i> 한국어
                         </button>
                         <div class="dropdown-content" id="languageDropdown">
-                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index.html" onclick="changeLanguage('English')">English</a>
                             <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
                             <a href="index-CN.html" onclick="changeLanguage('中文')">중국어 (간체)</a>
                             <a href="index-TW.html" onclick="changeLanguage('中文')">중국어 (번체)</a>
@@ -66,8 +66,8 @@
         <div class="hero-container fade-element">
             <div class="hero-content fade-element">
                 <h1>
-                    <span class="highlight fade-element">FX8. 승자는 왕이다</span><br />
-                    신규 계좌 개설 시 즉시 <span class="highlight">5달러</span> 지급
+                    <span class="highlight fade-element">FX8 · 승자는 왕이다</span><br />
+                    신규 가입자 매일 수령 가능<br /><span class="highlight">$15 USD</span>
                 </h1>
                 <p>전문 거래 플랫폼으로 최고의 투자 경험을 제공합니다</p>
                 <button class="apply-btn fade-element" id="start-trading-btn">지금 거래 시작</button>
@@ -76,27 +76,31 @@
                     <div class="app-icons-dock fade-element">
                         <span class="app-icons-label">추천 지갑</span>
                         <div class="app-icon">
-                             <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i1.png" alt="Wallet 1" />
                             </a>
                         </div>
+
                         <div class="app-icon">
-                            <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i2.png" alt="Wallet 2" />
                             </a>
                         </div>
+
                         <div class="app-icon">
-                           <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i3.png" alt="Wallet 3" />
                             </a>
                         </div>
+
                         <div class="app-icon">
-                             <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i4.png" alt="Wallet 4" />
                             </a>
                         </div>
+
                         <div class="app-icon">
-                             <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i5.png" alt="Wallet 5" />
                             </a>
                         </div>
@@ -213,7 +217,7 @@
                 가상의 거래 시나리오를 기반으로, 플랫폼은 사용자의 모의 거래 활동에서 발생한 트래픽 또는 홍보 성과를 평가하여 새로운 사용자를 초대하거나 고품질 전략 실행에 대해 보상을 제공합니다.
                 이를 통해 가상 경험을 실제 수익으로 전환하는 기회를 창출합니다.
             </p>
-             <button id="start-button" class="start-button">지금 거래 시작하기</button>
+            <button id="start-button" class="start-button">지금 거래 시작하기</button>
         </div>
     </div>
 
@@ -224,13 +228,12 @@
             <div class="what-left reveal-in">
                 <h2 class="what-title fade-element">우리는 무엇을 하나요?</h2>
                 <p class="what-description fade-element">
-                    저희는 투자자들을 위해 통합적이고 다기능적인 금융 거래 및 서비스 플랫폼을 구축하는 주식 거래 소프트웨어를 개발하고 있습니다.
-                    이 소프트웨어는 모의 거래, 실시간 메시징(IM), 거래소 연계 계약 거래, 자산 운용, 카피 트레이딩 등 핵심 기능을 포함하여
-                    다양한 수준의 투자자들이 정보 교류, 전략 실행, 거래 수행, 자산 관리 등에서 필요한 요구를 충족할 수 있도록 설계되었습니다.
+                    FX8는 2018년 BitMEX 공동 창립자 Samuel Reed가 설립한 미국 기반의 글로벌 디지털 자산 거래소입니다. 블록체인 교육, 프로젝트 인큐베이팅, 파생상품 거래에
+                    중점을 두며, ETH, BNB 등 주요 프로젝트에 초기 투자했습니다. 최대 125배 레버리지와 하루 120억 달러 이상의 거래량을 기록하며, 200여 개국 사용자에게 안전하고
+                    전문적인 서비스를 제공합니다.
                 </p>
-                 <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer" id="start-trading-btn"
-                    class="what-button fade-element">
-                  지금 거래 시작하기
+              <a href="#app-section" class="what-button fade-element" id="start-trading-btn">
+                    지금 거래 시작하기
                 </a>
                 <div class="what-features fade-element">
                     <div class="what-feature"><span class="circle-tick">✓</span> 스마트 지갑</div>
@@ -260,9 +263,10 @@
             <div class="how-right reveal-in">
                 <h2 class="how-title fade-element">어떻게 하나요?</h2>
                 <p class="how-description fade-element">
-                    저희는 투자자들을 위해 통합적이고 다기능적인 금융 거래 및 서비스 플랫폼을 구축하는 주식 거래 소프트웨어를 개발하고 있습니다.<br /><br />
-                    이 소프트웨어는 모의 거래, 실시간 메시징(IM), 거래소 연계 계약 거래, 자산 운용, 카피 트레이딩 등 핵심 기능을 포함하여,<br /><br />
-                    다양한 수준의 투자자들이 정보 교류, 전략 실습, 거래 실행 및 자산 관리 등 여러 측면의 요구를 충족할 수 있도록 설계되었습니다。
+                    FX8는 세 가지 독창적인 수익 분배 메커니즘—모의투자 학습 보상, 실거래 복사 거래 보상, 수수료 리베이트—을 통해 완전하고 효율적인 수익 분배 체계를 구축했습니다. FX8는
+                    디지털 자산 거래 서비스를 제공하는 것을 넘어, 개방적이고 투명하며 지속 가능한 생태계를 구축하는 데 전념하고 있습니다. Digichain Capital, CollinStar
+                    Capital, Kryptus Capital로부터 총 5억 달러의 전략적 투자를 유치했으며, 이 중 2억 달러는 신규 사용자 보상에 사용됩니다. 신규 가입자는 모의투자를 통해 하루
+                    최대 15달러의 보상을 받을 수 있으며, 모든 참가자, 거래자, 커뮤니티 리더 및 파트너가 디지털 자산 시대의 혜택을 함께 누릴 수 있도록 합니다.
                 </p>
                 <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
                     <div
@@ -328,7 +332,7 @@
 
 
     <!-- 앱 다운로드 영역 -->
-    <div class="app-container fade-element">
+    <div class="app-container fade-element"  id="app-section">
         <div class="app-left-section fade-element">
             <img src="./assets/images/phone-mockup.png" alt="FX8 앱 목업" class="app-phone-img">
             <div class="app-info">
@@ -521,13 +525,21 @@
         <hr class="footer-divider">
 
         <div class="footer-text">
-            FX8 디지털 자산 거래소 — 디지털 금융 생태계를 새롭게 정의합니다.
-            FX8은 MetaQuotes를 중심으로 혁신을 원동력 삼아, 다양한 역할이 공존하고 상생하는 글로벌 선도 디지털 자산 플랫폼 구축을 목표로 하고 있습니다.
-            자체 개발한 A북 모의 수익분배, B북 계약 수익분배, 카피트레이딩 수익분배 3대 구조를 통해 단순한 거래 서비스를 넘어, 개방적이고 투명하며 지속 가능한 금융 생태계를 조성합니다.
-            트레이더, 전략 개발자, 커뮤니티 리더, 파트너 등 모든 참여자가 디지털 경제 성장의 혜택을 함께 누릴 수 있도록 설계되었습니다.
-            기술이 미래를 이끌고, 수익 분배가 상생을 실현합니다. FX8은 단순한 거래소를 넘어 디지털 자산 생태계의 핵심 인프라로서, 업계를 보다 효율적이고 공정하며 역동적인 시대로 이끌어 갑니다.
+            FX8는 2018년 BitMEX 공동 창립자 Samuel Reed가 설립한 글로벌 디지털 자산 거래소입니다. 본사는 미국에 있으며, 블록체인 교육, 프로젝트 인큐베이팅, 디지털 자산 파생상품
+            거래에 중점을 두고 있습니다. ETH, BNB, ADA 등 수백 개의 프로젝트에 초기 투자 경험이 있으며, 비트코인 최대 125배 레버리지 거래를 포함해 다양한 암호화폐를 지원합니다. 하루
+            거래량은 120억 달러 이상이며, 전 세계 200개국 이상의 사용자를 보유하고 있습니다.
+
             <br><br>
-            © 2025 FX8.com. 모든 권리 보유.
+
+            FX8는 MetaQuotes를 기반으로 A판 시뮬레이션, B판 계약, 카피 트레이딩 등 독자적 수익 분배 모델을 통해 개방적이고 지속 가능한 생태계를 구축하고 있습니다. 모든 참여자가 디지털
+            경제의 혜택을 공유할 수 있도록 설계되었습니다.
+
+            <br><br>
+
+            FX8는 거래 플랫폼을 넘어 디지털 자산 인프라로서 기술과 분배를 통해 더 공정하고 효율적인 미래를 만들어갑니다.
+
+            <br><br>
+            © 2025 FX8.com. All rights reserved.
         </div>
 
     </footer>

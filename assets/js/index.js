@@ -39,25 +39,6 @@ function toggleMobileMenu() {
     }
 }
 
-// Create floating particles
-function createParticle() {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
-
-    const size = Math.random() * 4 + 1;
-    particle.style.width = size + 'px';
-    particle.style.height = size + 'px';
-    particle.style.left = Math.random() * 100 + '%';
-    particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
-    particle.style.animationDelay = Math.random() * 2 + 's';
-
-    document.getElementById('particles').appendChild(particle);
-
-    setTimeout(() => {
-        particle.remove();
-    }, 6000);
-}
-
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function () {
     // Header scroll effect
@@ -75,23 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
             languageDropdown.style.display = 'none';
         }
-    });
-
-    // Create particles continuously
-    setInterval(createParticle, 300);
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
     });
 });
 // mobile toggle dropdown //
@@ -114,20 +78,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Add entrance animation
-document.addEventListener('DOMContentLoaded', () => {
-const cards = document.querySelectorAll('.asset-card');
-cards.forEach((card, index) => {
-card.style.opacity = '0';
-card.style.transform = 'translateY(30px)';
-card.style.transition = 'all 0.6s ease';
-
-setTimeout(() => {
-    card.style.opacity = '1';
-    card.style.transform = 'translateY(0)';
-}, index * 200);
-});
-});
 
 // Liquid animation function
 function animateLiquid() {
@@ -205,10 +155,10 @@ document.querySelectorAll('.animate-zoom-rotate').forEach((el) => {
 
 // button link testing
  document.getElementById("start-trading-btn").addEventListener("click", function () {
-    window.open("https://www.baidu.com/", "_blank");
+    document.querySelector("#app-section").scrollIntoView({ behavior: "smooth" });
   });
 
   document.getElementById("start-button").addEventListener("click", function () {
-    window.open("https://www.baidu.com/", "_blank");
+     document.querySelector("#app-section").scrollIntoView({ behavior: "smooth" });
   });
-  
+

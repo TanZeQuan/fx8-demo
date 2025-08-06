@@ -22,7 +22,7 @@
             </div>
             <div class="nav-right">
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#home">Utama</a></li>
+                    <li><a href="#home" class="active">Utama</a></li>
                     <li><a href="#about">Tentang</a></li>
                     <li><a href="#vision">Cara Menjana Pendapatan</a></li>
                     <li><a href="./product-MY.html">Produk</a></li>
@@ -34,7 +34,7 @@
                             <i class="fas fa-globe"></i> Bahasa
                         </button>
                         <div class="dropdown-content" id="languageDropdown">
-                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index.html" onclick="changeLanguage('English')">English</a>
                             <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
                             <a href="index-CN.html" onclick="changeLanguage('中文')">中文（简体）</a>
                             <a href="index-TW.html" onclick="changeLanguage('中文')">中文（繁体）</a>
@@ -43,7 +43,7 @@
                         </div>
                     </li>
                 </ul>
-                 <a id="download-btn" href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer"
+                <a id="download-btn" href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer"
                     class="download-btn fade-element">
                     Download FX8 APP
                 </a>
@@ -66,8 +66,8 @@
         <div class="hero-container fade-element">
             <div class="hero-content fade-element">
                 <h1>
-                    <span class="highlight fade-element">FX8. Pemenang Terbaik</span><br />
-                    Daftar & Dapat <span class="highlight">USD 5</span>
+                    <span class="highlight fade-element">Pendaftaran Pengguna Baharu FX8</span><br />
+                    Terima <span class="highlight">$15</span> setiap hari
                 </h1>
                 <p>Platform dagangan profesional untuk pengalaman pelaburan unggul</p>
                 <button class="apply-btn fade-element" id="start-trading-btn">Mula Dagangan</button>
@@ -76,28 +76,32 @@
                 <div class="app-icons-section fade-element">
                     <div class="app-icons-dock fade-element">
                         <span class="app-icons-label">Dompet Disyorkan</span>
-                        <div class="app-icon">
-                            <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                       <div class="app-icon">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i1.png" alt="Wallet 1" />
                             </a>
                         </div>
+
                         <div class="app-icon">
-                            <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i2.png" alt="Wallet 2" />
                             </a>
                         </div>
+
                         <div class="app-icon">
-                            <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i3.png" alt="Wallet 3" />
                             </a>
                         </div>
+
                         <div class="app-icon">
-                            <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i4.png" alt="Wallet 4" />
                             </a>
                         </div>
+
                         <div class="app-icon">
-                             <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i5.png" alt="Wallet 5" />
                             </a>
                         </div>
@@ -234,15 +238,15 @@
             <div class="what-left reveal-in">
                 <h2 class="what-title fade-element">Apa yang Kami Lakukan?</h2>
                 <p class="what-description fade-element">
-                    Kami membangunkan perisian dagangan saham yang bersepadu dan pelbagai fungsi, direka untuk
-                    menyediakan pelabur dengan platform komprehensif untuk dagangan dan perkhidmatan kewangan.
-                    Perisian ini merangkumi fungsi utama seperti dagangan simulasi, pemesejan segera (IM), kontrak
-                    bursa, pengurusan kewangan dan salin dagangan — memenuhi keperluan pelabur pelbagai tahap dalam
-                    komunikasi maklumat, strategi pelaburan, pelaksanaan dagangan dan pengurusan kekayaan.
+                    FX8 ialah platform perdagangan aset digital global yang ditubuhkan pada 2018 oleh Samuel Reed,
+                    pengasas bersama BitMEX. Berpangkalan di AS, FX8 memberi tumpuan kepada pendidikan blockchain,
+                    pemangkinan projek, dan perdagangan derivatif. Ia telah melabur dalam ratusan projek seperti ETH,
+                    BNB dan LINK. Dengan leveraj sehingga 125x dan jumlah dagangan harian melebihi USD 12 bilion, FX8
+                    beroperasi di lebih 200 negara, menawarkan perkhidmatan selamat dan profesional serta membina
+                    ekosistem perkongsian keuntungan yang mampan.
                 </p>
-                 <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer" id="start-trading-btn"
-                    class="what-button fade-element">
-                   Mula Berdagang Sekarang
+                <a href="#app-section" class="what-button fade-element" id="start-trading-btn">
+                    Mula Berdagang Sekarang
                 </a>
                 <div class="what-features fade-element">
                     <div class="what-feature"><span class="circle-tick">✓</span> Dompet Pintar</div>
@@ -272,12 +276,14 @@
             <div class="how-right reveal-in">
                 <h2 class="how-title fade-element">Bagaimana Ia Berfungsi?</h2>
                 <p class="how-description fade-element">
-                    Kami membangunkan perisian dagangan saham bersepadu dan pelbagai fungsi untuk menyediakan pelabur
-                    dengan platform kewangan yang komprehensif.<br /><br />
-                    Perisian ini merangkumi dagangan simulasi, pemesejan segera (IM), kontrak bursa, pengurusan
-                    kewangan, dan fungsi salin dagangan.<br /><br />
-                    Ia memenuhi keperluan pelabur dari pelbagai peringkat, termasuk komunikasi maklumat, pelaksanaan
-                    strategi, urus niaga, dan pengurusan kekayaan.
+                    FX8 memperkenalkan tiga mekanisme pembahagian keuntungan unik—ganjaran simulasi dagangan, insentif
+                    salin dagangan sebenar, dan rebat yuran transaksi—mewujudkan ekosistem komisen yang lengkap dan
+                    cekap. Selain menawarkan perkhidmatan dagangan aset digital, FX8 komited membina platform yang
+                    terbuka, telus dan mampan. Platform ini telah menerima pelaburan strategik sebanyak USD 500 juta
+                    daripada Digichain Capital, CollinStar Capital dan Kryptus Capital, dengan USD 200 juta
+                    diperuntukkan untuk ganjaran pengguna baharu. Setiap pengguna baharu boleh memperoleh sehingga USD
+                    15 sehari melalui dagangan simulasi, membolehkan semua peserta, pedagang, pemimpin komuniti dan
+                    rakan kongsi berkongsi manfaat era aset digital.
                 </p>
                 <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
                     <div
@@ -364,9 +370,9 @@
             </div>
         </div>
 
-        <div class="app-right-section fade-element">
+        <div class="app-right-section fade-element"  id="app-section">
             <h3 class="app-subtitle">Cadangan Dompet Kripto</h3>
-           <div class="app-wallet-list fade-element">
+            <div class="app-wallet-list fade-element">
                 <div class="app-wallet-item">
                     <div class="app-wallet-left">
                         <img src="./assets/images/wallet-i1.png" alt="Wallet Icon">
@@ -539,21 +545,21 @@
         <hr class="footer-divider">
 
         <div class="footer-text">
-            FX8 Bursa Aset Digital — Mendefinisikan semula ekosistem perdagangan aset digital.
-            FX8, yang berteraskan MetaQuotes dan dipacu oleh inovasi, berkomitmen untuk membina platform aset digital
-            global yang menyokong kerjasama pelbagai pihak.
-            Melalui tiga sistem unik kami — Pembahagian Keuntungan Simulasi A-Book, Pembahagian Keuntungan Kontrak
-            B-Book, dan Pembahagian Keuntungan Salin Dagangan — kami bukan sahaja menyediakan perkhidmatan dagangan,
-            tetapi juga membentuk ekosistem kewangan yang terbuka, telus, dan mampan.
-            Semua peserta — pedagang, pembangun strategi, pemimpin komuniti, dan rakan kongsi — dapat berkongsi manfaat
-            daripada pertumbuhan ekonomi digital.
-            Didorong oleh teknologi dan diperkukuh melalui pembahagian keuntungan, FX8 bukan sekadar platform dagangan,
-            tetapi juga infrastruktur utama bagi ekosistem aset digital, memacu industri ke arah era yang lebih cekap,
-            adil dan dinamik.
+            FX8 ialah platform pertukaran aset digital global yang inovatif, ditubuhkan pada tahun 2018 oleh Pengasas
+            Bersama BitMEX, Samuel Reed. Berpangkalan di Amerika Syarikat, FX8 memberi tumpuan kepada pendidikan
+            blockchain, pemangkinan projek, dan perdagangan derivatif aset digital. Ia telah melabur dalam ratusan
+            projek termasuk ETH, BNB, ADA, LINK dan DOT, serta menawarkan leveraj sehingga 125x dengan jumlah dagangan
+            harian melebihi USD 12 bilion dan pengguna dari lebih 200 negara.
             <br><br>
-            © 2025 FX8.com. Hak cipta terpelihara.
+            Dipacu oleh MetaQuotes dan inovasi, FX8 membina ekosistem perkongsian keuntungan bertaraf dunia melalui tiga
+            model: simulasi A-side, kontrak B-side, dan perdagangan salinan. Ini membolehkan semua pihak—pedagang,
+            pembangun strategi, ketua komuniti dan rakan kongsi—berkongsi manfaat pertumbuhan ekonomi digital.
+            <br><br>
+            FX8 bukan sekadar platform dagangan, tetapi asas infrastruktur industri aset digital yang mendorong masa
+            depan yang lebih cekap, adil dan berdaya saing.
+            <br><br>
+            © 2025 FX8.com. All rights reserved.
         </div>
-
     </footer>
 
 

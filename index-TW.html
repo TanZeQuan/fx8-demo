@@ -22,7 +22,7 @@
             </div>
             <div class="nav-right">
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#home">首頁</a></li>
+                    <li><a href="#home" class="active">首頁</a></li>
                     <li><a href="#about">關於我們</a></li>
                     <li><a href="#vision">如何賺錢</a></li>
                     <li><a href="./product-TW.html">產品介紹</a></li>
@@ -34,7 +34,7 @@
                             <i class="fas fa-globe"></i> 中文繁體
                         </button>
                         <div class="dropdown-content" id="languageDropdown">
-                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index.html" onclick="changeLanguage('English')">English</a>
                             <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
                             <a href="index-CN.html" onclick="changeLanguage('中文')">中文（簡體）</a>
                             <a href="index-TW.html" onclick="changeLanguage('中文')">中文（繁體）</a>
@@ -43,7 +43,7 @@
                         </div>
                     </li>
                 </ul>
-                 <a id="download-btn" href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer"
+                <a id="download-btn" href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer"
                     class="download-btn fade-element">
                     下載 FX8 APP
                 </a>
@@ -66,38 +66,42 @@
         <div class="hero-container fade-element">
             <div class="hero-content fade-element">
                 <h1>
-                    <span class="highlight fade-element">FX8．唯強者勝出</span><br />
-                    新用戶註冊交易即贈<br/><span class="highlight">5美元</span>
+                    <span class="highlight fade-element">FX8 · 勝者為王</span><br />
+                    新用戶註冊 每日可領取<br /><span class="highlight">$15 美金</span>
                 </h1>
                 <p>專業交易平台，為您提供頂級的投資體驗</p>
-                 <button class="apply-btn fade-element" id="start-trading-btn">立即開始交易</button>
+                <button class="apply-btn fade-element" id="start-trading-btn">立即開始交易</button>
 
                 <!-- App Icons Section -->
                 <div class="app-icons-section fade-element">
                     <div class="app-icons-dock fade-element">
                         <span class="app-icons-label">推薦錢包</span>
                         <div class="app-icon">
-                             <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i1.png" alt="Wallet 1" />
                             </a>
                         </div>
+
                         <div class="app-icon">
-                           <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i2.png" alt="Wallet 2" />
                             </a>
                         </div>
+
                         <div class="app-icon">
-                             <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i3.png" alt="Wallet 3" />
                             </a>
                         </div>
+
                         <div class="app-icon">
-                           <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i4.png" alt="Wallet 4" />
                             </a>
                         </div>
+
                         <div class="app-icon">
-                            <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i5.png" alt="Wallet 5" />
                             </a>
                         </div>
@@ -223,12 +227,13 @@
             <div class="what-left reveal-in">
                 <h2 class="what-title fade-element">我們是做什麼的？</h2>
                 <p class="what-description fade-element">
-                    我們所打造的股票交易軟體，致力於為投資者構建一個綜合性、多功能的金融交易與服務平台。
-                    軟體涵蓋模擬交易、即時通訊（IM）、交易所合約、理財以及跟單等核心功能模組，
-                    滿足不同層級投資者在資訊交流、策略實踐、交易執行與資產管理等多方面的需求。
+                    FX8 數字貨幣交易所是一家面向全球用戶的創新型數位資產交易平台，成立於 2018 年，由 BitMEX 聯合創辦人兼首席技術官 Samuel Reed
+                    創立，專注於區塊鏈教育、區塊鏈項目孵化與數位資產衍生品交易。FX8 早期參與投資並孵化了包括 ETH、BNB、ADA、LINK、DOT
+                    在內的數百個知名項目。公司總部位於美國，現已成為全球最先進的比特幣衍生品交易所之一，為比特幣產品提供高達 125 倍的槓桿，同時支援多種加密貨幣的高槓桿交易，單日交易量高達 120
+                    億美元。平台用戶遍佈全球 200
+                    多個國家與地區，涵蓋北美、歐洲、亞太等主要市場，致力於為個人與機構投資者提供安全、高效、專業的數位資產衍生品交易服務，並著力打造「全球一流的數位資產分潤生態」，以安全、高效、開放為核心價值。
                 </p>
-                 <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer" id="start-trading-btn"
-                    class="what-button fade-element">
+                <a href="#app-section" class="what-button fade-element" id="start-trading-btn">
                     立即開始交易
                 </a>
                 <div class="what-features fade-element">
@@ -258,9 +263,10 @@
             <div class="how-right reveal-in">
                 <h2 class="how-title fade-element">怎麼做？</h2>
                 <p class="how-description fade-element">
-                    我們打造的股票交易軟體，致力於為投資者構建一個綜合性、多功能的金融交易與服務平台。<br /><br />
-                    軟體涵蓋模擬交易、即時通訊（IM）、交易所合約、理財以及跟單等核心功能模組，<br /><br />
-                    滿足不同層級投資者在資訊交流、策略實踐、交易執行與資產管理等多方面的需求。
+                    平台透過獨創三大分潤機制——模擬倉學習分潤機制、實盤跟單分潤機制、手續費返佣機制，構建完整且高效的分潤體系。FX8
+                    不僅提供數位資產交易服務，更致力打造一個開放、透明、可持續增長的生態架構。平台已獲得三大國際資本機構——Digichain Capital、CollinStar Capital、Kryptus
+                    Capital 共計 5 億美元的戰略投資，其中 2 億美元將用於獎勵市場新用戶。每位新註冊用戶在體驗模擬倉交易時，每日最高可獲得 15
+                    美元獎勵，真正實現讓每一位參與者、交易者、社群領袖與合作夥伴共享數位資產時代的紅利。
                 </p>
                 <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
                     <div
@@ -323,7 +329,7 @@
     </div>
 
     <!-- APP下載區域 -->
-    <div class="app-container fade-element">
+    <div class="app-container fade-element"  id="app-section">
         <div class="app-left-section fade-element">
             <img src="./assets/images/phone-mockup.png" alt="FX8 App 預覽圖" class="app-phone-img">
             <div class="app-info">
@@ -331,7 +337,7 @@
                     <img src="./assets/images/fx-logo.png" alt="FX8 Logo" class="app-logo">
                     <div class="app-title">APP 下載</div>
                 </div>
-                   <div class="app-store-buttons fade-element">
+                <div class="app-store-buttons fade-element">
                     <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
                         <img src="./assets/images/google-play-logo.png" alt="Google Play" data-store="google">
                     </a>
@@ -342,9 +348,9 @@
             </div>
         </div>
 
-        <div class="app-right-section fade-element">
+        <div class="app-right-section fade-element" >
             <h3 class="app-subtitle">推薦數位貨幣錢包下載</h3>
-             <div class="app-wallet-list fade-element">
+            <div class="app-wallet-list fade-element">
                 <div class="app-wallet-item">
                     <div class="app-wallet-left">
                         <img src="./assets/images/wallet-i1.png" alt="Wallet Icon">
@@ -518,15 +524,18 @@
         <hr class="footer-divider">
 
         <div class="footer-text">
-            FX8 數位貨幣交易所 — 重新定義數位資產交易生態。
-            FX8 以 MetaQuotes 為核心，並以創新為驅動，致力打造全球領先的多方共贏型數位資產平台。
-            通過自主研發的 A 盤模擬分潤、B 盤合約分潤及跟單分潤三大體系，我們不僅提供交易服務，更構建一個開放、透明、可持續成長的金融生態系統。
-            讓每一位參與者——交易者、策略開發者、社群領袖與合作夥伴——皆可共享數位經濟的成長紅利。
-            技術驅動未來，分潤實現共贏。FX8 不僅是交易平台，更是數位資產生態的基礎設施，推動行業邁向更高效、公平且充滿活力的新紀元。
+            FX8 數位貨幣交易所是一家面向全球用戶的創新型數位資產交易平台，成立於 2018 年，由 BitMEX 聯合創辦人暨首席技術官 Samuel Reed
+            創立，專注於區塊鏈教育、區塊鏈項目孵化以及數位資產衍生品交易。FX8 早期投資並孵化的項目包括 ETH、BNB、ADA、LINK、DOT
+            等數百個知名項目。公司總部位於美國，目前已成為全球最先進的比特幣衍生品交易所之一，提供高達 125 倍槓桿的比特幣交易，同時支持多種其他數位資產的高槓桿交易，單日交易量達 120 億美元。平台用戶遍及全球 200
+            多個國家和地區，涵蓋北美、歐洲、亞太等主要市場，致力於為個人與機構投資者提供高效、安全、專業的數位資產衍生品交易服務。
             <br><br>
-            © 2025 FX8.com. 版權所有。
+            以 MetaQuotes 為核心引擎，以創新為驅動，FX8 致力打造「全球頂尖的數位資產分潤生態」，透過自創的 A 盤模擬分潤、B
+            盤合約分潤、跟單分潤三大機制，不僅提供交易服務，更構建一個開放、透明、可持續發展的金融生態系統，讓每一位參與者——交易者、策略開發者、社群領袖與合作夥伴——都能共享數位經濟成長紅利。
+            <br><br>
+            科技驅動未來，分潤實現共贏。FX8 不僅是交易平台，更是數位資產基礎設施的奠基者，持續推動產業邁向更高效、公平且充滿活力的新時代。
+            <br><br>
+            © 2025 FX8.com. All rights reserved.
         </div>
-
     </footer>
 
     <!-- JavaScript -->

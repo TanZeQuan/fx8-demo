@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FX8 - 胜者为王 | 专业交易平台</title>
-    <link rel="icon" href="/assets/images/fx8-logo.png" type="image/png">
+    <link rel="icon" href="./assets/images/fx8-logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="./assets/css/index.css" />
@@ -22,7 +22,7 @@
             </div>
             <div class="nav-right">
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#home">首页</a></li>
+                    <li><a href="#home" class="active">首页</a></li>
                     <li><a href="#about">关于我们</a></li>
                     <li><a href="#vision">如何赚钱</a></li>
                     <li><a href="./product-CN.html">产品介绍</a></li>
@@ -34,7 +34,7 @@
                             <i class="fas fa-globe"></i> 中文简体
                         </button>
                         <div class="dropdown-content" id="languageDropdown">
-                            <a href="index-EN.html" onclick="changeLanguage('English')">English</a>
+                            <a href="index.html" onclick="changeLanguage('English')">English</a>
                             <a href="index-MY.html" onclick="changeLanguage('Bahasa Malaysia')">Bahasa Malaysia</a>
                             <a href="index-CN.html" onclick="changeLanguage('中文')">中文（简体）</a>
                             <a href="index-TW.html" onclick="changeLanguage('中文')">中文（繁体）</a>
@@ -43,8 +43,7 @@
                         </div>
                     </li>
                 </ul>
-                <a id="download-btn" href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer"
-                    class="download-btn fade-element">
+                <a id="download-btn" href="#app-section" class="download-btn fade-element">
                     下载 FX8 APP
                 </a>
             </div>
@@ -66,8 +65,8 @@
         <div class="hero-container fade-element">
             <div class="hero-content fade-element">
                 <h1>
-                    <span class="highlight fade-element">FX8.胜者为王</span><br />
-                    新开户交易立即获得<br /><span class="highlight">5美金</span>
+                    <span class="highlight fade-element">FX8 · 胜者为王</span><br />
+                    新用户注册 每日可领取<br /><span class="highlight">$15 美金</span>
                 </h1>
                 <p>专业的交易平台，为您提供最优质的投资体验</p>
                 <button class="apply-btn fade-element" id="start-trading-btn">立即开始交易</button>
@@ -76,37 +75,35 @@
                 <div class="app-icons-section fade-element">
                     <div class="app-icons-dock fade-element" id="wallet-icons">
                         <span class="app-icons-label">推荐钱包</span>
-
                         <div class="app-icon">
-                            <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i1.png" alt="Wallet 1" />
                             </a>
                         </div>
 
                         <div class="app-icon">
-                            <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i2.png" alt="Wallet 2" />
                             </a>
                         </div>
 
                         <div class="app-icon">
-                            <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i3.png" alt="Wallet 3" />
                             </a>
                         </div>
 
                         <div class="app-icon">
-                            <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i4.png" alt="Wallet 4" />
                             </a>
                         </div>
 
                         <div class="app-icon">
-                            <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="#app-section">
                                 <img src="./assets/images/wallet-i5.png" alt="Wallet 5" />
                             </a>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -227,15 +224,16 @@
             <div class="what-left reveal-in">
                 <h2 class="what-title fade-element">我们是做什么的？</h2>
                 <p class="what-description fade-element">
-                    我们打造的股票交易软件，致力于为投资者构建一个综合性、多功能的金融交易与服务平台。
-                    软件涵盖模拟交易、即时通讯（IM）、交易所合约交易、理财以及跟单等核心功能模块，
-                    满足不同层次投资者在信息交流、策略实践、交易执行与财富管理等多方面的需求。
+                    FX8 数字货币交易所是一家面向全球用户的创新型数字资产交易平台，成立于 2018 年，由 BitMEX 联合创始人兼首席技术官 Samuel Reed
+                    创办，专注于区块链教育、区块链项目孵化以及数字资产衍生品交易。FX8 早期参投并孵化的项目包括 ETH、BNB、ADA、LINK、DOT
+                    等数百个知名项目。公司总部位于美国，目前已成为最先进的比特币衍生品交易所之一，为比特币类产品提供高达 125 倍的杠杆，同时支持多种其他数字货币的高杠杆交易，单日交易量高达 120
+                    亿美金。平台用户遍布全球 200
+                    多个国家和地区，涵盖北美、欧洲、亚太等主要市场，致力于为个人用户及专业机构提供高效、安全、专业的数字资产衍生品交易服务，构建“全球一流的数字资产分佣生态”，以安全、高效、开放为核心价值。
                 </p>
-                <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer" id="start-trading-btn"
-                    class="what-button fade-element">
+
+                <a href="#app-section" class="what-button fade-element" id="start-trading-btn">
                     立即开始交易
                 </a>
-
                 <div class="what-features fade-element">
                     <div class="what-feature"><span class="circle-tick">✓</span> 智能钱包</div>
                     <div class="what-feature"><span class="circle-tick">✓</span> 利润规划师</div>
@@ -263,9 +261,10 @@
             <div class="how-right reveal-in">
                 <h2 class="how-title fade-element">怎么做？</h2>
                 <p class="how-description fade-element">
-                    我们打造的股票交易软件，致力于为投资者构建一个综合性、多功能的金融交易与服务平台。<br /><br />
-                    软件涵盖模拟交易、即时通讯（IM）、交易所合约交易、理财以及跟单等核心功能模块，<br /><br />
-                    满足不同层次投资者在信息交流、策略实践、交易执行与财富管理等多方面的需求。
+                    平台通过独创三大分佣机制——模拟仓学习分佣机制、实盘跟单分佣机制、手续费返佣机制，构建出完整且高效的分佣体系。FX8
+                    不仅提供数字资产交易服务，更致力于打造一个开放、透明、可持续增长的生态架构。平台已获得三大国际资本机构——Digichain Capital、CollinStar Capital、Kryptus
+                    Capital 共计 5 亿美金的战略投资，其中 2 亿美金将用于奖励市场新用户。每位新注册用户在体验模拟仓交易时，单日最高可获得 15
+                    美金的奖励，真正实现让每一位参与者、交易者、社区领袖与合作伙伴，共享数字资产时代的红利。
                 </p>
                 <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
                     <div
@@ -327,28 +326,33 @@
     </div>
 
     <!-- APP下载区域 -->
-    <div class="app-container fade-element">
+    <div class="app-container fade-element" id="app-section">
         <div class="app-left-section fade-element">
             <img src="./assets/images/phone-mockup.png" alt="FX8 App Mockup" class="app-phone-img">
             <div class="app-info">
                 <div class="app-title-row fade-element">
                     <img src="./assets/images/fx-logo.png" alt="FX8 Logo" class="app-logo">
-                    <div class="app-title">APP下载</div>
+                    <div class="app-title">APP 下载</div>
                 </div>
-                <div class="app-store-buttons fade-element">
-                    <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
-                        <img src="./assets/images/google-play-logo.png" alt="Google Play" data-store="google">
-                    </a>
-                    <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
-                        <img src="./assets/images/app-store-logo.png" alt="App Store" data-store="apple">
-                    </a>
+
+                <!-- 这个是你渲染按钮的容器 -->
+                <div id="app-container" class="fade-element">
+                    <!-- 动态生成的 app-store-buttons 将插入这里 -->
+                    <div class="app-store-buttons fade-element">
+                        <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/images/google-play-logo.png" alt="Google Play" data-store="google">
+                        </a>
+                        <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/images/app-store-logo.png" alt="App Store" data-store="apple">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="app-right-section fade-element">
             <h3 class="app-subtitle">推荐数字货币钱包下载</h3>
-            <div class="app-wallet-list fade-element">
+            <div class="app-wallet-list fade-element" id="wallet-container">
                 <div class="app-wallet-item">
                     <div class="app-wallet-left">
                         <img src="./assets/images/wallet-i1.png" alt="Wallet Icon">
@@ -520,11 +524,15 @@
         <hr class="footer-divider">
 
         <div class="footer-text">
-            FX8 数字货币交易所 —— 重新定义数字资产交易生态 以 MetaQuotes 为核心，以创新为驱动，fx8 致力于构建全球领先的多角色共赢型数字资产平台。
-            通过独创的 A 盘模拟分润、B 盘合约分润、跟单分润三大体系，我们不仅提供交易服务，更打造一个
-            开放、透明、可持续增长的金融生态，让每一位参与者——交易者、策略开发者、社区领袖、合作伙伴——都能共享数字经济的增长红利。
-            技术驱动未来，分润成就共赢。fx8 不仅是交易平台，更是数字资产生态的基础设施，
-            推动行业迈向更高效、更公平、更具活力的新纪元。
+            FX8 数字货币交易所是一家面向全球用户的创新型数字资产交易平台，成立于 2018 年，由 BitMEX 联合创始人兼首席技术官 Samuel Reed
+            创办，专注于区块链教育、区块链项目孵化以及数字资产衍生品交易。FX8 早期参投孵化的项目包括 ETH、BNB、ADA、LINK、DOT
+            等数百个项目。公司总部位于美国，目前已成为最先进的比特币衍生品交易所之一，为比特币类产品提供高达 125 倍的杠杆，同时支持多种其他数字货币产品的高杠杆交易，单日交易量高达 120 亿美金。平台用户遍布全球 200
+            多个国家和地区，覆盖北美、欧洲、亚太等主要市场，致力于为个人用户及专业机构提供高效、安全、专业的数字资产衍生品交易服务。
+            <br><br>
+            以 MetaQuotes 为核心引擎，以创新为驱动，FX8 着力构建“全球一流的数字资产分佣生态”，通过独创的 A 盘模拟分润、B
+            盘合约分润、跟单分润三大体系，我们不仅提供交易服务，更构建了一个开放、透明、可持续增长的金融生态系统，让每一位参与者——交易者、策略开发者、社区领袖、合作伙伴——都能共享数字经济的增长红利。
+            <br><br>
+            技术驱动未来，分润成就共赢。FX8 不仅是一家交易平台，更是数字资产基础设施的奠基者，持续推动行业迈向更高效、公平且充满活力的新纪元。
             <br><br>
             © 2025 FX8.com. All rights reserved.
         </div>
@@ -532,6 +540,8 @@
 
     <!-- JavaScript -->
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/wallet-loader.js"></script>
+    <script src="./assets/js/apps-loader.js"></script>
 </body>
 
 </html>
